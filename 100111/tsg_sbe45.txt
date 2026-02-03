@@ -1,0 +1,19 @@
+tsg_sbe45.txt
+
+  Sea-Bird SBE 45 MicroTSG Conductivity and Temperature Monitor.
+  Measures surface seawater temperature and conductivity.
+
+  Model: SBE45
+  Sample rate: 1 every 5 seconds
+
+  Example data line:
+    tsg_sbe45_fwd  2014-12-12T06:34:03.1647Z   26.4679,  5.44818,  34.9076, 1537.771
+
+  Field Descriptions:
+    Logger ID
+    Time Stamp [UTC]
+    Temperature [C]
+    Conductivity [S/m]
+    Salinity [psu]
+    Speed of Sound [m/s]
+    

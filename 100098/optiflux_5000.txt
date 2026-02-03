@@ -1,0 +1,19 @@
+
+  KROHNE OPTIFLUX 5000 Electromagnetic flowmeter measuring surface seawater flow being delivered
+  to forward TSG, SVP probe and Turner C6 in bow thruster room. These electromagnetic flowmeters 
+  are designed exclusively to measure the flow and conductivity of electrically conductive, 
+  liquid media.
+
+  Location: Forward seachest in bow thruster room
+  Sample rate: 1 per second
+
+  Example data line:
+    flow_krohne_fwd  2014-12-11T20:19:01.7029Z  0.558,5.93,27.38,0.65940
+
+  Field Descriptions:
+    Logger ID
+    Time Stamp [UTC]
+    flow speed [m/s]
+    volume flow [l/min]
+    coil temperature [C]
+    conductivity [S/m]

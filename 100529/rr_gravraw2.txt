@@ -1,0 +1,8 @@
+grav_bgm3_rr (shipboard BGM-3 gravimeter counts)
+Bell Laboratories BGM-3 gravimeter raw counts. Calculate mGals value with scale factor
+(4.999807547) and current bias (855272.520 from 10/27/2020 gravity tie).
+YYYY-MM-DDTHH:MM:SS.SSSSSSZ SS:XXXXXX ff
+YYYY-MM-DDTHH:MM:SS.SSSSSSZ = time stamp
+SS = counting frequency by 0.25-second interval (e.g., 04 = 1 sec [1Hz])
+XXXXXX = raw counts
+ff = status (00 = no error; 01 = platform DNV; 02 = sensor DNV; 03 = both DNV)

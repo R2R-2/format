@@ -1,0 +1,47 @@
+File Format ID: scs_pat
+
+Format Description Creation Date: 2019-04-29
+
+File Type: ASCII, comma-separated values
+
+Record Format: Magellan proprietary position and altitude  string with
+external datetime stamp.
+
+Data Format Description:
+The file contains GPPAT strings prefixed by an external datetime stamp.
+
+Example Record: 03/15/2010,14:08:45.876,$GPPAT,000020.00,4129.52523,N,07125.11232,W,-00021.26,147.6027,-001.76,-000.65,0.0028,0.0351,0*4D
+
+where:
+     03/15/2010     Date (source unknown), UTC
+                      03   = 2-digit month
+                      15   = 2-digit day of month
+                      2010 = 4-digit year
+     14:08:45.876   Time (source unknown), UTC
+                      14     = 2-digit hour [24-hour clock]
+                      08     = 2-digit minute
+                      45.876 = decimal seconds
+     $GPPAT			NMEA record (see definition below)
+
+
+$GPPAT
+The NMEA response message for the Magellan proprietary position and altitude message is in the
+format shown below and defined in Table 5.30.
+
+$GPPAT,hhmmss.ss,ddmm.mmmmm,N,dddmm.mmmmm,W,±aaaaa.aa,bbb.bbbb,±eee.ee,±fff.ff,g.gggg,h.hhhh,b.bbbb,a*cc
+
+Table 5.30.  Position and Attitude Message Structure
+Field			Description
+hhmmss.ss		UTC of position (hours, minutes, seconds, tenths of second)
+ddmm.mmmmm		GPS latitude in degrees (d) and minutes (m): ddmm.mmmm
+N				Latitude north (N) or south (S)
+dddmm.mmmmm		GPS longitude in degrees (d) and minutes (m) dddmm.mmmm
+W				Longitude east (E) or west (W)
+±aaaaa.aa		Altitude in meters
+bbb.bbbb		Heading in degrees
+eee.ee			Pitch in degrees
+± fff.ff		Roll in degrees
+h.hhhh 			Attitude phase measurement rms error, MRMS (meters)
+b.bbbb			Attitude baseline length rms error, BRMS (meters)
+a				Attitude reset flag (0:good attitude, 1:rough estimate or bad attitude)
+*cc				Hexadecimal checksum computed by exclusive ORing all bytes between, but not including, $ and *.

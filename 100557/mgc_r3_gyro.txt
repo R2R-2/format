@@ -1,0 +1,28 @@
+gyro_mgc_1:
+
+ Kongsberg MGC-R3 three Ring Laser, Motion Gyro Compass. Primary system feeding motion data to the Seapath 380+ Inertial Nav System.
+
+  Location: Forward, inboard bulkhead of upper lab, 03-32-2
+  Sample rate: 1 Hz
+
+  Example data lines:
+    gyro_mgc_1  2024-02-13T15:38:13.1526Z       $MGHDT,348.67,T*16
+    gyro_mgc_1  2024-02-13T15:38:13.1797Z       $MGHCR,348.7,A,A,-0.0*76
+    gyro_mgc_1  2024-02-13T15:38:13.2005Z       $MGTHS,348.67,A*14
+    gyro_mgc_1  2024-02-13T15:38:13.2182Z       $MGROT,0.1,A*2D
+    gyro_mgc_1  2024-02-13T15:38:13.2401Z       $PSXN,20,2,2,0,0*3B
+    gyro_mgc_1  2024-02-13T15:38:13.2808Z       $PSXN,23,-0.765,0.790,348.67,0.012*22
+    gyro_mgc_1  2024-02-13T15:38:13.3725Z       $MGVER,1,1,VRS,KSX,MGC R3-Compass,50952,MGC R3-Compass.v,5.06.11,50952_CAL@20231125*4E
+
+  Field Descriptions:
+    LDS Logger ID
+    LDS Time Stamp [UTC]
+    NMEA ASCII message
+
+  The following is a brief overview of the NMEA sentences currently being generated:
+
+    $--HDT,heading,T*checksum
+    $--ROT,rate of turn,status*checksum
+    $PSXN,20,horiz-qual,hgt-qual,head-qual,rp-qual*checksum
+    $PSXN,23,roll,pitch,heading,heave*checksum
+    $MGVER, relevant version data of the sensor including serial number and f/w version

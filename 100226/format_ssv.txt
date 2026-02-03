@@ -1,0 +1,27 @@
+File Format ID: ssv
+
+Format Description Creation Date: 2020-05-29
+
+File Type: ASCII, whitespace-delimited and comma-separated values
+
+Record Format: AML Oceanographic SV-Xchange ssv with WHOI format
+
+Data Format Description:
+The file contains  AML Oceanographic SV-Xchange ssv records prefixed by a datatype id, an external datetime stamp, and device tag.
+
+Example Record:
+SSV 2018/11/01 22:17:19.945 AML_SSV  16.820  1508.043 
+
+where:
+     NAV                       Datatype ID
+     2018/11/01 22:17:19.945   External datetime stamp (source unknown)
+                                 2018         4-digit year
+                                 11           2-digit month
+                                 01           2-digit day of month
+                                 22           2-digit hour [24-hour clock]
+                                 17           2-digit minute
+                                 19.945       decimal seconds
+     AML_SSV		            Logger ID
+	 16.820						Time Stamp [UTC]
+	 1508.043				    Speed of Sound [m/s]
+	 

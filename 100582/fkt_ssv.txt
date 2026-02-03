@@ -1,0 +1,35 @@
+Data Format Description: Each line includes a ISO8601 date string prefix and records temperature in celsius and sound velocity in m/s. Some files ommit temperature. Both line styles are described below. A file is only either all ommiting temperature or has temperature recorded on every line.
+
+Standards Followed: ISO8601
+
+Useful References: 
+
+Sample Rate: 2Hz
+
+Data line column descriptions (one description per unique line format):
+
+    Example Line: 2025-07-16T00:00:02.263561Z, 07.340 1478.565
+    where:
+	  2025-07-16T00:00:02.263561Z	ISO8601 timestamp delimited with a comma
+	  07.340           		Temperature in degress celsius
+	  1478.565			Sound velocity in meters per second
+
+    Example Line: 2025-11-28T00:00:00.068770Z, 1517.241
+    where:
+	  2025-11-28T00:00:00.068770Z	ISO8601 timestamp delimited with a comma
+	  1517.241			Sound velocity in meters per second
+
+
+Example File Contents:
+
+2025-07-16T00:00:00.266371Z, 07.341 1478.578 
+
+2025-07-16T00:00:00.767135Z, 07.341 1478.557 
+
+2025-07-16T00:00:01.265880Z, 07.340 1478.564 
+
+2025-07-16T00:00:01.768099Z, 07.340 1478.572 
+
+2025-07-16T00:00:02.263561Z, 07.340 1478.565
+
+

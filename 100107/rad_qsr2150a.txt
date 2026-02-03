@@ -1,0 +1,26 @@
+rad_qsr2150a.txt
+ 
+  Biospherical Instruments reference PAR sensor
+
+  Model: QSR2150
+  Serial Number: 50173
+  Location: top of science control room
+  Sample rate: 1 per second
+
+  ADC sample rate 125, gain 1
+  Averaging 125 readings                                                                           
+  Calfactor: 0.000624uE/m2 sec                                                                     
+  Calibration Mode = B, Output calibrated for use in air dividing net volts by 0.000624 with units of uE/m2 sec                       
+  Dark zero, currently dark = 0.010320v. 
+  temperature is enabled, line voltage is enabled
+
+
+  Example data line:
+    rad_qsr2150a  2014-12-12T02:02:20.7459Z  1914.525, 28.09, 7.536
+
+  Field Descriptions:
+    Logger ID
+    Time Stamp [UTC]
+    PAR [uE/m2 sec]
+    Sensor Temperature [C]
+    Line voltage [volts]

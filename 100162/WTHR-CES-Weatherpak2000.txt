@@ -1,0 +1,47 @@
+WTHR-CES-Weatherpak2000.txt
+
+Format Description Creation Date: 2019-06-04
+
+File Type: ASCII, whitespace-delimited and comma seperated values
+
+Data Format Description:
+This file contains the data produced from the Coastal Environmental Systems Weatherpak 
+2000 marine weather station. Instrument contains an internal GPS but Latitude, 
+Longitude, and Time is NOT to be used. Refer to specific sensor data files for that 
+information, correlated with Master time in UTC from the data logging system. 
+Additionally, ship's heading is not currently fed to this sensor, so do not use True 
+wind or ship's heading values. This file will be updated when the sensor configuration 
+changes.
+
+File name is of format `YYYYMMDD_HHMM.[Data Type ID]`. File is created at rollover 
+of the hour, or upon start of logging system or sensor.
+
+Example Record:
+WTHR    2019-06-04T13:00:41.819Z        MAST    3643,19/06/05,13:00:31,0.2,0.1,167,9,1.1,0.6,231,1.0,314,12.0,12.5,54.6,74,1021,9,130030.0,4245.313,-12642.572,
+
+where:
+  WTHR                          Data Type ID
+  2019-06-04T13:00:41.819Z      Master time in UTC, prepended to message by data
+                                  logging system
+  MAST                          Sensor Location 
+  3643                          Unit ID  
+  19/06/05                      [Do not use] Date
+  13:00:31                      [Do not use] Time
+  0.2                           [Do not use] Wind Speed (True) (5min Running AVG) (Knots) 
+  0.1                           [Do not use] Wind Speed (True) (5min Running AVG) (m/s)
+  167                           [Do not use] Wind Direction (True) (5min Running AVG) (Deg)
+  9                             [Do not use] Ship Heading (Deg)
+  1.1                           Wind Speed (Relative To Ship) (1min Vector AVG) (Knots)
+  0.6                           Wind Speed (Relative To Ship) (1min Vector AVG) (m/s)
+  231                           Wind Direction (Relative To Ship) (1min Vector AVG) (Deg)
+  1.0                           [Do not use] Speed Over Ground (Kts)
+  314                           [Do not use] Course Over Ground
+  12.0                          Battery Voltage (Vdc)
+  12.5                          Air Temp (C)
+  54.6                          Air Temp (F)
+  74                            Relative Humidity (%)
+  1021                          Barometric Pressure (mb)
+  9                             Satellite Hits
+  130030.0                      [Do not use] Universal Time
+  4245.313                      [Do not use] Latitude
+  -12642.572                    [Do not use] Longitude

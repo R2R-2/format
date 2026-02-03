@@ -1,0 +1,39 @@
+Instrument Make and Model: Dynamic Gravity Systems Marine Gravity Meter
+S/N AT1M-17 WHOI/UNOLS 
+Installed: October 2020    
+Installation: Tranceiver Room
+
+RAW datafile:
+DGS 2020/10/07 10:00:31.999 DgS $AT1M_3.60_764009,-434425,-33347,-40385,3883026,209,515,199,2138027,293589,630442,-680942,394,5756908
+,0.0000000000,0.0000000000,0.0000,0.0000,00000008201329
+dsLog time stamp:
+DGS 2020/10/07 10:00:31.999 DgS
+
+DGS	  	    Gravimeter
+2020/10/07          date in gmt
+10:00:31.999        time in gmt
+DgS 	            data collected using a Dynamic Gravity Systems iravimeter
+data		    $AT1M_3.60_764009,-434425,-33347,-40385,3883026,209,515,199,2138027,293589,630442,-680942,394,5756908
+,0.0000000000,0.0000000000,0.0000,0.0000,00000008201329
+
+
+Data breakdown for both raw and preliminary processed data is in /gravity/doc/
+
+Raw: Sensor_Marine_Raw_format.docx
+Processed: DgS Marine Manual v1.5 1Jul2020-small.pdf (starts on page 50)
+
+Notes:
+
+S/N 17 Advance Technology Marine Gravity Meter
+
+Installed and operated by Tom Lanagan - tlanagan@whoi.edu 
+Also contact Dan Fornari - dfornari@whoi.edu
+
+Gravity Data from Surface tablet  - stored in "gravimeter/DgS/" directory
+
+sample data:
+12431.932624454783,-9767.204765701859, -4.339099447620,  3.792524789873, -1.134408408929, 62.344801550000,           20894,        22486344, 30.36
+4959695000, 50.528310000000,176.580560000000,108.681550000000,-34.239100000000,-57.303650000000, 58.399099233333,-23.986279316667,  4.535302249627
+,238.800000000000, 84.866080721618,2020,10,07,00,00,00.66,727972
+
+

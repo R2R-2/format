@@ -1,0 +1,18 @@
+File Format ID: nav1
+
+Format Description Creation Date: 2020-01-27
+
+File Type: ASCII, comma-separated values
+
+Record Format: National Marine Electronics Association (NMEA) 0183 string
+
+Data Format Description:
+The file contains decimal epoc time stamp with raw NMEA: VBW, VLW, DPT and DRU  strings, alternating line-by-line.  
+
+ex: 
+1542734699.062 $VDVBW,0.2,-00.4,A,0.0,0.0,A,,V,,V*4A
+1542734699.351 $VDVLW,65354.6,N,4391.49,N*5A
+1542734699.432 $VDDPT,009.0,0,*69
+1542734699.542 $VDDRU,009.0,A,,V,*4D
+
+Definitions for NMEA sentences can be found at https://www.nmea.org/Assets/100108_nmea_0183_sentences_not_recommended_for_new_designs.pdf

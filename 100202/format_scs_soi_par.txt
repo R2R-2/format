@@ -1,0 +1,21 @@
+File Format ID: scs_soi_par
+
+Format Description Creation Date: 2020-02-14
+
+Schmidt Ocean Institute SCS (Shipboard Computer System) Raw Photosynthetic Active Radiation (PAR) Counts Format
+
+Data Format Description:
+The file contains date/time stamp with PAR Counts
+
+File Types:
+Raw, Logged Format:
+ASCII, NEMA style comma separated
+ex: 
+07/08/2019,18:10:49.788,$FKPAR,04042,03456*46
+
+07/08/2019,18:10:49.788 - Date,Time; MM/DD/YYYY,HH:MM:SS.SSS
+$FKPAR - sentence identifier
+04042 - Raw counts
+03456 - Ra counts
+*46 - sentence checksum
+

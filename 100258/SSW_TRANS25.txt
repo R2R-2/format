@@ -1,0 +1,28 @@
+Instrument Make: CSTAR 25 CM Transmissometer
+Model: CST 25 CM
+S/N: CST-1916
+Calibration Date: 2020-01-10
+Installation Date: 2020-02-20
+Installation Location: Wet Lab, inboard bulkhead 
+Distance from Intake: See SSW_IntakeNotes.txt
+Updated: 2020-03-07 lstolp
+
+RAW datafile:
+dsLog time stamp:
+SSW 2019/11/02 07:13:03.203 TRANS25 CST-1916DR	11123	12307	12750	00.766	530
+
+SSW                 Science Salt Water
+2019/11/02          date in gmt
+07:13:03.203        time in gmt
+TRANS25	            data collected using CSTAR 25 CM Transmissometerr
+data                11123   12307   12750   00.766  530
+
+Data Parsed: 
+11123  reference
+12307  signal 
+12750  corrected signal
+00.766 Calculated beam c, m-1
+530    thermistor
+
+
+Notes:

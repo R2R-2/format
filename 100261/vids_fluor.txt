@@ -1,0 +1,20 @@
+Software Version Number: 1	Data File Format Number: 1	Build Version Number: 1	Error Count Since VI Started: 0	Manufacturer:
+ Turner Designs	 Model Number: C3	 S/N: 	 Cal Date: 	 Wind Direction Offset: 0.00	 Slope (M)1: 0.00	 Offset (B)1:
+ 0.00	 Slope (M)2: 0.00	 Offset (B)2: 0.00	 Slope (M)3: 0.00	 Offset (B)3: 0.00	 Slope (M)4: 0.00	 Offs
+et (B)4: 0.00	 Slope (M)5: 0.00	 Offset (B)5: 0.00	 Slope (M)6: 0.00	 Offset (B)6: 0.00	
+Computer Date	Computer Time	Instrument Date	Instrument Time	Chlorophyll-a Raw Fluoresence Units	Chlorophyll-a Calibrated Fluo
+resence Units	Phycoerythrin Raw Fluoresence Units	Phycoerythrin Calibrated Fluoresence Units	CDOM Raw Fluoresence Units	CDOM Calibrated Fluoresence UnitsDs/TurneNo Sensor Installed Raw Fluoresence Units	No Sensor Installed Calibrated Fluoresence Un
+its	No Sensor Installed Raw Fluoresence Units	No Sensor Installed Calibrated Fluoresence Units	No Sensor Installed R
+aw Fluoresence Units	No Sensor Installed Calibrated Fluoresence Units	Depth	Temp C
+08/22/2020	12:00:01.136	 8/22/20	11:59:35	180.96	0.00	0.00	0.00	83.04	0.00	0.00	0.00	30.45
+	0.00		0.00			
+08/22/2020	12:00:06.136	 8/22/20	11:59:40	181.84	0.00	0.00	0.00	83.36	0.00	0.00	0.00	30.45
+	0.00		0.00			
+08/22/2020	12:00:11.137	 8/22/20	11:59:45	182.72	0.00	0.00	0.00	84.32	0.00	0.00	0.00	30.45
+	0.00		0.00			
+08/22/2020	12:00:16.136	 8/22/20	11:59:50	182.52	0.00	0.00	0.00	84.08	0.00	0.00	0.00	30.45
+	0.00		0.00			
+08/22/2020	12:00:21.137	 8/22/20	11:59:55	180.32	0.00	0.00	0.00	83.44	0.00	0.00	0.00	30.45
+	0.00		0.00			
+08/22/2020	12:00:26.127	 8/22/20	12:00:00	177.96	0.00	0.00	0.00	83.84	0.00	0.00	0.00	30.45
+	0.00		0.00

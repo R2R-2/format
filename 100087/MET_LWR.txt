@@ -1,0 +1,30 @@
+Instrument Make and Model: Eppley Precision Infrared Radiometer (PIR)
+S/N: LS#1
+Calibration Date: January 9, 201
+Installation: aft center of MET mast 15.5 meters above waterline
+
+RAW datafile:
+dsLog time stamp:
+MET 2013/01/16 15:17:41.320 LWR  
+
+MET                 Meteorological Sensor
+2013/01/26          date in gmt
+18:15:36.383        time in gmt
+LWR                 data collected using Long Radiation Sensor
+data                290.91  288.44  -33.6  393.9
+
+
+290.91  288.44  -33.6  393.9 
+
+Data Parsed:
+290.91                  dome temperature (K), 
+288.44                  body temperature (K),
+-33.6                   thermopile voltage (V),
+393.9                   longwave radiation flux (W/m^2)
+                  
+
+
+Notes:
+ASIMET documentation: http://frodo.whoi.edu
+The LWR is an Eppley PIR with a LWR ASIMET front end PC card.
+

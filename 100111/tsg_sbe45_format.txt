@@ -1,0 +1,26 @@
+Data Format Description: These files contain continuous sea surface measurements including temperature, conductivity, salinity, and sound velocity. The data is recorded as comma-separated values preceded by a log identifier and a high-resolution ISO 8601 UTC timestamp.
+
+Standards Followed: ISO 8601 (Timestamping), ITS-90 (Temperature), PSS-78 (Practical Salinity Scale 1978), UNESCO (Sound Velocity)
+
+Useful References:
+
+Sample Rate: 0.2 Hz (one sample every 5 seconds)
+
+Data line column descriptions (one description per unique line format):
+
+Example Line: tsg_sbe45_fwd    2025-09-07T17:01:06.1660Z     21.5316,  0.00503,   0.0307, 1487.000
+where:
+  tsg_sbe45_fwd       Log Name: Identifier for the forward thermosalinograph unit.
+  2025-09-07T...      Log Time: ISO 8601 UTC timestamp (YYYY-MM-DDTHH:MM:SS.ssssZ).
+  21.5316             Temperature: Water temperature inside the TSG (°C).
+  0.00503             Conductivity: Electrical conductivity of the seawater (S/m).
+  0.0307              Salinity: Practical Salinity (psu).
+  1487.000            Sound Velocity: Speed of sound through water (m/sec).
+
+Example File Contents:
+tsg_sbe45_fwd    2025-09-07T17:01:06.1660Z     21.5316,  0.00503,   0.0307, 1487.000
+tsg_sbe45_fwd    2025-09-07T17:01:11.1628Z     21.2752,  0.08722,   0.4640, 1486.741
+tsg_sbe45_fwd    2025-09-07T17:01:16.1652Z     21.8147,  0.04764,   0.2462, 1488.078
+tsg_sbe45_fwd    2025-09-07T17:01:21.1640Z     22.2617,  0.01826,   0.0939, 1489.201
+tsg_sbe45_fwd    2025-09-07T17:01:26.1651Z     22.4362,  0.00814,   0.0448, 1489.647
+tsg_sbe45_fwd    2025-09-07T17:01:31.1675Z     22.5028,  0.00488,   0.0298, 1489.821

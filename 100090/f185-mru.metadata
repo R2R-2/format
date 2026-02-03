@@ -1,0 +1,13 @@
+20130115 183005:
+	    addtimestamp	false
+	      dataformat	nmea0183
+	     description	CodaOctopus F-185 MRU
+	       directory	f185-mru
+	    manufacturer	CodaOctopus
+	        measures	position time heading attitude
+	            mode	19200,n,8,1,a
+	           model	F-185
+	            port	/dev/ttyRP12
+	    recordlength	84
+	    serialnumber	F0909125
+	       timeoutms	1000

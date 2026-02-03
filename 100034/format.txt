@@ -1,0 +1,6 @@
+Knudsen SounderSuite EchoControl file formats
+http://www.knudsenengineering.com/html/software/soundersuiteapps.html
+.keb - Binary Echogram playback format
+.kea - ASCII configurable log of depth, settings, and environmental data
+.sgy - Binary SEG-Y extended seismic format
+.xtf - Binary eXtended Triton format

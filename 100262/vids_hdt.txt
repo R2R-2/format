@@ -1,0 +1,14 @@
+Software Version Number: 1	Data File Format Number: 1	Build Version Number: 1	Error Count Since VI Started: 0	Manufacturer: Brow
+n	 Model Number: 	 S/N: 	 Cal Date: 	 Wind Direction Offset: 0.00	 Slope (M)1: 0.00	 Offset (B)1: 0.00	 Slope (M)
+2: 0.00	 Offset (B)2: 0.00	 Slope (M)3: 0.00	 Offset (B)3: 0.00	 Slope (M)4: 0.00	 Offset (B)4: 0.00	 Slope (M)
+5: 0.00	 Offset (B)5: 0.00	 Slope (M)6: 0.00	 Offset (B)6: 0.00
+Computer Date	Computer Time	True Heading	Mnemonic	Checksum
+08/17/2020	15:09:00	247.630000	$HEHDT	1B
+08/17/2020	15:09:01	247.630000	$HEHDT	1B
+08/17/2020	15:09:01	247.630000	$HEHDT	1B
+08/17/2020	15:09:01	247.630000	$HEHDT	1B
+08/17/2020	15:09:01	247.630000	$HEHDT	1B
+08/17/2020	15:09:01	247.630000	$HEHDT	1B
+08/17/2020	15:09:02	247.630000	$HEHDT	1B
+08/17/2020	15:09:02	247.630000	$HEHDT	1B
+

@@ -1,0 +1,26 @@
+
+	    addtimestamp	true
+	      dataformat	ascii
+	     description	Seabird Electronics SBE45 Thermosalinograph
+	       directory	sbe45-tsg
+	    manufacturer	Seabird Electronics
+	        measures	sea surface temperature, salinity, sound speed
+	            mode	9600,n,8,1,a
+	           model	SBE45
+	            port	/dev/ttyRP13
+	    serialnumber	0186
+	       timeoutms	2000
+
+
+Example file naming: 
+sbe45_20121026000000.raw  
+sbe45_20121028000000.raw 
+
+Format: 
+Timestamp, sea surface temperature, salinity, sound speed
+
+Example file:
+1341014764.867  22.2056,  0.00151,   0.0154, 1488.949
+1341014765.867  22.2057,  0.00151,   0.0154, 1488.949
+1341014766.877  22.2055,  0.00151,   0.0154, 1488.949
+

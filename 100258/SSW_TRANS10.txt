@@ -1,0 +1,28 @@
+Instrument Make: CSTAR 10 CM Transmissometer
+Model: CST 10 CM
+S/N:  CST-1985PR
+Calibration Date: 2020-01-10
+Installation Date: 2020-02-20
+Installation Location: Wet Lab, inboard bulkhead 
+Distance from Water Intake: See SSW_IntakeNotes.txt
+Updated: 2020-03-07 lstolp
+
+RAW datafile:
+dsLog time stamp:
+SSW 2019/11/02 11:02:03.594 TRANS10 CST-1985PR	07487	06803	10326	04.000	528
+
+SSW                 Science Salt Water
+2019/11/02          date in gmt
+11:02:03.594        time in gmt
+TRANS10	            data collected using CSTAR 10 CM Transmissometerr
+data                07487   06803   10326   04.000  528
+
+Data Parsed: 
+07487  reference
+06803  signal 
+10326  corrected signal
+04.000 Calculated beam c, m-1
+528    thermistor
+
+
+Notes:

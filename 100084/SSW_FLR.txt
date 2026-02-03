@@ -1,0 +1,26 @@
+Instrument Make and Model: WET Labs Chlorophyll WETSar 
+S/N: WS3S-900P
+Calibration Date: November 20, 2012  installed: January 15, 2013
+Installation: aft end of mainlab
+
+RAW datafile:
+dsLog time stamp:
+SSW 2013/01/15 16:44:38.685 FLR 
+
+SSW                 Science Salt Water
+2013/01/15          date in gmt
+16:44:38.685        time in gmt
+FLR	            data collected using SBE45
+data                *+00213.70
+
+
+
+*+00213.70
+00213.70               millivolts
+
+Notes:
+Fluorometer data is collected in millivolts. A metrabyte module is used to collect the data.
+the waterline.
+The saltwater intake is located in the forward transducer well on the portside at 5 meters below
+the waterline.
+

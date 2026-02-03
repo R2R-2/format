@@ -1,0 +1,48 @@
+Instrument: Thiel Engineering Flowmeter
+Flowmeter impeller J  
+BoardId: TEENSY-232 - Rev. 1.0 - S/N 1114 
+Installation Date: 2018-04-15
+Installation Location: Wet lab, inboard bulkhead 
+Updated: 2018-05-30 AMS
+
+
+RAW datafile:
+SSW 2016/10/03 17:01:17.092 FLOW $FLOWRATE, 70, 20566479, 146.8, 145.1, 144.9, 42.2, 1019820.000
+
+
+
+dsLog time stamp:
+SSW 2016/10/03 17:01:17.092 FLOW
+
+SSW                 Surface Sea Water
+2016/10/03          date in gmt
+17:01:17.092        time in gmt
+FLOW               data collected with flow meter
+data               $FLOWRATE, 70, 20566479, 146.8, 145.1, 144.9, 42.2, 1019820.000
+
+
+
+
+$FLOWRATE, 70, 20566479, 146.8, 145.1, 144.9, 42.2, 1019820.000
+
+$FLOWRATE       Data Tag
+70              Pulse count
+20566479        Cumulative Pulse Count
+146.8           Current Flow Rate in ml/sec
+145.1           Flow Rate for the Last Minute, ml/sec
+144.9           Flow Rate for the Last Hour, ml/sec
+42.2            Flow Rate for the Last 24 Hours, ml/sec
+1019820.000     Elapsed Time In Seconds Since Flowmeter Was Powered Up.
+
+
+Notes
+
+FLOWMETER - Rev. 0.006 - Built at Dec 12 2017 13:50:56 
+BoardId: TEENSY-232 - Rev. 1.0 - S/N 1114                                         
+                                                                                  
+--------------------------------------------------                                
+CFG settingsVersion = 1                                                           
+CFG countsPerLiter = 407                                                          
+--------------------------------------------------                                
+                                                              
+

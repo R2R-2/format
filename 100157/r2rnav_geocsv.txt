@@ -1,0 +1,48 @@
+File Format: r2rnav_geocsv	
+Format ID: 100157
+Format description: R2R GeoCSV Navigation, tab-separated values
+
+For more information on geocsv format: https://service.rvdata.us/docs/format_docs/100157/GeoCSV.pdf
+
+
+NAXXX/processed/r2r/ - generated products for Rolling Decks To Repositories ingestion
+
+NAXXX_1min.r2rnav
+//Datetime [UTC]	Longitude [deg]	Latitude [deg]	Instantaneous Speed-over-ground [m/s]	Instantaneous Course-over-ground [deg. clockwise from North]
+2023-05-15T21:00:00.26Z	-157.87733440	21.31526667
+2023-05-15T21:01:00.26Z	-157.87733388	21.31526637
+2023-05-15T21:02:00.26Z	-157.87733510	21.31526725
+2023-05-15T21:03:00.26Z	-157.87733645	21.31526755
+
+
+NAXXX_control.r2rnav
+//Datetime [UTC]	Longitude [deg]	Latitude [deg]
+2023-05-15T21:00:00.26Z	-157.8773344	21.31526667
+2023-05-16T21:16:00.26Z	-157.8673931	21.30322738
+2023-05-16T21:41:00.26Z	-157.89503458	21.23577863
+2023-05-16T22:56:00.26Z	-158.02786885	21.02207518
+
+
+
+NAXXX_full.r2rnav - no headers - see NAXXX_full_qc.r2rnav
+2023-05-15T21:00:00.26Z	-157.87733440	21.31526667	2	12	0.7	9.44
+2023-05-15T21:00:01.26Z	-157.87733437	21.31526660	2	12	0.7	9.44
+2023-05-15T21:00:02.26Z	-157.87733433	21.31526653	2	12	0.7	9.44
+2023-05-15T21:00:03.26Z	-157.87733430	21.31526645	2	12	0.7	9.44
+
+
+
+NAXXX_full_qc.r2rnav
+//Datetime [UTC]	Longitude [deg]	Latitude [deg]	GPS quality indicator	Number of GPS satellites	Horizontal dilution of precision, GPS antenna height above/below mean sea level [m]	Instantaneous Speed-over-ground [m/s]	Instantaneous Course-over-ground [deg. clockwise from North]
+2023-05-15T21:00:00.26Z	-157.87733440	21.31526667	2	12	0.7	9.44
+2023-05-15T21:00:01.26Z	-157.87733437	21.31526660	2	12	0.7	9.44
+2023-05-15T21:00:02.26Z	-157.87733433	21.31526653	2	12	0.7	9.44
+2023-05-15T21:00:03.26Z	-157.87733430	21.31526645	2	12	0.7	9.44
+
+
+
+For more information contact datamanager@oet.org
+Ocean Exploration Trust
+PO Box 42
+Old Lyme, CT 06371
+(401)379-2052

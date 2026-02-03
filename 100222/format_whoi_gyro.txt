@@ -1,0 +1,69 @@
+File Format ID: whoi_gyro
+
+Format Description Creation Date: 2020-05-28
+
+File Type: ASCII, whitespace-delimited and comma-separated values
+
+Record Format: National Marine Electronics Association (NMEA) 0183 string with device id
+and external, colon-separated datetime stamp.
+
+Data Format Description:
+The file contains PPLAN, TIROT and HEHDT strings, alternating line-by-line.  Each NMEA 
+record is prefixed by a datatype id, an external datetime stamp, and device tag.
+
+Example Record:
+NAV 2018/11/01 13:00:00.065 GYRO $TIROT,00000.1,A*3A
+
+where:
+     NAV                       Datatype ID
+     2013/11/20 05:00:04.561   External datetime stamp (source unknown)
+                                 2013         4-digit year
+                                 11           2-digit month
+                                 20           2-digit day of month
+                                 05           2-digit hour [24-hour clock]
+                                 00           2-digit minute
+                                 04.561       decimal seconds
+     GYRO                      Device tag
+     $TIROT etc                NMEA record (see definitions below)
+
+Definitions follow.
+
+Definition of HEHDT
+Gyro heading (Gyro)
+  Ship's heading (degrees true) obtained from the Gyro NMEA HEHDT data sentence.
+Example Record: $HEHDT,024.04,T*1D
+	  Format:
+	  	xxx.xx  heading (degrees true)
+	    *1D 	Checksum, always begins with *
+
+$TIROT
+Summary
+NMEA 0183 standard Rate of Turn. 
+
+Syntax
+	$TIROT,<1>,<2>*hh<CR><LF>
+
+Example
+	$TIROT,00000.1,A*3A
+Fields
+	<1> Signed rate of turn, degrees per minute, to the nearest 0.1 degree.
+		Negative values indicate the bow is turning to port.
+	<2> Status: A = Data Valid; V = Data Invalid.
+	*3A 	Checksum, always begins with *
+
+Example Content:
+NAV 2018/11/01 13:00:00.065 GYRO $TIROT,00000.1,A*3A
+NAV 2018/11/01 13:00:00.107 GYRO $HEHDT,024.04,T*1D
+NAV 2018/11/01 13:00:00.199 GYRO $HEHDT,024.04,T*1D
+NAV 2018/11/01 13:00:00.266 GYRO $TIROT,00000.1,A*3A
+NAV 2018/11/01 13:00:00.308 GYRO $HEHDT,024.04,T*1D
+NAV 2018/11/01 13:00:00.399 GYRO $HEHDT,024.04,T*1D
+NAV 2018/11/01 13:00:00.465 GYRO $TIROT,00000.1,A*3A
+NAV 2018/11/01 13:00:00.507 GYRO $HEHDT,024.04,T*1D
+NAV 2018/11/01 13:00:00.598 GYRO $HEHDT,024.04,T*1D
+NAV 2018/11/01 13:00:00.665 GYRO $TIROT,00000.1,A*3A
+NAV 2018/11/01 13:00:00.707 GYRO $HEHDT,024.04,T*1D
+NAV 2018/11/01 13:00:00.749 GYRO $PPLAN,,,,,,,,1*72
+
+
+References: www.nmea.org

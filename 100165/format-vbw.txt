@@ -1,0 +1,38 @@
+File Format ID: scs_vbw
+
+Format Description Creation Date: 2019-04-29
+
+File Type: ASCII, comma-separated values
+
+Record Format: National Marine Electronics Association (NMEA) 0183 string with
+external datetime stamp.
+
+Data Format Description:
+The file contains VBW strings prefixed by an external datetime stamp.
+
+Example Record: 03/15/2010,14:08:45.876,$VDVBW,-00.06,-00.02,A,-00.06,-00.02,V,-00.02,V,000.00,V*59
+
+where:
+     03/15/2010     Date (source unknown), UTC
+                      03   = 2-digit month
+                      15   = 2-digit day of month
+                      2010 = 4-digit year
+     14:08:45.876   Time (source unknown), UTC
+                      14     = 2-digit hour [24-hour clock]
+                      08     = 2-digit minute
+                      45.876 = decimal seconds
+     $VBW			NMEA record (see definition below)
+
+
+Definition of VBW:
+VBWDual Ground/Water Speed       1   2   3 4   5   6 7
+                                 |   |   | |   |   | |
+                          $--VBW,x.x,x.x,A,x.x,x.x,A*hh
+						  
+1) Longitudinal water speed, "-" means astern
+2) Transverse water speed, "-" means port
+3) Status, A = data valid
+4) Longitudinal ground speed, "-" means astern
+5) Transverse ground speed, "-" means port
+6) Status, A = data valid
+7) Checksum

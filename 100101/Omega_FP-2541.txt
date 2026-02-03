@@ -1,0 +1,18 @@
+  
+Omega_FP-2541.txt
+
+
+Omega High performance flow sensor, model FP-2541. Measures flow being delivered from forward science 
+  seawater pump in bow thruster room to science seawater system.
+
+  Location: Forward seachest in bow thruster room
+  Sample rate: variable
+
+  Example data line:
+    flow_omega_fwd  2014-12-11T21:01:29.0588Z     22.6
+
+  Field Descriptions:
+    Logger ID
+    Time Stamp [UTC]
+    Flow alarm[single character, H = High Alarm, L = Low Alarm, B = Both High and Low Alarms or Space = Neither High nor Low Alarms.]
+    flow [?]

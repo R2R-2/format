@@ -1,0 +1,2 @@
+Water_Temp_Intake	Water-Temp-Intake	
+SCS UTC DATE	SCS UTC TIME	TEMPERATURE CELCIUS 																	

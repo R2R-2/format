@@ -1,0 +1,19 @@
+sv_aml-svxchang.txt
+
+
+  AML Oceanographic’s SV•Xchange field swappable sound velocity sensor.
+  Measures speed of sound in surface seawater from forward seachest in bow thruster room.
+
+  Model: SV•Xchange Calibrated Sensor
+  Serial Number: 203298
+  Location: Forward seachest in bow thruster room
+  Sample rate: 1 every 5 seconds
+
+
+  Example data line:
+    ssv_aml-svxchang_fwd  2014-12-12T06:08:43.7092Z   1537.965
+
+  Field Descriptions:
+    Logger ID
+    Time Stamp [UTC]
+    Speed of Sound [m/s]

@@ -1,0 +1,38 @@
+File Format ID: scs_dpt
+
+Format Description Creation Date: 2019-05-02
+
+File Type: ASCII, comma-separated values
+
+Record Format: National Marine Electronics Association (NMEA) 0183 depth of
+water string with external datetime stamp.
+
+Data Format Description:
+The file contains DPT strings prefixed by an external datetime stamp.
+
+Example Record: 03/15/2010,14:08:45.876,$SDDPT,0006.29,002.40*6C
+
+where:
+     03/15/2010     Date (source unknown), UTC
+                      03   = 2-digit month
+                      15   = 2-digit day of month
+                      2010 = 4-digit year
+     14:08:45.876   Time (source unknown), UTC
+                      14     = 2-digit hour [24-hour clock]
+                      08     = 2-digit minute
+                      45.876 = decimal seconds
+     $DPT			NMEA record (see definition below)
+
+
+Definition of DPT:
+
+       1   2   3
+       |   |   |
+$--DPT,x.x,x.x*hh<CR><LF>
+Field Number:
+	1. Depth, meters
+	2. Offset from transducer, positive means distance from tansducer to
+		water line negative means distance from transducer to keel
+	3. Checksum
+
+

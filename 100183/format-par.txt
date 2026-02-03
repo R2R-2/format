@@ -1,0 +1,28 @@
+File Format ID: scs_par
+
+Format Description Creation Date: 2019-05-02
+
+File Type: ASCII, comma-separated values
+
+Record Format:  Par data string with external datetime stamp.
+
+Data Format Description:
+The file contains PAR strings prefixed by an external datetime stamp.
+
+Example Record: 03/15/2010,14:08:45.876,$PPAR,2217.080, 21.04, 14.754
+
+where:
+     03/15/2010     Date (source unknown), UTC
+                      03   = 2-digit month
+                      15   = 2-digit day of month
+                      2010 = 4-digit year
+     14:08:45.876   Time (source unknown), UTC
+                      14     = 2-digit hour [24-hour clock]
+                      08     = 2-digit minute
+                      45.876 = decimal seconds
+     $PPAR			data record (see definition below)
+
+
+Definition of PAR:
+columns are:
+“$PPAR”, PAR value (μE/m2/s), sensor temperature (degrees C), sensor supplyvoltage (V)

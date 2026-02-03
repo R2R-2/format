@@ -1,0 +1,20 @@
+  Vaisala Combined Pressure, Humidity, and Temperature Transmitter
+  Model: PTU307
+  Serial Number: J1620011
+  Location: forward mast
+
+  Example data lines:
+    met_ptu307  2014-12-11T22:57:50.4649Z  N     0 P=  1016.8 hPa   T= 24.5 'C RH= 68.0 %RH
+
+  Field Descriptions:
+    Logger ID
+    Time Stamp [UTC]
+    Transmitter status [7 character field, for example:
+        N     0    no heating
+        h   115    probe heating active, power 115/255
+        H 159.0    purge heating active, temperature 159C
+        S 115.0    purge cooling active, temperature 115C
+        X  95.0    sensor heating active, temperature 95C ]
+    Atmospheric pressure[hPa]
+    Air Temperature[C]
+    Relative Humidity[%]

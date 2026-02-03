@@ -1,0 +1,46 @@
+
+ University of Hawaii Data Acquisition System (UHDAS)
+ Key to Instrument Directory Names
+ November 18, 2011 (J. Hummon)
+ http://currents.soest.hawaii.edu/docs/adcp_doc/
+
+ -------------- ADCPs --------------
+ /nb150             Narrowband ADCP, 150kHz
+ /nb300             Narrowband ADCP, 300kHz
+ /wh300             Workhorse Mariner (Non-phased array), 300kHz
+ /os150             Ocean Surveyor (Phased array), 150kHz
+ /os75              Ocean Surveyor (Phased array), 75kHz
+ /os38              Ocean Surveyor (Phased array), 38kHz
+
+ ----------- position only  ----------------
+ /gpsnav            some kind of GPS
+ /gpsnav1           some kind of GPS
+ /gpsnav2           some kind of GPS
+ /gpsnav3           some kind of GPS
+ /simrad            some kind of GPS
+
+ ---------- heading only ----------------
+ /gyro              some kind of gyro
+ /gyro2             some kind of gyro
+ /othergyro         some kind of gyro
+ /gyro_comparitor   switched gyro
+
+ ----------- "accurate heading" ---------
+ /adu_at2           Ashtech (ADU2 or ADU5)
+ /ashtech           Ashtech (ADU2 or ADU5)
+ /ashpaq2           Ashtech (ADU2 or ADU5)
+ /ashpaq5           Ashtech (ADU2 or ADU5)
+ /ashtech           Ashtech (ADU2 or ADU5)
+
+ /posmv             POSMV
+ /phins             Phins
+ /mahrs             Mahrs
+ /octans (possibly a phins -R/V Atlantis)
+ /seapath           Seapath
+
+ --------------- "experimental heading"------------
+ /csi               2-gps "compass"
+
+ ------------ other sensor ----------------
+ /sndspd            soundspeed sensor (R/Vs Palmer,Gould)
+

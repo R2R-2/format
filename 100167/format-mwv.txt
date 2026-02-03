@@ -1,0 +1,33 @@
+File Format ID: scs_hdt
+
+Format Description Creation Date: 2019-04-29
+
+File Type: ASCII, comma-separated values
+
+Record Format: National Marine Electronics Association (NMEA) 0183 string with
+external datetime stamp.
+
+Data Format Description:
+The file contains heading - True strings prefixed by an external datetime stamp.
+
+Example Record: 03/15/2010,14:08:45.876,$HEHDT,146.2,T*2E
+
+where:
+     03/15/2010     Date (source unknown), UTC
+                      03   = 2-digit month
+                      15   = 2-digit day of month
+                      2010 = 4-digit year
+     14:08:45.876   Time (source unknown), UTC
+                      14     = 2-digit hour [24-hour clock]
+                      08     = 2-digit minute
+                      45.876 = decimal seconds
+     $HEHDT			NMEA record (see definition below)
+
+
+HDT - Heading – True
+       1   2 3
+       |   | |
+$--HDT,x.x,T*hh
+1) Heading Degrees, true
+2) T = True
+3) Checksum

@@ -1,0 +1,22 @@
+wind_gill_true.txt
+
+  WindObserver 70/75 Ultrasonic Anemometer
+  Computed true wind speed. Uses SeaPath 320+ for reference heading source.
+
+  Model: 1390-75-B-313
+  Serial Number: 1351005 - WC45
+  Location: Forward mast
+  Sample rate: 1 per second
+
+  Example data line:
+    wind_gill_fwdmast_true  2014-12-12T07:25:11.4542Z  $WIMWD,81.4,T,,M,6.9,N,3.6,M*43
+
+  Field Descriptions:
+    Logger ID
+    Time Stamp [UTC]
+    NMEA ID
+    Wind direction, 0 to 359 degrees,T[True]
+    Wind direction, 0 to 359 degrees,M[Magnetic]
+    Wind speed, N[knots]
+    Wind speed, M[meters/second]
+    Checksum

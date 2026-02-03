@@ -1,0 +1,53 @@
+Data Format Description: Each line records the survey reading date and time, field measurement, signal strength, measurement time, instrument and GPS metadata, layback calculations, positional coordinates, and related identifiers. All values are stored in separate comma-delimited columns as defined by the header.
+
+Standards Followed: ISO8601 (time fields are combined with separate date fields in DD-MMM-YYYY format)
+
+Useful References: 
+
+Sample Rate: Not specified in the data
+
+Data line column descriptions (one description per unique line format):
+
+    Example Line: 08-Oct-2025,00:35:23.200,24822.432,145,215, , , , ,0,0.3,1,08-Oct-2025,00:35:24.720,08-Oct-2025,00:35:23.200,08-Oct-2025,00:35:23.628,*,Layback: 375.0m, offset:10.0m ,08-Oct-2025,00:35:23.200, ,*,-44.29297000,-59.95022100,264632.95,5091353.26,-44.29248196,-59.95022221,264630.90,5091407.47,0.0,-44.29248196,-59.95022221,264630.90,5091407.47
+    where:
+        08-Oct-2025                 Reading_Date in DD-MMM-YYYY format
+        00:35:23.200                 Reading_Time in HH:MM:SS.sss format
+        24822.432                    Field measurement value
+        145                          Signal_Strength field
+        215                          Measurement_Time field
+        (blank)                      Gradient_Condition field
+        (blank)                      Weak_Signal field
+        (blank)                      Poor_Reading field
+        (blank)                      Instrument_Mistuned field
+        0                             Leak indicator
+        0.3                           Depth field
+        1                             Reading_ID field
+        08-Oct-2025                   System_Date
+        00:35:24.720                  System_Time
+        08-Oct-2025                   Mag_Date
+        00:35:23.200                  Mag_Time
+        08-Oct-2025                   GPS_Date
+        00:35:23.628                  GPS_Time
+        *                             Line_Name
+        Layback: 375.0m, offset:10.0m Marker_Label
+        08-Oct-2025                   Marker_Date
+        00:35:23.200                  Marker_Time
+        (blank)                        Error field
+        *                             Target_Name
+        -44.29297000                  GPS_Latitude in decimal degrees
+        -59.95022100                  GPS_Longitude in decimal degrees
+        264632.95                      GPS_Easting
+        5091353.26                     GPS_Northing
+        -44.29248196                   Layback_Latitude in decimal degrees
+        -59.95022221                   Layback_Longitude in decimal degrees
+        264630.90                       Layback_Easting
+        5091407.47                      Layback_Northing
+        0.0                             Layback_Displacement
+        -44.29248196                   Latitude
+        -59.95022221                   Longitude
+        264630.90                       Easting
+        5091407.47                      Northing
+
+Example File Contents:
+
+08-Oct-2025,00:35:23.200,24822.432,145,215, , , , ,0,0.3,1,08-Oct-2025,00:35:24.720,08-Oct-2025,00:35:23.200,08-Oct-2025,00:35:23.628,*,Layback: 375.0m, offset:10.0m ,08-Oct-2025,00:35:23.200, ,*,-44.29297000,-59.95022100,264632.95,5091353.26,-44.29248196,-59.95022221,264630.90,5091407.47,0.0,-44.29248196,-59.95022221,264630.90,5091407.47

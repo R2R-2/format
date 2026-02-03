@@ -1,0 +1,40 @@
+File Format ID: scs_wir
+
+Format Description Creation Date: 2019-04-29
+
+File Type: ASCII, comma-separated values
+
+Record Format: 	Eppley RAD Interface run time output string with
+external datetime stamp.
+
+Data Format Description:
+The file contains WIR strings prefixed by an external datetime stamp.
+
+Example Record: 03/15/2010,14:08:45.876,$WIR01,18/10/11,01:08:20,  66, -103.5, 395.48, 20.66, 20.41,  -5.02, 
+24.6, 10.8
+
+where:
+     03/15/2010     Date (source unknown), UTC
+                      03   = 2-digit month
+                      15   = 2-digit day of month
+                      2010 = 4-digit year
+     14:08:45.876   Time (source unknown), UTC
+                      14     = 2-digit hour [24-hour clock]
+                      08     = 2-digit minute
+                      45.876 = decimal seconds
+     $WIR##		 NMEA-style record (see definition below)
+
+
+$WIR## Summary:
+Output Variables
+ID			NMEA-style tag.  Set with ‘A’ command from menu.	—
+DATE TIME	yy/MM/dd,hh:mm:ss.  Set with ‘T’ command from menu.	GMT
+#			the number of samples that went into the averages.	—
+PIR			the average voltage from the PIR thermopile.		millivolts
+LW			the computed longwave downwelling irradiance		W m−2.
+TCASE		the PIR case temperature							◦C.
+TDOME		the PIR dome temperature							◦C.
+SW			the computed shortwave downwelling irradiance.		W m−2.
+T-AVR		the temperature on the circuit board.				◦C.
+BATT		the battery voltage after the input diode drop		volts.
+

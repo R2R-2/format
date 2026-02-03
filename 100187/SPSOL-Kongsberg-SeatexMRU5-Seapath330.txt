@@ -1,0 +1,44 @@
+SPSOL-Kongsberg-SeatexMRU5-Seapath330.txt
+
+Format Description Creation Date: 2019-06-04
+
+File Type: ASCII, tab-delimited values with final JSON-object
+
+Data Format Description:
+This file contains the Sepath binary format 23 data produced from the Konsberg 
+Seapath 330+ and MRU-5+ system. This varies from other data outputs as it is 
+higher frequency and contains ship's position and attitude - as well as the rate 
+of change of position and attitude. Data is recorded from Monitoring Point 2 (MP2) 
+which is located at the Tracklink Ultrashort Baseline (USBL) transceiver head.
+Binary data stream is converted by an Ocean Exploration Trust (OET) developed 
+utility and parsed into JSON format.
+File name is of format `YYYYMMDD_HHMM.[Data Type ID]`. File is created at rollover 
+of the hour, or upon start of logging system or sensor.
+
+Example Record:
+SPSOL   2019-06-04T13:00:00.895Z        SEAPATHCAP      {"header":"aa51","time":1559653200.8942,"latitude":42.7552085649222136,"longitude":-126.7095263767987490,"height":-36.27,"heave":1.67,"vel_north":0.54,"vel_east":-0.42,"vel_down":0.15,"roll":-1.697388,"pitch":-1.389771,"heading":5.322876,"rate_roll":-0.087891,"rate_pitch":1.400757,"rate_heading":-0.384521,"checksum":"3924","calc_checksum":"3924"}
+
+where:
+  SPSOL                               Data Type ID
+  2019-06-04T13:00:00.895Z            Master time in UTC, prepended to message by data
+                                        logging system
+  SEAPATHCAP                          Data Source 
+  {                                   [Start of JSON object]
+  "header":"aa51",                    Binary Message Header
+  "time":1559653200.8942,             [Do not use] Time (epoch seconds)
+  "latitude":42.7552085649222136,     Latitude (decimal degrees) 
+  "longitude":-126.7095263767987490,  Longitude (decimal degrees) 
+  "height":-36.27,                    Height (meters) [use only as relative value]
+  "heave":1.67,                       Heave (meters)
+  "vel_north":0.54,                   Velocity North (meters per second) 
+  "vel_east":-0.42,                   Velocity East (meters per second) 
+  "vel_down":0.15,                    Velocity Down (meters per second) 
+  "roll":-1.697388,                   Roll (degrees) 
+  "pitch":-1.389771,                  Pitch (degrees)
+  "heading":5.322876,                 Heading (degrees)
+  "rate_roll":-0.087891,              Rate of Roll (degrees per second)
+  "rate_pitch":1.400757,              Rate of Pitch (degrees per second)
+  "rate_heading":-0.384521,           Rate of Heading change (degrees per second)
+  "checksum":"3924",                  Binary Message Checksum as sent by instrument
+  "calc_checksum":"3924"              Binary Message Checksum as calculated by OET utility
+  }                                   [End of JSON object]

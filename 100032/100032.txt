@@ -1,0 +1,11 @@
+
+R2R Format ID 100032
+
+Lamont Data System (LDS) Magnetometer Stream on R/Vs Langseth, Ewing, etc.
+
+Columns:
+{identifier}    {date/time}    ${total_field},{a/d_signal}
+
+Example:
+mag01   2010:197:20:15:47.4618  $116545.036,0042
+

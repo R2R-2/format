@@ -1,0 +1,8 @@
+General Oceanics 8050	
+
+############ Example
+Type	error	PC Date	PC Time	equ temp	std val	CO2a W	CO2b W	CO2 um/m	H2Oa W	H2Ob W	H2O mm/m	licor temp	licor press	 Diag	 RH%
+	 C_AGC	 H_AGC	 flowV	equ press	H2O flow	licor flow	equ pump	vent flow	atm cond	equ cond	drip 1	N/A	cond
+ temp	dry box temp	SST
+EQU	0	20/06/23	00:01:52	14.78	NaN	14917538.00	12715028.00	428.07	13942904.00	14111944.00	-1.64	28.11	1017.62	0.00
+	3.40	0.65	0.64	0.04	-0.52	2.30	94.55	129.00	915.87	9.87	9.87	9.87	0.00	4.50	20.25	14.3777

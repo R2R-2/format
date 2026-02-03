@@ -1,0 +1,25 @@
+Data Format Description: These files contain high-accuracy sea surface temperature data from a Sea-Bird digital thermometer. Each line consists of a static log identifier, an ISO 8601 formatted UTC timestamp, and the measured temperature in degrees Celsius.
+
+Standards Followed: ISO 8601 (Timestamping)
+
+Useful References:
+
+Sample Rate: ~1Hz
+
+Data line column descriptions (one description per unique line format):
+
+Example Line: thermo_sbe38_cb    2025-09-07T00:00:00.7890Z    11.8332
+where:
+  thermo_sbe38_cb      		Log Name: Static identifier for the centerboard temperature log.
+  2025-09-07T00:00:00.7890Z	Log Time: ISO 8601 standard UTC timestamp (Year-Month-Day T Hour:Minute:Second.Subsecond Z).
+  11.8332              		Temperature: Water temperature measured in degrees Celsius (°C) according to the ITS-90 scale.
+
+Example File Contents:
+thermo_sbe38_cb    2025-09-07T00:00:00.7890Z    11.8332
+thermo_sbe38_cb    2025-09-07T00:00:01.7957Z    11.8409
+thermo_sbe38_cb    2025-09-07T00:00:02.8040Z    11.8401
+thermo_sbe38_cb    2025-09-07T00:00:03.8102Z    11.8328
+thermo_sbe38_cb    2025-09-07T00:00:04.8168Z    11.8300
+thermo_sbe38_cb    2025-09-07T00:00:05.8246Z    11.8294
+thermo_sbe38_cb    2025-09-07T00:00:06.8312Z    11.8257
+thermo_sbe38_cb    2025-09-07T00:00:07.8378Z    11.8257

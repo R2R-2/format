@@ -1,0 +1,28 @@
+Data Format Description: These files contain non-contact sea surface "skin" temperature measurements. Each data line includes a log identifier, a high-resolution ISO 8601 UTC timestamp, and the temperature value followed by a literal "C" unit designation.
+
+Standards Followed: ISO 8601 (Timestamping)
+
+Useful References:
+
+Sample Rate: 1 Hz (one sample per second)
+
+Data line column descriptions (one description per unique line format):
+
+Example Line: thermo_pyrometer-ct15    2025-09-06T00:00:00.5129Z     12.36 C
+where:
+  thermo_pyrometer-ct15  Log Name: Static identifier for the infrared pyrometer log.
+  2025-09-06T...         Log Time: ISO 8601 standard UTC timestamp (YYYY-MM-DDTHH:MM:SS.ssssZ).
+  12.36 C                Temperature: Sea surface skin temperature in degrees Celsius (°C). 
+                         Note: The value includes a space and the character "C" as a suffix.
+
+Example File Contents:
+thermo_pyrometer-ct15    2025-09-06T00:00:00.5129Z     12.36 C
+thermo_pyrometer-ct15    2025-09-06T00:00:01.5129Z     12.35 C
+thermo_pyrometer-ct15    2025-09-06T00:00:02.5137Z     12.33 C
+thermo_pyrometer-ct15    2025-09-06T00:00:03.5136Z     12.32 C
+thermo_pyrometer-ct15    2025-09-06T00:00:04.5136Z     12.31 C
+thermo_pyrometer-ct15    2025-09-06T00:00:05.5145Z     12.30 C
+thermo_pyrometer-ct15    2025-09-06T00:00:06.5144Z     12.29 C
+thermo_pyrometer-ct15    2025-09-06T00:00:07.5143Z     12.28 C
+thermo_pyrometer-ct15    2025-09-06T00:00:08.5142Z     12.29 C
+thermo_pyrometer-ct15    2025-09-06T00:00:09.5141Z     12.30 C

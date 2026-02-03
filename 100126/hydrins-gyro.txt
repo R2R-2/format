@@ -1,0 +1,19 @@
+20121106 172421:
+	    addtimestamp	true
+	      dataformat	nmea0183
+	     description	Hydrins heading
+	       directory	hydrins-gyro
+	    manufacturer	iXBlue
+	        measures	heading
+	            mode	9600,n,8,1,a
+	           model	Hydrins 6005212
+	            port	/dev/ttyRP4
+	    serialnumber	PH-490
+	       timeoutms	2000
+
+
+hydrins-gyro_20121116000000.raw
+1353024000.043 $HEHDT,64.552,T*1F
+1353024000.143 $HEHDT,64.569,T*17
+1353024000.243 $HEHDT,64.587,T*17
+...

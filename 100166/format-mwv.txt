@@ -1,0 +1,35 @@
+File Format ID: scs_mwv
+
+Format Description Creation Date: 2019-04-29
+
+File Type: ASCII, comma-separated values
+
+Record Format: National Marine Electronics Association (NMEA) 0183 string with
+external datetime stamp.
+
+Data Format Description:
+The file contains MWV strings prefixed by an external datetime stamp.
+
+Example Record: 03/15/2010,14:08:45.876,$PPMWV,354.9,R,00.0,N
+
+where:
+     03/15/2010     Date (source unknown), UTC
+                      03   = 2-digit month
+                      15   = 2-digit day of month
+                      2010 = 4-digit year
+     14:08:45.876   Time (source unknown), UTC
+                      14     = 2-digit hour [24-hour clock]
+                      08     = 2-digit minute
+                      45.876 = decimal seconds
+     $PPMWV			NMEA record (see definition below)
+
+MWVWind Speed and Angle
+       1   2 3   4 5
+       |   | |   | |
+$--MWV,x.x,a,x.x,a*hh
+1) Wind Angle, 0 to 360 degrees
+2) Reference, R = Relative, T = True
+3) Wind Speed
+4) Wind Speed Units, K/M/N
+5) Status, A = Data Valid
+6) Checksum

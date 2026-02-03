@@ -1,0 +1,43 @@
+Format Description: $WMV and $MTA nmea tags alternating line-by-line preceded by an ISO 8601 date/time string. This format was initially encountered on HLY2501.
+
+Standards Followed: NMEA 0183, ISO 8061
+
+Useful References: 
+https://www.iso.org/iso-8601-date-and-time-format.html
+https://docs.vaisala.com/r/M210822EN-F/en-US/GUID-9759D749-CEBA-4EF8-A802-688F163459E4
+
+Sample Rate: 10Hz
+
+Data line column descriptions (one description per unique line format):
+
+	Example Line: 2024-11-12T14:30:00.101544Z $WIMWV,182,R,05.2,M,A
+	where:
+		2024-11-12T14:30:00.101544Z	ISO 8601 formatted time
+		$WIMWV				NMEA 0183 "MWV" tag - The NMEA 0183 specification defines wind speed and angle message with MWV
+		182				Wind angle, 0 … 359 degrees
+		R				Reference: R = Relative, T = Theoretical
+		05.2				Wind speed
+		M				measuring unit (in this case it's m/s)
+		A				Status: A = Valid, V = Invalid
+
+
+	Example Line: 2024-11-12T14:30:00.121507Z $WIMTA,021,C
+	where:
+		2024-11-12T14:30:00.121507Z		ISO 8601 formatted time
+		$WIMTA					NMEA 0183 "MTA" tag - Air Temperature (obsolete)
+		021					Temperature degrees
+		C					Unit of measurement (celsius)
+	
+
+Example File Contents:
+
+	2024-11-12T14:30:00.101544Z $WIMWV,182,R,05.2,M,A
+	2024-11-12T14:30:00.121507Z $WIMTA,021,C
+	2024-11-12T14:30:00.201535Z $WIMWV,182,R,05.2,M,A
+	2024-11-12T14:30:00.221505Z $WIMTA,021,C
+	2024-11-12T14:30:00.301553Z $WIMWV,181,R,05.3,M,A
+	2024-11-12T14:30:00.321946Z $WIMTA,021,C
+	2024-11-12T14:30:00.401562Z $WIMWV,182,R,05.3,M,A
+	2024-11-12T14:30:00.421728Z $WIMTA,021,C
+	2024-11-12T14:30:00.501561Z $WIMWV,183,R,05.2,M,A
+	2024-11-12T14:30:00.521509Z $WIMTA,021,C	

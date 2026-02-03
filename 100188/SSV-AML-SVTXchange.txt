@@ -1,0 +1,25 @@
+SSV-AML-SVTXchange.txt
+
+Format Description Creation Date: 2019-06-04
+
+File Type: ASCII, whitespace-delimited values
+
+Data Format Description:
+This file contains the data produced from the AML Oceanographics SV-T-Xchange field 
+swappable sound velocity and temperature sensor.
+File name is of format `YYYYMMDD_HHMM.[Data Type ID]`. File is created at rollover 
+of the hour, or upon start of logging system or sensor.
+
+Example Record:
+SSV     2019-06-04T13:00:00.295Z        SEACHEST         1496.149  12.800  0
+
+where:
+  SSV                           Data Type ID
+  2019-06-04T13:00:00.295Z      Master time in UTC, prepended to message by data
+                                  logging system
+  SEACHEST                      Sensor Location 
+  1496.149                      Sound velocity in meters per second
+  12.800                        Temperature in Celsius
+  0                             [Optional] Additional non-data field. Sometimes 
+                                  present depending on configuration of AML 
+                                  instrument base for two or three sensors.

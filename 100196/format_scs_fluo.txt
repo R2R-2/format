@@ -1,0 +1,16 @@
+File Format ID: scs_fluo
+
+Format Description Creation Date: 2020-02-14
+
+File Type: ASCII, tab or comma separated
+
+Record Format: Schmidt Ocean Institute SCS (Shipboard Computer System) Raw Fluorometer Format
+
+Data Format Description:
+The file contains date/time stamp with Fluorometer data setence
+
+ex: 
+07/30/2019,01:21:47.390,$FLUO,89/99/99,99:99:99,0.05,695,52,527*59
+or
+03/19/2019,13:13:02.354,03/19/19    13:13:05    0.17    695 69  530
+

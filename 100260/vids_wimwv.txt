@@ -1,0 +1,12 @@
+Software Version Number: 1	Data File Format Number: 1	Build Version Number: 1	Error Count Since VI Started: 0	Manufacturer:
+ RM Young	 Model Number: 5106	 S/N: WM147751	 Cal Date: 19 December 2018	 Wind Direction Offset: 0.00	 Slope (M)1: 
+0.00	 Offset (B)1: 0.00	 Slope (M)2: 0.00	 Offset (B)2: 0.00	 Slope (M)3: 0.00	 Offset (B)3: 0.00	 Slop
+e (M)4: 0.00	 Offset (B)4: 0.00	 Slope (M)5: 0.00	 Offset (B)5: 0.00	 Slope (M)6: 0.00	 Offset (B)6: 0.00
+Computer Date	Computer Time	Seconds	Relative Speed	Relative Dir	True Speed	True Dir	Mnemonic	Checksum
+08/17/2020	15:09:43	3.0	293.0	3.1	183.3	$WIMWV	
+08/17/2020	15:09:44	3.0	290.0	3.1	180.4	$WIMWV	
+08/17/2020	15:09:45	3.0	292.0	3.1	182.3	$WIMWV	
+08/17/2020	15:09:46	2.0	294.0	2.1	183.7	$WIMWV	
+08/17/2020	15:09:47	2.0	297.0	2.1	186.6	$WIMWV	
+08/17/2020	15:09:48	2.0	301.0	2.1	190.4	$WIMWV	
+08/17/2020	15:09:49	2.0	303.0	2.1	192.4	$WIMWV

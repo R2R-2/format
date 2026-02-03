@@ -1,0 +1,60 @@
+Instrument Make and Model: Bell BGM-3 Gravimeter 
+S/N:  S/N 210 BGM-3 Sensor Electronics
+      S/N 322 CPS  Control Power Supply
+ 
+Installed: December 2021 
+Installation: aft inboard area of computer lab.
+
+RAW datafile:
+BGM 2013/02/01 09:29:10.307 BGM3 04:024927 00
+dsLog time stamp:
+BGM 2013/02/01 09:29:10.307 BGM3
+
+
+BGM	  	    Gravimeter
+2013/00/01          date in gmt
+09:29:10.307        time in gmt
+BGM3	            data collected using a BGM3 Gravimeter
+data		    04:024927 00
+
+Where the data is:
+
+       sample BGM-3 gravity count record:
+
+       pp:dddddd ss
+        |    |    |___________ status: 00 = No DNV error; 01 = Platform DNV
+        |    |                         02 = Sensor DNV;   03 = Both DNV's 
+        |    |________________ count typcially 025000
+        |_____________________ counting interval
+
+
+
+Notes:
+
+Installed and operated by PFPE --- pfpe@whoi.edu
+additional contact information:  James Kinsey: jkinsey@whoi.edu
+
+Gravity Data from laptop - stored in "gravimeter" directory
+
+RGS string - raw gravimeter data
+FGS is the 'Filtered Gravity String' - a Gaussian filter is done on the raw gravity counts.
+
+
+The data format for the RGS string is:
+RGS YYYY/MM/DD hh:mm:ss.sss raw_gravity gravity_unixtime counts scale_factor bias gravimeter_model gravimeter_serial_number
+NAV: latitude longitude number_of_satelites GPS_unixtime GPS_source
+DEPTH: depth depth_unixtime depth_source
+dnv_status maggie_data_string
+
+sample data:
+RGS 2016/11/19 20:00:08.160 969472.623 22784 1479585608.160 5.003353363 855476.220 BGM3 S225 GPS:
+      8.425987 -104.953079 1479585607.245 0 0 UNKNOWN_SRC 0.490 194.900 DEPTH: -999 -999 NONE HDG:
+      259.800 1479585608.096 SRC_GYRO NO_DNV_ERROR 1479585608.160 -999
+
+The data format for the FGS string is:
+YYYY/MM/DD hh:mm:ss.sss  "filtered gravity-gaussian filter"  length  "error status" "filtered raw gravity" counts
+  "gaussian filter length"  "error status" 
+
+sample data:
+FGS 2016/11/19 20:00:08.160 978156.952 361 0 24519.7017 361 0
+

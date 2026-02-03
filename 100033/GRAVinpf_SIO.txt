@@ -1,0 +1,15 @@
+GRAV/GRAVinpf.yyyymondd
+
+Raw gravity data, in units called counts, are written to
+GRAVinpf.yyyymondd files, for example GRAVinpf.2000jun22:
+
+                           Meter
+#  Unix secs      Msecs    Counts     Error Code
+   961631701       255     023220     00
+   961631702       253     024121     00
+   961631703       255     025236     00
+   961631704       255     025051     00
+
+The data is logged by a logging routine that uses the 
+GPS-time-synched system time on the real-time data collection system
+to time stamp the data.

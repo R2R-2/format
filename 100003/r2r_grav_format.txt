@@ -1,0 +1,44 @@
+R2R Gravity data product format
+#ISO_time UNIX_time longitude latitude raw_gravity dnv_flag gravity_anomaly_pre_eotvos eotvos_corrected_grav FINAL_MEDIAN_FILTERED_GRAV eotvos_correction eotvos_gradient velocity_east velocity course_made_good
+
+ISO_time
+ - Time in standard ISO format, e.g 2012-01-11T08:37:23.000Z
+
+UNIX_time
+ - Number of seconds since the Unix epoch
+
+Longitude/Latitude
+ - Values for longitude and latitude in decimal degrees from -90 to 90 (lat) and -180 to 180 (lon)
+
+raw_gravity
+ - Value of raw gravity after bias and scale have been accounted for.
+
+dnv_flag
+ - The DNV number propagated from the raw grav file.
+    00 - No DNV
+    01 - Platform DNV
+    02 - Instrument DNV
+
+gravity_anomaly_pre_eotvos
+ - The raw_gravity value with theoretical gravity removed and gaussian filter applied
+
+eotvos_corrected_grav
+ - The gravity_anomaly_pre_eotvos value with Eotvos correction applied
+
+final_median_filtered_grav
+ - The final anomaly.  This is the eotvos_corrected_grav value after a median filter has been applied.
+
+eotvos_correction
+ - The value of the Gaussian filtered Eotvos correction applied to the data.
+
+eotvos_gradient
+ - The derivative of the Gaussian filtered Eotvos correction used for cutting turns from data.
+
+velocity_east
+ - The eastern component of velocity over ground for calculating the Eotvos correction
+
+velocity
+ - The velocity over ground for calculating the Eotvos correction
+
+course_made_good
+- The value of course made good calculated by R2R.

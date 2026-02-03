@@ -1,0 +1,37 @@
+Data Format Description: Each line includes an ISO8601 date string prefix and records PIR measurements in millivolts, LW and SW measurements in watts per square meter, multiple temperature measurements in degrees Celsius, and battery voltage in volts. Each line also includes instrument-reported date and time values, a sample count, and a header field.
+
+Standards Followed: ISO8601
+
+Useful References: 
+
+Sample Rate: 10Hz
+
+Data line column descriptions (one description per unique line format):
+
+    Example Line: 2025-07-29T00:00:00.510034Z,$WIR39,25/07/29,01:22:20, 176, -245.2, 298.95,  9.97,  8.98,  -1.99, 12.8, 10.0
+    where:
+	  2025-07-29T00:00:00.510034Z 		ISO8601 timestamp delimited by a comma
+	  $WIR39				Header delimited by a comma
+	  25/07/29				Instrument date delimited by a comma
+	  01:22:20				Instrument time delimited by a comma
+	  176					Sample delimited by a comma
+	  -245.2				PIR in millivolts delimited by a comma
+	  298.95				LW in watts per square meter delimited by a comma
+	  9.97					Case temperature in degrees celsius delimited by a comma
+	  8.98					Dome temperature in degrees celsius delimited by a comma
+	  -1.99					SW in watts per square meter delimited by a comma
+	  12.8					Board temperature in degrees celcius delimited by a comma
+	  10.0					Battery voltage in volts
+
+
+Example File Contents:
+
+2025-07-29T00:00:00.510034Z,$WIR39,25/07/29,01:22:20, 176, -245.2, 298.95,  9.97,  8.98,  -1.99, 12.8, 10.0
+
+2025-07-29T00:00:10.491729Z,$WIR39,25/07/29,01:22:30, 175, -244.9, 299.06,  9.97,  8.97,  -2.12, 12.8, 10.0
+
+2025-07-29T00:00:20.468098Z,$WIR39,25/07/29,01:22:40, 175, -244.6, 299.29,  9.97,  8.97,  -2.12, 12.8, 10.0
+
+2025-07-29T00:00:30.499610Z,$WIR39,25/07/29,01:22:50, 176, -244.7, 299.26,  9.96,  8.96,  -2.68, 12.8, 10.1
+
+2025-07-29T00:00:40.478316Z,$WIR39,25/07/29,01:23:00, 175, -245.7, 298.82,  9.96,  8.96,  -2.69, 12.8, 10.0

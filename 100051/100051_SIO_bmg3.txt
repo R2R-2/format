@@ -1,0 +1,32 @@
+20120209 111140:
+	       timeoutms	1000
+	    serialnumber	S224
+	           model	BGM-3
+	      dataformat	bell-bgm3
+	     description	Bell BGM-3 Gravimeter
+	    addtimestamp	true
+	       directory	bgm-3-gravity
+	            mode	1200,n,8,1,a
+	            port	/dev/ttyRP0
+	        measures	gravity
+	    manufacturer	Bell Aerospace
+
+  - gravity-bgm3
+    Time + Raw counts (followed by a 2-digit error code) from the Bell BGM-3
+    gravimeter. The BGM-3 has a listed bias of 855311.4 and a scale factor of
+    4.9826266. 
+
+Ex:
+1331251199.965 01:024161 00
+1331251200.965 01:025735 00
+1331251201.975 01:026562 00
+
+
+Each line has a time tag (Unix timestamp, seconds since 1/1/1970) and a string
+from the gravimeter. The meter puts out an integer every second. On the top
+line, the integer from the gravimeter for that second is 024161. The leading
+"01" indicates that this is 1 Hz data (1 sample per second). The trailing "00"
+indicates that the meter's self assessment shows no equipment failures or
+errors. This is known as the "Data Not Valid" flag. The other possible states
+are "01" for platform problems, "02" for sensor problems and "03" for both. 
+

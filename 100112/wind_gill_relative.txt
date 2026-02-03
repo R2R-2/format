@@ -1,0 +1,24 @@
+wind_gill_relative.txt
+
+  WindObserver 70/75 Ultrasonic Anemometer
+  Relative wind speed only.
+
+  Model: 1390-75-B-313
+  Serial Number: 1351005 - WC45
+  Location: Forward mast
+  Sample rate: 1 per second
+
+  Example data line:
+    wind_gill_fwdmast  2014-12-12T07:08:16.3849Z  A,356,006.00,M,60,0E
+
+  Field Descriptions:
+    Logger ID
+    Time Stamp [UTC]
+    Unit ID
+    Wind direction [In degrees relative to bow of ship (DDD)]
+    Wind speed  [In increments of 0.01 units (+-MMM.MM)]
+    Units [M Metres per second (m/s)]
+    Status [0          : OK
+            60 or 66   : Heating enabled and OK if enabled
+            Any other value: Warning or fault condition ]
+    Checksum

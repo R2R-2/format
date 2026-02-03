@@ -1,0 +1,29 @@
+Data Format Description: Each line includes an ISO8601 date string prefix and records instrument channel number, instrument mode, raw measurement value, and scaled measurement value. Values are delimited by commas. 
+
+Standards Followed: ISO8601
+
+Useful References: 
+
+Sample Rate: 1Hz
+
+Data line column descriptions (one description per unique line format):
+
+    Example Line: 2025-08-28T00:00:00.539364Z,0,0,22,0.003357
+    where:
+        2025-08-28T00:00:00.539364Z   ISO8601 timestamp indicating the time associated with the record
+        0                              Instrument channel number
+        0                              Instrument mode indicator
+        22                             Raw measurement value as reported by the instrument
+        0.003357                       Scaled measurement value as reported by the instrument
+
+Example File Contents:
+
+2025-08-28T00:00:00.539364Z,0,0,22,0.003357
+2025-08-28T00:00:01.539116Z,0,0,21,0.003204
+2025-08-28T00:00:02.531556Z,0,0,22,0.003357
+2025-08-28T00:00:03.539535Z,0,0,21,0.003204
+2025-08-28T00:00:04.539604Z,0,0,22,0.003357
+2025-08-28T00:00:05.535335Z,0,0,22,0.003357
+2025-08-28T00:00:06.540495Z,0,0,23,0.00351
+2025-08-28T00:00:07.539564Z,0,0,23,0.00351
+2025-08-28T00:00:08.540179Z,0,0,22,0.003357

@@ -1,0 +1,10 @@
+	    addtimestamp	false
+	      dataformat	SIMRAD-EM3000
+	     description	Seapath MRU
+	    manufacturer	Kongsberg
+	        measures	"time" "latitude" "longitude" "altitude" "heave" "north velocity" "east velocity" "down velocity" "roll" "pitch" "headi
+ng" "roll rate" "pitch rate" "yaw rate" "sensor status"
+	            mode	19200,n,8,1,b
+	           model	Seapath 330+
+	    recordlength	42
+

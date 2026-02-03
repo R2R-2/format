@@ -1,0 +1,46 @@
+Instrument Make and Model:  Vaisala WXT520
+S/N: D0220001 
+Calibration Date: PTU (Pressure Temperature Unit) installed January 2, 2013
+Installation: Port side of MET tower 15.5 meters above waterline.
+
+RAW datafile:  
+MET 2013/01/30 14:00:05.194 WXTP PR0,Dm=012D,Sn=12.3M,Sm=12.8M,Sx=13.2M,Ta=25.9C,Ua=76.2P,Pa=1010.7H,Rc=1.13M,Ri=0.0M
+
+dsLog time stamp:
+MET 2013/01/30 14:00:05.194 WXTP 
+
+MET                 Meteorological Sensor
+2013/01/30          date in gmt
+14:00:05.194        time in gmt
+WXTP                data collected using Port WXT520
+data                PR0,Dm=012D,Sn=12.3M,Sm=12.8M,Sx=13.2M,Ta=25.9C,Ua=76.2P,Pa=1010.7H,Rc=1.13M,Ri=0.0M
+
+
+
+PR0,Dm=012D,Sn=12.3M,Sm=12.8M,Sx=13.2M,Ta=25.9C,Ua=76.2P,Pa=1010.7H,Rc=1.13M,Ri=0.0M
+
+Data Parsed     data		                Units	        
+PR0		Port Vaisala address P0		na
+Dm=004D      	Wind Direction Average          degrees
+Sn=8.4M   	Wind Speed Minimum		m/s
+Sm=11.2M	Wind Speed Average		m/s
+Sx=13.0M	Wind Speed Maximum		m/s
+Ta=11.3		Temperature			Degrees C
+Ua=90.4P	Relative Humidity		percent
+Pa=986.4H	Air Pressure			hPa
+Rc=63.34M	Rain Accumulation		mm
+Ri=8.4M		Rain Intensity			mm/h
+
+
+
+Notes:
+Barometer is being corrected using: WXTP_Pa + (.1185mb/m * 15.5)
+It is corrected in the datascreen.db and the csv files. In the .XTP files 
+it is uncorrected.
+
+True Wind and Direction are being calulated using the SAMOS c-codes translated into perl.  
+http://samos.coaps.fsu.edu/html/tools_truewinds.php
+True Wind values are in the csv file and although these values are calculated, they are 
+considered raw.
+
+

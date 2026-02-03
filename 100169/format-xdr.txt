@@ -1,0 +1,54 @@
+File Format ID: scs_xdr
+
+Format Description Creation Date: 2019-04-29
+
+File Type: ASCII, comma-separated values
+
+Record Format: Magellan proprietary Transducer Measurements: wind chill and vessel attitude string with
+external datetime stamp.
+
+Data Format Description:
+The file contains WIXDR strings prefixed by an external datetime stamp.
+
+Example Record: 03/15/2010,14:08:45.876,$WIXDR,C, 23.4,C,TEMP,H,098,P,RH,P,1013,mB,BARO*36
+
+where:
+     03/15/2010     Date (source unknown), UTC
+                      03   = 2-digit month
+                      15   = 2-digit day of month
+                      2010 = 4-digit year
+     14:08:45.876   Time (source unknown), UTC
+                      14     = 2-digit hour [24-hour clock]
+                      08     = 2-digit minute
+                      45.876 = decimal seconds
+     $WIXDR     NMEA record (see definition below)
+
+
+$WIXDR Summary
+NMEA 0183 Transducer Measurements.  Used in the WeatherStation to provide
+wind chill data, and vessel attitude (pitch and roll) data.
+
+Syntax
+$WIXDR,<1>, <2>, <3>, <4>,
+       <5>, <6>, <7>, <8>,
+	   <9>, <10>,<11>,<12>,
+	   <13>,<14>,<15>,<16>
+	   *hh<CR><LF>
+	 
+Fields
+<1> C = temperature
+<2> Calculated “relative” wind chill temperature, degrees Celsius, to the nearest 0.1 degree
+<3> C = degrees C
+<4> WCHR (ID indicating relative wind chill)
+<5> C = temperature
+<6> Calculated “theoretical” wind chill temperature, degrees Celsius, to the nearest 0.1 degree
+<7> C = degrees C
+<8> WCHT (ID indicating theoretical wind chill)
+<9> A = angular displacement
+<10> Pitch: oscillation of vessel about its latitudinal axis.  Bow moving up is positive.  Value reported to the nearest 0.1 degree.
+<11> D = degrees
+<12> PTCH (ID indicating pitch of vessel)
+<13> A = angular displacement
+<14> Roll: oscillation of vessel about its longitudinal axis.  Roll to the starboard is positive.  Value reported to the nearest 0.1 degree.
+<15> D = degrees
+<16> ROLL (ID indicating roll of vessel)

@@ -1,0 +1,17 @@
+File Format ID: hly_gyrocompass
+
+Format Description Creation Date: 2020-01-27
+
+File Type: ASCII, tab-separated values
+
+Record Format: National Marine Electronics Association (NMEA) 0183 string
+
+Data Format Description:
+The file contains decimal epoc time stamp with raw NMEA: HDT, ROT and GLL
+
+ex: 
+1542734696.532 $INROT,-1,A*13
+1542734696.651 $INHDT,233.48,T*1B
+1542734696.701 $INGLL,,,,,,V,N*74
+
+Definitions for NMEA sentences can be found at https://www.nmea.org/Assets/100108_nmea_0183_sentences_not_recommended_for_new_designs.pdf

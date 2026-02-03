@@ -1,0 +1,24 @@
+Instrument Make and Model: Eppley Precision Spectral Pyranometer (PSP)
+S/N: LS#1
+Calibration Date: January 9, 201
+Installation: aft center of MET mast 15.5 meters above waterline
+
+
+RAW datafile:
+dsLog time stamp:
+MET 2013/02/05 13:00:05.320 SWR
+
+MET                 Meteorological Sensor
+2013/02/05          date in gmt
+13:00:05.320        time in gmt
+SWR                 data collected using Long Radiation Sensor
+data                455.292 watts/square meter
+
+
+
+
+Notes:
+ASIMET documentation: http://frodo.whoi.edu
+The LWR is an Eppley PSP with a SWR ASIMET front end PC card.
+
+

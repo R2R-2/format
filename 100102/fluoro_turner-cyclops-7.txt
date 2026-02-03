@@ -1,0 +1,31 @@
+fluoro_turner-cyclops-7.txt
+
+  Turner Designs C6 Multi-Sensor Platform with 5 Cyclops-7 submersible sensors located forward in bow thruster room.
+  Measures the following parameters in surface seawater from forward seachest in bow thruster room:
+ 
+   Phycoerythrin, Serial Number: 2102973
+   CDOM, Serial Number: 2102975
+   Chlorophyll a, Serial Number: 2102977
+   Crude Oil, Serial Number: 2102979
+   Turbidity, Serial Number: 2102981
+   
+   Platform Serial Number: 220223
+
+  Location: Forward seachest in bow thruster room
+  Sample rate: 1 per second
+
+  Example data line:
+    fluoro_turner-c6  2014-11-29T00:00:00.8851Z  11/29/14  0:00:01     79.88     20.60    101.32     44.32      7.28   9.38  21.05
+
+  Field Descriptions:
+    Logger ID
+    Time Stamp [UTC]
+    C6 Date
+    C6 Time
+    Phycoeryth(RFU)
+    CDOM(RFU)
+    Chlorophyll_a(RFU)
+    Crude Oil(RFU)
+    Turbidity(RFU)
+    Depth(m) 
+    Temp(C)

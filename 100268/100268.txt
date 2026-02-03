@@ -1,0 +1,471 @@
+  <Sensor>
+    <SensorId>43</SensorId>
+    <SensorName>POSMV-V5-PASHR-RAW</SensorName>
+    <SensorType>NMEA ASYNC PARENT</SensorType>
+    <SensorEnabled>1</SensorEnabled>
+    <SensorComment>POS-MV v5 GPS-aided inertial attitude system 
+2 Hz output</SensorComment>
+    <LoggingRate>-1</LoggingRate>
+    <LoggingFolder>NAV</LoggingFolder>
+    <Device>COM21</Device>
+    <BaudRate>9600</BaudRate>
+    <DataBits>8</DataBits>
+    <StopBits>1.000000000000000e+000</StopBits>
+    <Parity>None</Parity>
+    <TermChar>10</TermChar>
+    <Timeout>60</Timeout>
+    <SyncCheck>0</SyncCheck>
+    <SentenceLabel>$PASHR</SentenceLabel>
+    <ParentSensorName>No Value</ParentSensorName>
+    <ExtendLabelFlg>0</ExtendLabelFlg>
+  </Sensor>
+  <Sensor>
+    <SensorId>44</SensorId>
+    <SensorName>POSMV-V5-PASHR-pitch</SensorName>
+    <Units>deg</Units>
+    <SensorType>NMEA ASYNC CHILD</SensorType>
+    <SensorEnabled>1</SensorEnabled>
+    <DataFieldPosition>5</DataFieldPosition>
+    <DecodeType>ASCII</DecodeType>
+    <DeltaCheck>0</DeltaCheck>
+    <IncludeInCompressFile>0</IncludeInCompressFile>
+    <RangeCheck>0</RangeCheck>
+    <DataFieldCategory>Other</DataFieldCategory>
+    <ParentSensorName>POSMV-V5-PASHR-RAW</ParentSensorName>
+  </Sensor>
+  <Sensor>
+    <SensorId>45</SensorId>
+    <SensorName>POSMV-V5-PASHR-heading</SensorName>
+    <Units>deg</Units>
+    <SensorType>NMEA ASYNC CHILD</SensorType>
+    <SensorEnabled>1</SensorEnabled>
+    <DataFieldPosition>2</DataFieldPosition>
+    <DecodeType>ASCII</DecodeType>
+    <DeltaCheck>0</DeltaCheck>
+    <IncludeInCompressFile>0</IncludeInCompressFile>
+    <RangeCheck>0</RangeCheck>
+    <DataFieldCategory>Heading</DataFieldCategory>
+    <ParentSensorName>POSMV-V5-PASHR-RAW</ParentSensorName>
+  </Sensor>
+  <Sensor>
+    <SensorId>46</SensorId>
+    <SensorName>POSMV-V5-PASHR-roll</SensorName>
+    <Units>deg</Units>
+    <SensorType>NMEA ASYNC CHILD</SensorType>
+    <SensorEnabled>1</SensorEnabled>
+    <DataFieldPosition>4</DataFieldPosition>
+    <DecodeType>ASCII</DecodeType>
+    <DeltaCheck>0</DeltaCheck>
+    <IncludeInCompressFile>0</IncludeInCompressFile>
+    <RangeCheck>0</RangeCheck>
+    <DataFieldCategory>Other</DataFieldCategory>
+    <ParentSensorName>POSMV-V5-PASHR-RAW</ParentSensorName>
+  </Sensor>
+  <Sensor>
+    <SensorId>47</SensorId>
+    <SensorName>POSMV-V5-PASHR-heave</SensorName>
+    <Units>Meters</Units>
+    <SensorType>NMEA ASYNC CHILD</SensorType>
+    <SensorEnabled>1</SensorEnabled>
+    <DataFieldPosition>6</DataFieldPosition>
+    <DecodeType>ASCII</DecodeType>
+    <DeltaCheck>0</DeltaCheck>
+    <IncludeInCompressFile>0</IncludeInCompressFile>
+    <RangeCheck>0</RangeCheck>
+    <DataFieldCategory>Other</DataFieldCategory>
+    <ParentSensorName>POSMV-V5-PASHR-RAW</ParentSensorName>
+  </Sensor>
+  <Sensor>
+    <SensorId>48</SensorId>
+    <SensorName>POSMV-V5-PASHR-IMU status</SensorName>
+    <Units>1 = good</Units>
+    <SensorType>NMEA ASYNC CHILD</SensorType>
+    <SensorEnabled>1</SensorEnabled>
+    <DataFieldPosition>11</DataFieldPosition>
+    <DecodeType>ASCII</DecodeType>
+    <DeltaCheck>0</DeltaCheck>
+    <IncludeInCompressFile>0</IncludeInCompressFile>
+    <RangeCheck>0</RangeCheck>
+    <DataFieldCategory>Other</DataFieldCategory>
+    <ParentSensorName>POSMV-V5-PASHR-RAW</ParentSensorName>
+  </Sensor>
+  <Sensor>
+    <SensorId>49</SensorId>
+    <SensorName>POSMV-V5-INGGA-RAW</SensorName>
+    <SensorType>NMEA ASYNC PARENT</SensorType>
+    <SensorEnabled>1</SensorEnabled>
+    <SensorComment>POS-MV v5 GPS-aided inertial attitude system 
+2 Hz output</SensorComment>
+    <LoggingRate>-1</LoggingRate>
+    <LoggingFolder>NAV</LoggingFolder>
+    <Device>COM21</Device>
+    <BaudRate>9600</BaudRate>
+    <DataBits>8</DataBits>
+    <StopBits>1.000000000000000e+000</StopBits>
+    <Parity>None</Parity>
+    <TermChar>10</TermChar>
+    <Timeout>30</Timeout>
+    <SyncCheck>0</SyncCheck>
+    <SentenceLabel>$INGGA</SentenceLabel>
+    <ParentSensorName>No Value</ParentSensorName>
+    <ExtendLabelFlg>0</ExtendLabelFlg>
+  </Sensor>
+  <Sensor>
+    <SensorId>50</SensorId>
+    <SensorName>POSMV-V5-INGGA-latitude</SensorName>
+    <Units>DDMM.MMMM</Units>
+    <SensorType>NMEA ASYNC CHILD</SensorType>
+    <SensorEnabled>1</SensorEnabled>
+    <DataFieldPosition>2</DataFieldPosition>
+    <DecodeType>NAVSEC</DecodeType>
+    <UnitsFieldPosition>3</UnitsFieldPosition>
+    <DeltaCheck>0</DeltaCheck>
+    <IncludeInCompressFile>0</IncludeInCompressFile>
+    <RangeCheck>0</RangeCheck>
+    <DataFieldCategory>Latitude</DataFieldCategory>
+    <ParentSensorName>POSMV-V5-INGGA-RAW</ParentSensorName>
+  </Sensor>
+  <Sensor>
+    <SensorId>51</SensorId>
+    <SensorName>POSMV-V5-INGGA-longitude</SensorName>
+    <Units>DDDMM.MMMM</Units>
+    <SensorType>NMEA ASYNC CHILD</SensorType>
+    <SensorEnabled>1</SensorEnabled>
+    <DataFieldPosition>4</DataFieldPosition>
+    <DecodeType>NAVSEC</DecodeType>
+    <UnitsFieldPosition>5</UnitsFieldPosition>
+    <DeltaCheck>0</DeltaCheck>
+    <IncludeInCompressFile>0</IncludeInCompressFile>
+    <RangeCheck>0</RangeCheck>
+    <DataFieldCategory>Longitude</DataFieldCategory>
+    <ParentSensorName>POSMV-V5-INGGA-RAW</ParentSensorName>
+  </Sensor>
+  <Sensor>
+    <SensorId>52</SensorId>
+    <SensorName>POSMV-V5-INVTG-RAW</SensorName>
+    <SensorType>NMEA ASYNC PARENT</SensorType>
+    <SensorEnabled>1</SensorEnabled>
+    <SensorComment>POS-MV v5 GPS-aided inertial attitude system 
+2 Hz output</SensorComment>
+    <LoggingRate>-1</LoggingRate>
+    <LoggingFolder>NAV</LoggingFolder>
+    <Device>COM21</Device>
+    <BaudRate>9600</BaudRate>
+    <DataBits>8</DataBits>
+    <StopBits>1.000000000000000e+000</StopBits>
+    <Parity>None</Parity>
+    <TermChar>10</TermChar>
+    <Timeout>60</Timeout>
+    <SyncCheck>0</SyncCheck>
+    <SentenceLabel>$INVTG</SentenceLabel>
+    <ParentSensorName>No Value</ParentSensorName>
+    <ExtendLabelFlg>0</ExtendLabelFlg>
+  </Sensor>
+  <Sensor>
+    <SensorId>53</SensorId>
+    <SensorName>POSMV-V5-VTG-COG</SensorName>
+    <Units>Deg. True</Units>
+    <SensorType>NMEA ASYNC CHILD</SensorType>
+    <SensorEnabled>1</SensorEnabled>
+    <DataFieldPosition>1</DataFieldPosition>
+    <DecodeType>ASCII</DecodeType>
+    <DeltaCheck>0</DeltaCheck>
+    <IncludeInCompressFile>0</IncludeInCompressFile>
+    <RangeCheck>0</RangeCheck>
+    <DataFieldCategory>Course Over Ground</DataFieldCategory>
+    <ParentSensorName>POSMV-V5-INVTG-RAW</ParentSensorName>
+  </Sensor>
+  <Sensor>
+    <SensorId>54</SensorId>
+    <SensorName>POSMV-V5-VTG-SOG</SensorName>
+    <Units>Knots</Units>
+    <SensorType>NMEA ASYNC CHILD</SensorType>
+    <SensorEnabled>1</SensorEnabled>
+    <DataFieldPosition>5</DataFieldPosition>
+    <DecodeType>ASCII</DecodeType>
+    <DeltaCheck>0</DeltaCheck>
+    <IncludeInCompressFile>0</IncludeInCompressFile>
+    <RangeCheck>0</RangeCheck>
+    <DataFieldCategory>Speed Over Ground</DataFieldCategory>
+    <ParentSensorName>POSMV-V5-INVTG-RAW</ParentSensorName>
+  </Sensor>
+  <Sensor>
+    <SensorId>55</SensorId>
+    <SensorName>POSMV-V5-INZDA-RAW</SensorName>
+    <SensorType>NMEA ASYNC PARENT</SensorType>
+    <SensorEnabled>1</SensorEnabled>
+    <SensorComment>POS-MV v5 GPS-aided inertial attitude system 
+2 Hz output</SensorComment>
+    <LoggingRate>-1</LoggingRate>
+    <LoggingFolder>NAV</LoggingFolder>
+    <Device>COM21</Device>
+    <BaudRate>9600</BaudRate>
+    <DataBits>8</DataBits>
+    <StopBits>1.000000000000000e+000</StopBits>
+    <Parity>None</Parity>
+    <TermChar>10</TermChar>
+    <Timeout>60</Timeout>
+    <SyncCheck>0</SyncCheck>
+    <SentenceLabel>$INZDA</SentenceLabel>
+    <ParentSensorName>No Value</ParentSensorName>
+    <ExtendLabelFlg>0</ExtendLabelFlg>
+  </Sensor>
+  <Sensor>
+    <SensorId>56</SensorId>
+    <SensorName>POSMV-V5-ZDA-time UTC</SensorName>
+    <Units>HHMMSS.SS</Units>
+    <SensorType>NMEA ASYNC CHILD</SensorType>
+    <SensorEnabled>1</SensorEnabled>
+    <DataFieldPosition>1</DataFieldPosition>
+    <DecodeType>ASCII</DecodeType>
+    <DeltaCheck>0</DeltaCheck>
+    <IncludeInCompressFile>0</IncludeInCompressFile>
+    <RangeCheck>0</RangeCheck>
+    <DataFieldCategory>Time</DataFieldCategory>
+    <ParentSensorName>POSMV-V5-INZDA-RAW</ParentSensorName>
+  </Sensor>
+  <Sensor>
+    <SensorId>57</SensorId>
+    <SensorName>POSMV-V5-ZDA-day</SensorName>
+    <Units>NUMBER</Units>
+    <SensorType>NMEA ASYNC CHILD</SensorType>
+    <SensorEnabled>1</SensorEnabled>
+    <DataFieldPosition>2</DataFieldPosition>
+    <DecodeType>ASCII</DecodeType>
+    <DeltaCheck>0</DeltaCheck>
+    <IncludeInCompressFile>0</IncludeInCompressFile>
+    <RangeCheck>0</RangeCheck>
+    <DataFieldCategory>Other</DataFieldCategory>
+    <ParentSensorName>POSMV-V5-INZDA-RAW</ParentSensorName>
+  </Sensor>
+  <Sensor>
+    <SensorId>58</SensorId>
+    <SensorName>POSMV-V5-ZDA-month</SensorName>
+    <Units>NUMBER</Units>
+    <SensorType>NMEA ASYNC CHILD</SensorType>
+    <SensorEnabled>1</SensorEnabled>
+    <DataFieldPosition>3</DataFieldPosition>
+    <DecodeType>ASCII</DecodeType>
+    <DeltaCheck>0</DeltaCheck>
+    <IncludeInCompressFile>0</IncludeInCompressFile>
+    <RangeCheck>0</RangeCheck>
+    <DataFieldCategory>Other</DataFieldCategory>
+    <ParentSensorName>POSMV-V5-INZDA-RAW</ParentSensorName>
+  </Sensor>
+  <Sensor>
+    <SensorId>59</SensorId>
+    <SensorName>POSMV-V5-ZDA-year</SensorName>
+    <Units>NUMBER</Units>
+    <SensorType>NMEA ASYNC CHILD</SensorType>
+    <SensorEnabled>1</SensorEnabled>
+    <DataFieldPosition>4</DataFieldPosition>
+    <DecodeType>ASCII</DecodeType>
+    <DeltaCheck>0</DeltaCheck>
+    <IncludeInCompressFile>0</IncludeInCompressFile>
+    <RangeCheck>0</RangeCheck>
+    <DataFieldCategory>Other</DataFieldCategory>
+    <ParentSensorName>POSMV-V5-INZDA-RAW</ParentSensorName>
+  </Sensor>
+  <Sensor>
+    <SensorId>60</SensorId>
+    <SensorName>POSMV-V5-PRDID-RAW</SensorName>
+    <SensorType>NMEA ASYNC PARENT</SensorType>
+    <SensorEnabled>1</SensorEnabled>
+    <SensorComment>POS-MV v5 GPS-aided inertial attitude system 
+2 Hz output</SensorComment>
+    <LoggingRate>-1</LoggingRate>
+    <LoggingFolder>NAV</LoggingFolder>
+    <Device>COM21</Device>
+    <BaudRate>9600</BaudRate>
+    <DataBits>8</DataBits>
+    <StopBits>1.000000000000000e+000</StopBits>
+    <Parity>None</Parity>
+    <TermChar>10</TermChar>
+    <Timeout>30</Timeout>
+    <SyncCheck>0</SyncCheck>
+    <SentenceLabel>$PRDID</SentenceLabel>
+    <ParentSensorName>No Value</ParentSensorName>
+    <ExtendLabelFlg>0</ExtendLabelFlg>
+  </Sensor>
+  <Sensor>
+    <SensorId>61</SensorId>
+    <SensorName>POSMV-V5-PRDID-pitch</SensorName>
+    <Units>Degrees</Units>
+    <SensorType>NMEA ASYNC CHILD</SensorType>
+    <SensorEnabled>1</SensorEnabled>
+    <DataFieldPosition>1</DataFieldPosition>
+    <DecodeType>ASCII</DecodeType>
+    <DeltaCheck>0</DeltaCheck>
+    <IncludeInCompressFile>0</IncludeInCompressFile>
+    <RangeCheck>0</RangeCheck>
+    <DataFieldCategory>Other</DataFieldCategory>
+    <ParentSensorName>POSMV-V5-PRDID-RAW</ParentSensorName>
+  </Sensor>
+  <Sensor>
+    <SensorId>62</SensorId>
+    <SensorName>POSMV-V5-PRDID-roll</SensorName>
+    <Units>Degrees</Units>
+    <SensorType>NMEA ASYNC CHILD</SensorType>
+    <SensorEnabled>1</SensorEnabled>
+    <DataFieldPosition>2</DataFieldPosition>
+    <DecodeType>ASCII</DecodeType>
+    <DeltaCheck>0</DeltaCheck>
+    <IncludeInCompressFile>0</IncludeInCompressFile>
+    <RangeCheck>0</RangeCheck>
+    <DataFieldCategory>Other</DataFieldCategory>
+    <ParentSensorName>POSMV-V5-PRDID-RAW</ParentSensorName>
+  </Sensor>
+  <Sensor>
+    <SensorId>63</SensorId>
+    <SensorName>POSMV-V5-PRDID-sensor heading</SensorName>
+    <Units>Degrees</Units>
+    <SensorType>NMEA ASYNC CHILD</SensorType>
+    <SensorEnabled>1</SensorEnabled>
+    <DataFieldPosition>3</DataFieldPosition>
+    <DecodeType>ASCII</DecodeType>
+    <DeltaCheck>0</DeltaCheck>
+    <IncludeInCompressFile>0</IncludeInCompressFile>
+    <RangeCheck>0</RangeCheck>
+    <DataFieldCategory>Heading</DataFieldCategory>
+    <ParentSensorName>POSMV-V5-PRDID-RAW</ParentSensorName>
+  </Sensor>
+  <Sensor>
+    <SensorId>64</SensorId>
+    <SensorName>POSMV-V5-INPPS-RAW</SensorName>
+    <SensorType>NMEA ASYNC PARENT</SensorType>
+    <SensorEnabled>1</SensorEnabled>
+    <SensorComment>POS-MV v5 GPS-aided inertial attitude system 
+2 Hz output</SensorComment>
+    <LoggingRate>-1</LoggingRate>
+    <LoggingFolder>NAV</LoggingFolder>
+    <Device>COM21</Device>
+    <BaudRate>9600</BaudRate>
+    <DataBits>8</DataBits>
+    <StopBits>1.000000000000000e+000</StopBits>
+    <Parity>None</Parity>
+    <TermChar>10</TermChar>
+    <Timeout>30</Timeout>
+    <SyncCheck>0</SyncCheck>
+    <SentenceLabel>$INPPS</SentenceLabel>
+    <ParentSensorName>No Value</ParentSensorName>
+    <ExtendLabelFlg>0</ExtendLabelFlg>
+  </Sensor>
+  <Sensor>
+    <SensorId>65</SensorId>
+    <SensorName>POSMV-V5-INPPS-time UTC</SensorName>
+    <Units>hhmmss.sss</Units>
+    <SensorType>NMEA ASYNC CHILD</SensorType>
+    <SensorEnabled>1</SensorEnabled>
+    <DataFieldPosition>1</DataFieldPosition>
+    <DecodeType>ASCII</DecodeType>
+    <DeltaCheck>0</DeltaCheck>
+    <IncludeInCompressFile>0</IncludeInCompressFile>
+    <RangeCheck>0</RangeCheck>
+    <DataFieldCategory>Time</DataFieldCategory>
+    <ParentSensorName>POSMV-V5-INPPS-RAW</ParentSensorName>
+  </Sensor>
+  <Sensor>
+    <SensorId>66</SensorId>
+    <SensorName>POSMV-V5-INPPS-offset day</SensorName>
+    <Units>#</Units>
+    <SensorType>NMEA ASYNC CHILD</SensorType>
+    <SensorEnabled>1</SensorEnabled>
+    <DataFieldPosition>2</DataFieldPosition>
+    <DecodeType>ASCII</DecodeType>
+    <DeltaCheck>0</DeltaCheck>
+    <IncludeInCompressFile>0</IncludeInCompressFile>
+    <RangeCheck>0</RangeCheck>
+    <DataFieldCategory>Other</DataFieldCategory>
+    <ParentSensorName>POSMV-V5-INPPS-RAW</ParentSensorName>
+  </Sensor>
+  <Sensor>
+    <SensorId>67</SensorId>
+    <SensorName>POSMV-V5-INPPS-GNSS week</SensorName>
+    <Units>#</Units>
+    <SensorType>NMEA ASYNC CHILD</SensorType>
+    <SensorEnabled>1</SensorEnabled>
+    <DataFieldPosition>3</DataFieldPosition>
+    <DecodeType>ASCII</DecodeType>
+    <DeltaCheck>0</DeltaCheck>
+    <IncludeInCompressFile>0</IncludeInCompressFile>
+    <RangeCheck>0</RangeCheck>
+    <DataFieldCategory>Other</DataFieldCategory>
+    <ParentSensorName>POSMV-V5-INPPS-RAW</ParentSensorName>
+  </Sensor>
+  <Sensor>
+    <SensorId>68</SensorId>
+    <SensorName>POSMV-V5-INPPS-GPS time offset </SensorName>
+    <Units>#</Units>
+    <SensorType>NMEA ASYNC CHILD</SensorType>
+    <SensorEnabled>1</SensorEnabled>
+    <DataFieldPosition>4</DataFieldPosition>
+    <DecodeType>ASCII</DecodeType>
+    <DeltaCheck>0</DeltaCheck>
+    <IncludeInCompressFile>0</IncludeInCompressFile>
+    <RangeCheck>0</RangeCheck>
+    <DataFieldCategory>Time</DataFieldCategory>
+    <ParentSensorName>POSMV-V5-INPPS-RAW</ParentSensorName>
+  </Sensor>
+  <Sensor>
+    <SensorId>69</SensorId>
+    <SensorName>POSMV-V5-INPPS-PPS count</SensorName>
+    <Units>#</Units>
+    <SensorType>NMEA ASYNC CHILD</SensorType>
+    <SensorEnabled>1</SensorEnabled>
+    <DataFieldPosition>5</DataFieldPosition>
+    <DecodeType>ASCII</DecodeType>
+    <DeltaCheck>0</DeltaCheck>
+    <IncludeInCompressFile>0</IncludeInCompressFile>
+    <RangeCheck>0</RangeCheck>
+    <DataFieldCategory>Other</DataFieldCategory>
+    <ParentSensorName>POSMV-V5-INPPS-RAW</ParentSensorName>
+  </Sensor>
+  <Sensor>
+    <SensorId>70</SensorId>
+    <SensorName>POSMV-V5-UTC-RAW</SensorName>
+    <SensorType>NMEA ASYNC PARENT</SensorType>
+    <SensorEnabled>1</SensorEnabled>
+    <SensorComment>POS-MV v5 GPS-aided inertial attitude system 
+2 Hz output</SensorComment>
+    <LoggingRate>-1</LoggingRate>
+    <LoggingFolder>NAV</LoggingFolder>
+    <Device>COM21</Device>
+    <BaudRate>9600</BaudRate>
+    <DataBits>8</DataBits>
+    <StopBits>1.000000000000000e+000</StopBits>
+    <Parity>None</Parity>
+    <TermChar>10</TermChar>
+    <Timeout>30</Timeout>
+    <SyncCheck>0</SyncCheck>
+    <SentenceLabel>$UTC</SentenceLabel>
+    <ParentSensorName>No Value</ParentSensorName>
+    <ExtendLabelFlg>0</ExtendLabelFlg>
+  </Sensor>
+  <Sensor>
+    <SensorId>71</SensorId>
+    <SensorName>POSMV-V5-UTC-year</SensorName>
+    <Units>Date</Units>
+    <SensorType>NMEA ASYNC CHILD</SensorType>
+    <SensorEnabled>1</SensorEnabled>
+    <DataFieldPosition>1</DataFieldPosition>
+    <DecodeType>ASCII</DecodeType>
+    <DeltaCheck>0</DeltaCheck>
+    <IncludeInCompressFile>0</IncludeInCompressFile>
+    <RangeCheck>0</RangeCheck>
+    <DataFieldCategory>Time</DataFieldCategory>
+    <ParentSensorName>POSMV-V5-UTC-RAW</ParentSensorName>
+  </Sensor>
+  <Sensor>
+    <SensorId>72</SensorId>
+    <SensorName>POSMV-V5-UTC-UTC time</SensorName>
+    <Units>hhmmss.sss</Units>
+    <SensorType>NMEA ASYNC CHILD</SensorType>
+    <SensorEnabled>1</SensorEnabled>
+    <DataFieldPosition>2</DataFieldPosition>
+    <DecodeType>ASCII</DecodeType>
+    <DeltaCheck>0</DeltaCheck>
+    <IncludeInCompressFile>0</IncludeInCompressFile>
+    <RangeCheck>0</RangeCheck>
+    <DataFieldCategory>Time</DataFieldCategory>
+    <ParentSensorName>POSMV-V5-UTC-RAW</ParentSensorName>
+  </Sensor>

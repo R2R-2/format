@@ -1,0 +1,111 @@
+File Format ID: scs_kel
+
+Format Description Creation Date: 2019-04-29
+
+File Type: ASCII, comma-separated values
+
+Record Format: Knudsen PKEL depth log output string with external
+datetime stamp.
+
+Data Format Description:
+The file contains PKEL strings prefixed by an external datetime stamp.
+
+Example Record: 03/15/2010,14:08:45.876,$PKEL99,,,,,12.0kHz,13.67,0,5.00,1500
+
+where:
+     03/15/2010     Date (source unknown), UTC
+                      03   = 2-digit month
+                      15   = 2-digit day of month
+                      2010 = 4-digit year
+     14:08:45.876   Time (source unknown), UTC
+                      14     = 2-digit hour [24-hour clock]
+                      08     = 2-digit minute
+                      45.876 = decimal seconds
+     $PKEL##		 NMEA-style record (see definition below)
+
+
+$PKEL## Summary:
+
+PKEL:  a user-configurable format that can output any of the following: time-stamps, depths referenced to various offsets,heave, position, latency values, speed of sound, and a user-defined header.
+
+The PKEL depth log output string can be configured by the user to contain any combination of the fields listed in thefollowing table.  The fields appear in the output string in the same order listed below.  If a field is selected but no data isavailable (ie. heave field selected but no heave device selected), the field position is filled with dashes.  All the fields arefixed fields, meaning they do not vary in size regardless of the data.  Fields are separated by commas except Time andMilliseconds.
+
+Two methods are available for configuring the output string format:
+
+1) A Windows serial utility program, 320CFG.EXE, is provided with the Echosounder to allow the users to easily modify thedepth log format to suit their individual needs.  This program communicates with the echosounder’s monitor port on COM3via a null modem RS-232 serial cable.
+
+2) It is possible to send the appropriate instruction directly to the echosounder monitor using any standard communicationspackage with a simple null modem RS-232 serial cable.
+
+The echosounder uses a 32-bit code to setup the configuration of the depth log string.  This code is displayed in the secondaryfunction interface menu as a hexadecimal value.  The Windows utility program, 320CFG.EXE, automatically sets this code value and sends it to the echosounder.  Users familiar with binary and hexadecimal conversions can easily compute theappropriate code value to send to the echosounder for a given configuration.  The bit corresponding to a field in the codeword is set to 1 to select the field for output, and is reset to 0 to deselect the field.
+
+Example 1:
+To setup the Hypack compatible string select the following fields:  HF depth corrected for draft, LF depth corrected for draft,and Heave.
+
+For the 32 bit code:  
+		LSW = 0000 0100 0000 0000b =  0400h
+		MSW = 0000 1000 0000 0100b = 0804h
+Thus the instruction to send to the echosounder would be:   $PKEL30,1,0400,0804,<CR><LF>
+This would result in a depth log string as follows:   xx.xx,xx,xx,shhhhq<CR.<LF>
+
+Example 2:
+For the following code selection:
+	LSW = 1010 1001 1111 1001b = A9F9h
+	MSW = 1111 1100 1010 1001b = FCA9h
+the resulting instruction would be:     $PKEL30,1,A9F9,FCA9,MyString<CR><LF>
+and the expected depth log format would be:
+MyString,Fnnnn,ddmmyyyy,hhmmss.sss,ttttt,HF,xx.xx,f,sxx.xx,LF,xx.xx,f,sxx.xx,xxxx,shhhhq,tttt,ll ll.llllll,ooo oo.oooooo,tttt*hh<CR><LF>
+
+PKEL Depth Log String Format Fields
+Field #	Field Description						Field Format					Code WordBit #
+0		User defined preamble string			Printable ASCII chars (max.16)	LSW:0
+1		KEL Proprietary String Standard Header	$PKEL99							LSW:1
+2		Record Number							rrrrr							LSW:2
+3		Fix Indicator							Fnnnn							LSW:3
+4		Date									Standard:ddmmyyyy				LSW:4
+												Julian: Jdddyyyy
+5		Time at start of ping, to second
+		resolution fromMPM Real-Time Clock		hhmmss							LSW:5
+6		Milliseconds sync'd to Real-Time Clock
+		(Timefield must be selected)			.sss							LSW:6
+7		Ping Start to Data Output Latency		ttttt							LSW:7
+8		High Frequency Identification Header	HF								LSW:8
+9		HF Depth, to transducer (uncorrected
+		for anyoffsets)							xx.xx or xxx.x or xxxx.
+												or xxxxx						LSW:9
+10		HF Depth, corrected for draft			xx.xx or xxx.x or xxxx.
+												or xxxxx						LSW:10
+11		HF Depth, corrected for draft and
+		heave									xx.xx or xxx.x or xxxx.
+												or xxxxx						LSW:11
+12		HF Depth, corrected for draft, heave,
+		and tide								xx.xx or xxx.x or xxxx.
+												or xxxxx						LSW:12
+13		HF Depth validity flag					1 = okay, 0 = bad				LSW:13
+14		HF Multplexer Channel					0 - 15							LSW:14
+15		HF Draft offsets						xx.xx							LSW:15
+16		Low Frequency Identification Header		LF								MSW:0 (16)
+17		LF Depth, to transducer (uncorrected
+		for anyoffsets)							xx.xx or xxx.x or xxxx.
+												or xxxxx						MSW:1 (17)
+18		LF Depth, corrected for draft			xx.xx or xxx.x or xxxx.
+												or xxxxx						MSW:2 (18)
+19		LF Depth, corrected for draft and
+		heave									xx.xx or xxx.x or xxxx.
+												or xxxxx						MSW:3 (19)
+20		LF Depth, corrected for draft, heave,
+		and tide								xx.xx or xxx.x or xxxx.
+												or xxxxx						MSW:4 (20)
+21		LF Depth validity flag					1 = okay, 0 = bad				MSW:5 (21)
+22		LF Multiplexer Channel					0 - 15							MSW:6 (22)
+23		LF Draft offset							sxx.xx							MSW:7 (23)
+24		Tide (not in use yet)					sxx.xx							MSW:8 (24)
+25		Tide latency (Tide field must be
+		selected)								tttt							MSW:9 (25)
+26		Speed of Sound							xxxx							MSW:10 (26)
+27		Heave									shhhhq							MSW:11 (27)
+28		Heave Latency (Heave field must be
+		selected)								tttt							MSW:12 (28)
+29		Position: Latitude, Longitude			ll ll.llllllN,ooo oo.ooooooE	MSW:13 (29)
+30		Position Latency (position field must
+		beselected)								tttt							MSW:14 (30)
+31		Checksum								hh								MSW:15 (31)

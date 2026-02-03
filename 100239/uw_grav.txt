@@ -1,0 +1,13 @@
+Gravimeter data format for University of Washington started in 2018
+
+Data Sample:
+08/05/2019,17:16:47.839,04:024915 00
+
+08 - month
+05 - day
+2019 - year
+17 - 24 hour
+16 - minutes
+47.839 - decimial seconds
+04:024915 - sampling_interval:raw_gravity
+00 - dnv_code

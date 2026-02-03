@@ -1,0 +1,40 @@
+File Format ID: hly_mru
+
+Format Description Creation Date: 2020-01-28
+
+File Type: ASCII, tab-separated values
+
+Record Format: Seatec MRU TSS1 Sounder Sentence
+
+Data Format Description:
+The file contains decimal epoc time stamp with Seatec MRU TSS1 sounder sentence
+
+ex: 
+1535243706.515 :000064 -0003U 0007 -0056
+1535243706.532 :000064 -0003U 0006 -0056
+1535243706.532 :000060 -0003U 0006 -0056
+
+TSS1 sentence
+
+The next adjustable protocol is the TSS1 sentence which is a modified version of the SOUNDER sentence with aiding MRU status information. By selecting this protocol, the number of MRU variables is fixed, and there is no token associated with it. However, the baud rate and output interval may be changed as required.
+
+The format is ASCII based, with a fixed length and terminated with CR and LF:
+:aabbbb shhhhxsrrrr spppp<CR><LF>
+
+where: 
+
+•aa is a 2 char hex number with SWAY acceleration, in 0.03835 m/ss units. bbbb  is a 4 char hex number with HEAVE acceleration, in 0.000625 m/ss units.
+•hhhh  is a 4 char decimal number with HEAVE position in centimetres, positive up s is 1 character of sign: <SPACE> if positive, "-" if negative.
+•x is a status character. Below is a description of the various characters. 
+•rrrr    is a 4 char decimal number with ROLL angle in hundreds of a degree. s is 1 character of sign: <SPACE> if positive, "-" if negative.
+•pppp  is a 4 char decimal number with PITCH angle in hundreds of a degree. s is 1 character of sign: <SPACE> if positive, "-" if negative.
+
+Status character   Description
+U Unaided mode and stable data. The MRU is operating without external input data.
+u Unaided mode but unstable data. The MRU is without external input data, but the data from the unit are unstable most likely due to alignment after power on or restart. The alignment period from power on or restart is normally 5 minutes.
+G Speed aided mode and stable data. The MRU is operating with external input of speed data.
+g Speed aided mode but unstable data. The MRU is operating with external input of speed data, but the data from the unit are unstable most likely due to alignment after power on, restart or input of speed data.
+H Heading aided mode and stable data. The MRU is operating with external input of heading data.
+h Heading aided mode but unstable data. The MRU is operating with external input of heading data, but the data from the unit are unstable most likely due to alignment after power on, restart or input of heading data.
+F Full aided mode and stable data. The MRU is operating with external input of both speed and heading data.
+f Full aided mode but unstable data. The MRU is operating with external input of both speed and heading data, but the data from the unit are unstable most likely due to alignment after power on, restart or input of external data. 

@@ -1,0 +1,35 @@
+  <Sensor>
+    <SensorId>107</SensorId>
+    <SensorName>Trans-mV-V-DRV</SensorName>
+    <SensorType>DERIVED LINEAREQUATION PARENT</SensorType>
+    <SensorEnabled>1</SensorEnabled>
+    <LoggingRate>-1</LoggingRate>
+    <LoggingFolder>mv_drv_trans_flow</LoggingFolder>
+    <TermChar>10</TermChar>
+    <Timeout>90</Timeout>
+    <SyncCheck>0</SyncCheck>
+    <SentenceLabel>$BOWMT</SentenceLabel>
+    <UpdateRate>1</UpdateRate>
+    <LineEqSlope>1.000000000000000e-003</LineEqSlope>
+    <LineEqOffset>0.000000000000000e+000</LineEqOffset>
+    <ParentSensorName>No Value</ParentSensorName>
+    <BaseSensor1>RMYoung-Flow-Transmisometer</BaseSensor1>
+    <Precision>3</Precision>
+  </Sensor>
+  <Sensor>
+    <BaseSensor1>RMYoung-Flow-Transmisometer</BaseSensor1>
+    <SensorId>108</SensorId>
+    <SensorName>Trans-mV-V-DRV-VALUE</SensorName>
+    <SensorType>DERIVED LINEAREQUATION CHILD</SensorType>
+    <SensorEnabled>1</SensorEnabled>
+    <DataFieldPosition>1</DataFieldPosition>
+    <DecodeType>ASCII</DecodeType>
+    <DeltaCheck>0</DeltaCheck>
+    <IncludeInCompressFile>0</IncludeInCompressFile>
+    <Precision>3</Precision>
+    <Slope>1.000000000000000e-003</Slope>
+    <Offset>0.000000000000000e+000</Offset>
+    <RangeCheck>0</RangeCheck>
+    <DataFieldCategory>Other</DataFieldCategory>
+    <ParentSensorName>Trans-mV-V-DRV</ParentSensorName>
+  </Sensor>

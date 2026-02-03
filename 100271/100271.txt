@@ -1,0 +1,34 @@
+  <Sensor>
+    <SensorId>256</SensorId>
+    <SensorName>SAMOS-WT</SensorName>
+    <SensorType>DERIVED AVERAGE PARENT</SensorType>
+    <SensorEnabled>1</SensorEnabled>
+    <LoggingRate>60</LoggingRate>
+    <LoggingFolder>SAMOS</LoggingFolder>
+    <TermChar>10</TermChar>
+    <Timeout>60</Timeout>
+    <SyncCheck>0</SyncCheck>
+    <SentenceLabel>$SAMOS</SentenceLabel>
+    <UpdateRate>1</UpdateRate>
+    <AverageType>Arithmetic</AverageType>
+    <ParentSensorName>No Value</ParentSensorName>
+    <NumberOfSamples>-60</NumberOfSamples>
+    <BaseSensor1>SBE38-RAW-INTAKE-TEMP</BaseSensor1>
+    <Precision>2</Precision>
+  </Sensor>
+  <Sensor>
+    <BaseSensor1>SBE38-RAW-INTAKE-TEMP</BaseSensor1>
+    <SensorId>257</SensorId>
+    <SensorName>SAMOS-WT-VALUE</SensorName>
+    <Units>uE/m^2sec</Units>
+    <SensorType>DERIVED AVERAGE CHILD</SensorType>
+    <SensorEnabled>1</SensorEnabled>
+    <DataFieldPosition>1</DataFieldPosition>
+    <DecodeType>ASCII</DecodeType>
+    <DeltaCheck>0</DeltaCheck>
+    <IncludeInCompressFile>0</IncludeInCompressFile>
+    <Precision>2</Precision>
+    <RangeCheck>0</RangeCheck>
+    <DataFieldCategory>Other</DataFieldCategory>
+    <ParentSensorName>SAMOS-WT</ParentSensorName>
+  </Sensor>

@@ -1,0 +1,15 @@
+File Format ID: scs_sph
+
+Format Description Creation Date: 2020-02-14
+
+Schmidt Ocean Institute SCS (Shipboard Computer System) Raw pH Format
+
+Data Format Description:
+The file contains date/time stamp with pH data
+
+File Types:
+Raw, Logged Format:
+ASCII, NEMA style comma separated
+ex: 
+07/10/2019,00:05:46.390,$SBSPH,191.0035,16.93,35.00,8.0009,11.24,2019-07-10,00:04:59
+

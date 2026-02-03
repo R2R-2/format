@@ -1,0 +1,14 @@
+VBW - Dual Ground/Water Speed
+VBW Tag Fields
+ 1 2 3 4 5 6 7
+ $--VBW, x.x, x.x, A, x.x, x.x, A *hh&lt;CR&gt;&lt;LF&gt;
+
+ Field Number:
+
+ Longitudinal water speed, "-" means astern
+ Transverse water speed, "-" means port
+ Status, A = Data Valid
+ Longitudinal ground speed, "-" means astern
+ Transverse ground speed, "-" means port
+ Status, A = Data Valid
+ Checksum

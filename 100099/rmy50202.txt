@@ -1,0 +1,26 @@
+RM Young 50202 raingauge
+  
+Model: 50202
+  
+Serial Number: 02078
+  Location: Fying Bridge
+  Sample rate: 1 every 10 seconds
+
+  Example data line:
+    rain_rmy50202  2014-12-12T05:17:36.5777Z  $PAPR1,1805,22.56*03
+
+  Field Descriptions:
+    Logger ID
+    Time Stamp [UTC]
+    ID
+    Raw Voltage counts [0 - 4000]    
+    Precipitation Column Level [mm]*
+    Checksum
+
+   * Note: The following formula is used to compute precip from raw counts:
+     $volts = 5*($counts/4000)
+     $precip = $volts * 10
+
+    See included document RMYoung-RainGauge.pdf for more information.
+
+

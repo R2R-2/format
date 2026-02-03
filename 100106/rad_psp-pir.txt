@@ -1,0 +1,25 @@
+rad_psp-pir.txt
+
+  Remote Measurements & Research  PSP (Precision Spectral Pyranometer) and PIR (Precision Infrared Radiometer)
+
+  PSP Serial Number: 37668F3
+  PIR Serial Number: 37684F3
+  Location: top of science control room
+  Sample rate: 1 every 10 seconds
+
+  Example data line:
+    rad_psp-pir  2014-12-12T01:29:38.2952Z  $WIR20,14/12/12,01:46:30, 175, -418.5, 265.53, 26.31, 26.15, 278.59, 27.9, 10.8
+
+  Field Descriptions:
+    Logger ID
+    Time Stamp [UTC]
+    ID [NMEA-style tag]
+    DATE TIME [yy/MM/dd,hh:mm:ss(Note: this time is not synced with external time server so do not use)]
+    # [the number of samples that went into the averages]
+    PIR [the average voltage from the PIR thermopile,millivolts]
+    LW [the computed longwave downwelling irradiance,Wm**2]
+    TCASE [the PIR case temperature,C]
+    TDOME [the PIR dome temperature,C]
+    SW [the computed shortwave downwelling irradiance,Wm**2]
+    T-AVR  [the computed shortwave downwelling irradiance,C]
+    BATT [the battery voltage after the input diode drop,volts]

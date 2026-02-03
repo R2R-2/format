@@ -1,0 +1,3 @@
+The .mms files produced by the SeaSpy2 are a proprietary file type by Marine Magnetics and can be read with their free (but Windows OS only) BOB software. Please see the following link for more information. 
+
+https://marinemagnetics.com/products/b-o-b/

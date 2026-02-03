@@ -1,0 +1,16 @@
+thermo_pyrometer-ct15.txt
+
+  Heitronics infrared radiation pyrometer. Measures seasurface skin temperature.
+
+  Model: CT15.10
+  Serial Number: 10975
+  Location: Just forward of science control room
+  Sample rate: 1 per second
+
+  Example data line:
+    thermo_pyrometer-ct15  2014-12-12T06:26:14.2312Z   25.51 C
+
+  Field Descriptions:
+    Logger ID
+    Time Stamp [UTC]
+    Temperature [C]

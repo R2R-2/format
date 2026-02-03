@@ -1,0 +1,31 @@
+------------------------------------------------------------------------------------------------
+ins_seapath_position:
+
+  Kongsberg Seapth 320+ Precise Heading, Attitude and Positioning Sensor.
+  The product combines inertial technology together with GPS and GLONASS satellite
+  signals. Core components in the product are the MRU 5+ inertial sensor, the two
+  combined GPS/GLONASS receivers, the Processing and HMI Unit.
+
+  RTCM corrections provided by the C-Nav3050.
+
+  Sample rate: 1 per second
+
+  Example data lines:
+    ins_seapath_position  2014-12-11T22:09:32.4715Z  $GPZDA,220932.45,11,12,2014,,*6B
+    ins_seapath_position  2014-12-11T22:09:32.5563Z  $GPGGA,220932.45,2207.733438,N,16242.262661,W,2,09,1.1,7.25,M,4.62,M,1.2,
+0001*6A
+    ins_seapath_position  2014-12-11T22:09:32.6020Z  $GPVTG,111.01,T,101.59,M,8.5,N,15.7,K,D*14
+    ins_seapath_position  2014-12-11T22:09:32.6841Z  $GPRMC,220932.45,A,2207.733438,N,16242.262661,W,8.5,111.01,111214,9.4,E,D
+*16
+    ins_seapath_position  2014-12-11T22:09:32.7451Z  $GPGST,220932.45,0.49,0.206,0.193,32,0.202,0.197,0.439*42
+    ins_seapath_position  2014-12-11T22:09:32.8020Z  $GPGBS,220932.45,0.06,-0.03,0.44,19,0.00,0.46,0.51*40
+    ins_seapath_position  2014-12-11T22:09:32.8229Z  $GPHDT,104.68,T*0E
+    ins_seapath_position  2014-12-11T22:09:32.8450Z  $PSXN,20,0,0,0,0*3B
+    ins_seapath_position  2014-12-11T22:09:32.8825Z  $PSXN,23,1.28,1.93,104.68,-0.24*18
+
+  Field Descriptions:
+    Logger ID
+    Time Stamp [UTC]
+    NMEA ASCII message
+
+

@@ -1,0 +1,48 @@
+  <Sensor>
+    <SensorId>100</SensorId>
+    <SensorName>FLOUROMETER-RAW</SensorName>
+    <SensorType>SERIAL ASYNC PARENT</SensorType>
+    <SensorEnabled>1</SensorEnabled>
+    <LoggingRate>-1</LoggingRate>
+    <LoggingFolder>SEAWATER</LoggingFolder>
+    <Device>COM51</Device>
+    <BaudRate>19200</BaudRate>
+    <DataBits>8</DataBits>
+    <StopBits>1.000000000000000e+000</StopBits>
+    <Parity>None</Parity>
+    <TermChar>10</TermChar>
+    <Timeout>90</Timeout>
+    <SyncCheck>0</SyncCheck>
+    <RecordSize>36</RecordSize>
+    <ParentSensorName>No Value</ParentSensorName>
+  </Sensor>
+  <Sensor>
+    <SensorId>101</SensorId>
+    <SensorName>FLOUROMETER-CAL-uL</SensorName>
+    <Units>ug/l</Units>
+    <SensorType>SERIAL ASYNC CHILD</SensorType>
+    <SensorEnabled>1</SensorEnabled>
+    <DecodeType>ASCII</DecodeType>
+    <DeltaCheck>0</DeltaCheck>
+    <IncludeInCompressFile>0</IncludeInCompressFile>
+    <RangeCheck>0</RangeCheck>
+    <StartChar>18</StartChar>
+    <StopChar>21</StopChar>
+    <DataFieldCategory>Other</DataFieldCategory>
+    <ParentSensorName>FLOUROMETER-RAW</ParentSensorName>
+  </Sensor>
+  <Sensor>
+    <SensorId>102</SensorId>
+    <SensorName>FLOUROMETER-Counts</SensorName>
+    <Units>#</Units>
+    <SensorType>SERIAL ASYNC CHILD</SensorType>
+    <SensorEnabled>1</SensorEnabled>
+    <DecodeType>ASCII</DecodeType>
+    <DeltaCheck>0</DeltaCheck>
+    <IncludeInCompressFile>0</IncludeInCompressFile>
+    <RangeCheck>0</RangeCheck>
+    <StartChar>23</StartChar>
+    <StopChar>25</StopChar>
+    <DataFieldCategory>Other</DataFieldCategory>
+    <ParentSensorName>FLOUROMETER-RAW</ParentSensorName>
+  </Sensor>

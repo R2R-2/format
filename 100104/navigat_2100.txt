@@ -1,0 +1,15 @@
+navigat_2100.txt
+
+ NAVIGAT 2100 Fiber-Optic Gyrocompass and Attitude Reference System. Primary.
+
+  Sample rate: 10 per second. Downsampled to 2 per second in log files.
+
+  Example data lines:
+    gyro_1  2014-12-11T00:16:03.5470Z  $HEHDT,107.38,T*12
+    gyro_1  2014-12-11T00:16:03.5984Z  $TIROT,-0000.6,A*20
+    gyro_1  2014-12-11T00:16:03.8972Z  $PPLAN,,,,,,,,2*71
+
+  Field Descriptions:
+    Logger ID
+    Time Stamp [UTC]
+    NMEA ASCII message

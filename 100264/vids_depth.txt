@@ -1,0 +1,13 @@
+oftware Version Number: 1	Data File Format Number: 1	Build Version Number: 1	Error Count Since VI Started: 0	Manufacturer: Knud
+sen	 Model Number: 3260	 S/N: 	 Cal Date: 	 Wind Direction Offset: 0.00	 Slope (M)1: 0.00	 Offset (B)1: 0.00	 S
+lope (M)2: 0.00	 Offset (B)2: 0.00	 Slope (M)3: 0.00	 Offset (B)3: 0.00	 Slope (M)4: 0.00	 Offset (B)4: 0.00	 S
+lope (M)5: 0.00	 Offset (B)5: 0.00	 Slope (M)6: 0.00	 Offset (B)6: 0.00
+	Date	Time	Depth (ft)	Depth (m)	Depth (F)	Mnemonic	Checksum
+	08/17/2020	15:08:45	7.410000	2.260000	1.230000	$SDDBT	02
+	08/17/2020	15:08:46	7.400000	2.260000	1.230000	$SDDBT	03
+	08/17/2020	15:08:47	7.400000	2.260000	1.230000	$SDDBT	03
+	08/17/2020	15:08:48	7.400000	2.260000	1.230000	$SDDBT	03
+	08/17/2020	15:08:49	7.410000	2.260000	1.240000	$SDDBT	05
+	08/17/2020	15:08:50	7.400000	2.260000	1.230000	$SDDBT	03
+	08/17/2020	15:08:51	7.420000	2.260000	1.240000	$SDDBT	06
+	08/17/2020	15:08:52	7.410000	2.260000	1.240000	$SDDBT	05

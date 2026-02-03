@@ -1,0 +1,36 @@
+File Format ID: whoi_par
+
+Format Description Creation Date: 2020-05-29
+
+File Type: ASCII, whitespace-delimited and comma-separated values
+
+Record Format: National Marine Electronics Association (NMEA) 0183 string with device id
+and external, colon-separated datetime stamp.
+
+Data Format Description:
+The file contains $ME.  Each NMEA 
+record is prefixed by a datatype id, an external datetime stamp, and device tag.
+
+Example Record:
+MET 2018/11/01 13:00:09.388 PAR $ME, 445.969, 16.89, 14.499
+
+where:
+     MET			datatype ID
+     2018/11/01 13:00:09.388   External datetime stamp (source unknown)
+                                 2018         4-digit year
+                                 11           2-digit month
+                                 01           2-digit day of month
+                                 13           2-digit hour [24-hour clock]
+                                 00           2-digit minute
+                                 09.388       decimal seconds
+     PAR                       Device tag
+     $ME                	  NMEA style record (see definition below)
+
+Definitions follow.
+
+Definition of ME
+PAR data record
+	  Format:
+	  	445.969	PAR [uE/m2 sec]
+		16.89	Sensor Temperature [C]
+		14.499	Line voltage [volts]

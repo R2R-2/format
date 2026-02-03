@@ -1,0 +1,36 @@
+Instrument Make and Model: SBE48 Hull Mounted Temperature Sensor
+S/N: 480021
+Calibration Date: December 15, 2012  installed: January 10, 2013
+Installation: Forward Port bulkhead, near saltwater intake.
+
+RAW datafile:
+dsLog time stamp:
+SSW 2013/01/30 14:00:04.078 SBE48 
+
+SSW                 Science Salt Water
+2013/01/30          date in gmt
+14:00:04.078        time in gmt
+SBE48               data collected using SBE48
+data                22.5390,  5.25508,  36.5893, 1530.010
+
+
+
+
+26.9851, 30 Jan 2013, 14:00:19
+
+Data Parsed:
+26.9851		ttt.tttt temperature (degrees Celsius, ITS-90)
+30 Jan 2013	date 
+14:00:19	time
+
+Notes:
+The instrument sends out two lines of data, the first is the command for 'send data'.
+The second line is the data.
+
+SSW 2013/01/30 14:00:04.078 SBE48 S�
+SSW 2013/01/30 14:00:04.209 SBE48 # 26.9851, 30 Jan 2013, 14:00:19
+
+
+The saltwater intake is located in the forward transducer well on the portside at 5 meters below
+the waterline.
+

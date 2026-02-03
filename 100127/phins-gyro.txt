@@ -1,0 +1,12 @@
+20121106 172421:
+	    addtimestamp	true
+	      dataformat	nmea0183
+	     description	Phins heading
+	       directory	phins-gyro
+	    manufacturer	iXBlue
+	        measures	heading
+	            mode	9600,n,8,1,a
+	           model	Phins
+	            port	/dev/ttyRP8
+	    serialnumber	3457-017
+	       timeoutms	2000

@@ -1,0 +1,56 @@
+  Write the Raw Gravity String (RGS) and send to the logging thread.
+
+  The Raw Gravity String (RGS) is created at the native rate of the gravimeter (e.g., for a BGM3, 
+  it is created once a second) and uses the MOST RECENT navigation, depth, and heading data.  The 
+  gravity logging program (gravlog) does not attempt to resolve the asynchronous data streams.  
+  Consequently, the navigation and depth data will be older than the gravity measurements.  The 
+  nav data uses GPS and should be less than a second old; depending on the site depth, the depth 
+  data maybe a few seconds old.  The timestamps of the nav and depth data are included in the 
+  RGS, enabling the user to resolve the age of the measurement.
+
+  For both the nav and depth measurements, ONLY THE BEST AVAILABLE MEASUREMENT IS LOGGED IN THE 
+  RGS.  On any given vessel, multiple sensors may be obtaining nav and depth data, and gravlog
+  decides which sensor to use based on a prioritization table, the staleness of the measurement, 
+  and other metrics.  It is not uncommon for the source of the measurement to change during a cruise.
+  GravLog automatically switches to the best available sensor and uses that "best measurement" in 
+  the RGS.  For both depth and nav, a source field is included that indicates the source of the 
+  obtained measurement.
+
+  The data format for the RGS is:
+
+  RGS YYYY/MM/DD hh:mm:ss.sss raw_gravity gravity_unixtime counts scale_factor bias gravimeter_model gravimeter_serial_number  \\
+  NAV: latitude longitude number_of_satelites GPS_unixtime GPS_source DEPTH: depth depth_unixtime depth_source HDG: heading heading_unixtime\\
+  dnv_status maggie_data_string
+
+  Where:
+     raw_gravity      	      --- the UNFILTERED measured gravity in *MGALS*
+     counts           	      --- the counts measured by the gravimeter (e.g., for a BGM3, the value transmitted from the data buffer)
+     gravity_unixtime 	      --- time the gravity measurement was obtained in seconds since Jan 1 1970 
+     scale_factor     	      --- the scale factor for the gravimeter obtained during factory calibration
+     bias             	      --- the bias obtained during the last ship to pier tie in mGal
+     gravimeter_model 	      --- gravimeter model used to obtain the gravity measurement
+     gravimeter_serial_number --- serial number of the gravimeter used to obtain the gravity measurement
+     latitude                 --- MOST RECENT vessel latitude as reported by the best available navigation sensor in decimal degrees (+=north;-=south)
+     longitude                --- MOST RECENT vessel longitude as reported by the best available navigation sensor in decimal degrees (+=east;-=west)
+     number_of_satelites      --- number of satelites used to obtain the logged navigation position (-1 indicates GPS *WAS NOT* used)
+     GPS_unixtime             --- time the lat/lon was obtained in seconds since Jan 1 1970 
+     GPS_source               --- source of the GPS measurement
+     depth                    --- MOST RECENT water depth as reported by the best available sensor in meters
+     depth_unixtime           --- time the logged depth was obtained in seconds since Jan 1 1970 
+     depth_source             --- source of the depth measurement
+     gyro heading             --- most recent heading reported by the vehicle gyro in degrees  				  
+     gyro_unixtime            --- unix timestamp of the most recent heading reported by the vehicle gyro  				  
+     dnv_status               --- On a BGM3 system, the status of the DNV indicator.  There are 4 possible values:
+
+				  SENSOR_DNV_ERROR         --- Error reported by the SENSOR ELECTRONICS         
+				  CPS_DNV_ERROR            --- Error reported by the CPS
+				  SENSOR_AND_CPS_DNV_ERROR --- Errors reported by BOTH the SENSOR ELECTRONICS and CPS
+				  NO_DNV_ERROR             --- No errors reported; system is running fine
+     maggie_data_string       --- The most recent magnometer data string rx'd by gravlog (typically grossly undersampled!!! Use at your own risk.) 				  
+                                    
+
+
+  Modification History
+
+  2010-04-17 JCK - created and written 
+  2010-05-18 JCK - added maggie data string

@@ -1,0 +1,11 @@
+
+R2R Format ID 100056
+
+Lamont Data System (LDS) Gravimeter Stream on R/Vs Langseth, Ewing, etc.
+
+Columns:
+{identifier}    {date/time}    {sampling_interval}:{raw_gravity} {dnv_code}
+
+Example:
+vc01  2010:258:00:00:00.6086  01:024681 00
+

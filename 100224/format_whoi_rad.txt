@@ -1,0 +1,42 @@
+File Format ID: whoi_rad
+
+Format Description Creation Date: 2020-05-29
+
+File Type: ASCII, whitespace-delimited and comma-separated values
+
+Record Format: National Marine Electronics Association (NMEA) 0183 style string with device id
+and external, colon-separated datetime stamp.
+
+Data Format Description:
+The file contains $WIR22.  Each NMEA style record is prefixed by a datatype id, an external datetime stamp, and device tag.
+
+Example Record:
+MET 2018/11/01 13:00:04.569 RAD $WIR22,18/11/01,13:24:40, 175, -111.0, 373.49, 16.69, 15.55, 105.38, 22.2, 11.9
+
+where:
+     MET			datatype ID
+     2018/11/01 13:00:04.569   External datetime stamp (source unknown)
+                                 2018         4-digit year
+                                 11           2-digit month
+                                 01           2-digit day of month
+                                 13           2-digit hour [24-hour clock]
+                                 00           2-digit minute
+                                 04.569      decimal seconds
+     RAD                       Device tag
+     $WIR22                	  NMEA style record (see definition below)
+
+Definitions follow.
+
+Definition of WIR22
+Radiometer data record
+	  Format:
+	  Field Descriptions:
+Logger ID
+	175		# [the number of samples that went into the averages]
+	-418.5	PIR [the average voltage from the PIR thermopile,millivolts]
+	265.53	LW [the computed longwave downwelling irradiance,Wm**2]
+	26.31	TCASE [the PIR case temperature,C]
+	26.15	TDOME [the PIR dome temperature,C]
+	278.59	SW [the computed shortwave downwelling irradiance,Wm**2]
+	27.9	T-AVR  [the computed shortwave downwelling irradiance,C]
+	10.8	BATT [the battery voltage after the input diode drop,volts]

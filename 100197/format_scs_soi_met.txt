@@ -1,0 +1,27 @@
+File Format ID: scs_soi_met
+
+Format Description Creation Date: 2020-02-14
+
+Schmidt Ocean Institute SCS (Shipboard Computer System) Raw meteorological Sensor Format
+
+Data Format Description:
+The file contains date/time stamp with meteorological data
+
+File Types:
+Includes up to 3 different format files.
+
+Raw, Logged Format:
+ASCII, comma separated
+ex: 
+07/08/2019,18:10:42.656,Q,288,001.19,1015.6,086.3,+015.7,+013.4,,+99998.0005,+99998.0004,0000.000,+11.5,00,4C
+
+Derived Relative Winds:
+ASCII, comma separated
+ex:
+07/08/2019,18:10:43.250,$DERIV,2.31,1.19,
+
+Derived TWind:
+ASCII, comma separated
+ex:
+07/08/2019,18:10:45.273,$TWIND,4.66,247.37,4.67,290.8,0.01,260.5,316.6,
+

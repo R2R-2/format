@@ -1,0 +1,31 @@
+Instrument Make and Model: SBE45 MicroTSG (Thermosalinograph)
+S/N: 4530841-0063
+Calibration Date: March 10, 2011  installed: October 5, 2012
+Installation: aft end of mainlab
+
+RAW datafile:
+dsLog time stamp:
+SSW 2013/01/24 14:25:43.586 SBE45 
+
+SSW                 Science Salt Water
+2013/01/24          date in gmt
+14:25:43.586        time in gmt
+SBE45               data collected using SBE45
+data                22.5390,  5.25508,  36.5893, 1530.010
+
+
+22.5390,  5.25508,  36.5893, 1530.010
+
+Data Parsed:
+22.5390  	ttt.tttt temperature (degrees Celsius, ITS-90)
+5.25508  	cc.cccc conductiviy (S/m) mS/cm = 1-*S/m
+36.5893	        sss.ssss salinity (psu)
+1530.010	vvvv.vvv sound velocity (meters/second)
+
+
+Notes: 
+Sound Velocity is calculated in the csv file using SBE45 Salinity and SBE48 Temperature, the perl module:
+Physics-Water-SoundSpeed-0.92.tar.gz is used to make the calculation.
+The saltwater intake is located in the forward transducer well on the portside at 5 meters below
+the waterline.
+~                   

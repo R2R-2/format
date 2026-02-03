@@ -1,0 +1,2 @@
+Gyrocompass	Gyro-HDT	
+SCS UTC DATE	SCS UTC TIME	STRING NAME	HEADING																

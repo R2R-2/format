@@ -1,0 +1,4 @@
+date/time string followed by NEMA GGA, VTG or  ZDA Sentence
+example:
+08/31/2018,16:44:18.659,$GPGGA,164415.00,2843.47232901,N,08912.43348951,W,2,10,0.9,14.887,M,-28.990,M,6.0,0138*43
+

@@ -1,0 +1,14 @@
+
+R2R Format ID 100021
+
+Lamont Data System (LDS) Navigation Stream on R/Vs Langseth, Ewing, etc.
+
+Mixed NMEA Strings $GNxxx,$GPxxx,$INxxx
+
+Columns:
+{identifier}    {date/time}    ${sentence_type},...
+
+Example:
+cnav3050	2011:157:00:00:03.0950	$GNVTG,279.1,T,,M,7.50,N,13.88,K,D*2B
+cnav3050	2011:157:00:00:04.0691	$GNGGA,000004.00,5742.563081,N,15202.578998,W,2,15,0.8,33.055,M,0.0,M,10.0,0358*71
+

@@ -1,0 +1,26 @@
+
+  ORG-815-DS OPTICAL PRECIPITATION SENSOR
+
+  Model: ORG-815-DS
+  Serial Number: 1304383
+  Location: Fying Bridge, mounted port-starboard**
+  Sample rate: 1 per minute
+
+  Example data line:
+    rain_org815ds_forward  2014-12-12T05:06:01.9937Z R- .118 000.709 01** 4999 0044 0062 +25
+
+
+  Field Descriptions:
+    Logger ID
+    Time Stamp [UTC]
+    40 character long ASCII data string(*). 
+
+  * See section 4.1.3 "C" Poll Response in included document "ORG815DS User Guide 110114.pdf".
+    The "C" poll is used to obtain routine data in NWS weather code format and detailed system 
+    diagnostic data. The accumulation is zero-out every 24hours at 0 UTC.
+
+    While underway this sensor always indicates that it is raining regardless of the weather
+    conditions. So usefulness of this data is probably rather limited until this issue is resolved.
+
+ ** Sometime after sensors were mounted it appears they rotated about 45 degrees rendering the 
+    concept of "across" and "forward" meaningless. 

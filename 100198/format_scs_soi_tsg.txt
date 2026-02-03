@@ -1,0 +1,22 @@
+File Format ID: scs_soi_tsg
+
+Format Description Creation Date: 2020-02-14
+
+Schmidt Ocean Institute SCS (Shipboard Computer System) Raw Thermosalinograph Format
+
+Data Format Description:
+The file contains date/time stamp with Thermosalinagraph data
+
+File Types:
+Raw, Logged Format:
+ASCII, comma and space (", ") separated
+ex: 
+07/09/2019,17:45:02.659,t1= 17.4134, c1= 4.21067, s= 32.2437, sv=1509.149, t2= 16.8268
+
+Fields:
+07/09/2019,17:45:02.659 - date,time; mm/dd/yy,hh:mm:ss.sss
+t1= 17.4134 - Temperature from primary sensor (Deg C)
+c1= 4.21067 - Conductivity from primary sensor (S/m)
+s= 32.2437 - Salinity derived from t1 and t2 (ppt)
+sv=1509.149 - Sound velocity derived from t1 and t2 (meter/sec)
+t2= 16.8268 - Temperature from secondary sensor (Deg C)

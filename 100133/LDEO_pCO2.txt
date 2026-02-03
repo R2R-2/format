@@ -1,0 +1,27 @@
+LDEO PCO2 System
+PCO2 outputs data in the following sentence format:
+yyyyjjj.jjj aaaa.aa bb.bb cccc.cc ddd.dd e.ee fff.f gggg.gg hh i k
+
+
+Item	Definition	Value	Units
+yyyyjjj.jjj 	pco2 Computer Date/Time	n/a	Year/Julian Day.decimal Four fixed digits of year. Three fixed digits of julian day. Five fixed digits for decimal fractions of a julian day
+aaaa.aa	CO2 Raw Signal	n/a	mVolts
+bb.bb	CO2 Analyzer Cell Temperature	n/a	Celcius 
+cccc.cc	PCO2 Barometer	n/a	mbar 
+ddd.dd	VCO2	n/a	ppm
+e.ee	Equilibrator Water Temp 	n/a	Celcius 
+fff.f	pCO2	n/a	uatm
+gggg.gg	Flow Controller	n/a	mVolts
+hh	Flow Meter	n/a	cc/min
+i	Sample ID #	0 to 16	integer
+k	Sample ID	Equil, Atmos, Nitrogen, CC18798, CA07163, CC15551, or CC63668	alphanumeric
+
+
+
+The LDEO PCO2 system output is logged by LDS to the “pco2” set. 
+Logging interval: ~180 seconds
+
+pco2 data format:
+pco2 2011:130:00:27:11.9162 2011130.02002 2370.39 37.54 1007.07 404.51 28.42 386.9 5000.00 19 0 Equil
+pco2 2011:130:00:30:00.5374 2011130.02198 2370.02 37.53 1007.14 404.42 28.46 386.8 5000.00 19 0 Equil
+

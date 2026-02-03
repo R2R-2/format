@@ -1,0 +1,17 @@
+  <Sensor>
+    <SensorId>176</SensorId>
+    <SensorName>ROSR-RAW</SensorName>
+    <SensorType>NMEA UDPSOCKET PARENT</SensorType>
+    <SensorEnabled>1</SensorEnabled>
+    <LoggingRate>-1</LoggingRate>
+    <LoggingFolder>ANCILLARY</LoggingFolder>
+    <NetAddress>   .   .   .   </NetAddress>
+    <NetConnection>UDP Broadcast</NetConnection>
+    <Socket>33333</Socket>
+    <TermChar>10</TermChar>
+    <Timeout>601</Timeout>
+    <SyncCheck>0</SyncCheck>
+    <SentenceLabel>$ROSST</SentenceLabel>
+    <ParentSensorName>No Value</ParentSensorName>
+    <ExtendLabelFlg>0</ExtendLabelFlg>
+  </Sensor>

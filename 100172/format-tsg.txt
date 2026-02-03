@@ -1,0 +1,27 @@
+File Format ID: scs_tsg
+
+Format Description Creation Date: 2019-04-29
+
+File Type: ASCII, comma-separated values
+
+Record Format: Thermosalinigraph output string with external
+datetime stamp.
+
+Data Format Description:
+The file contains TSG data strings prefixed by an external datetime stamp.
+
+TSG fields are user defined. Some Example Records:
+03/15/2010,14:08:45.876, 22.7471,  0.04887,   0.2476, 1490.768
+03/15/2010,14:08:45.876,         4.16646        19.4964        30.2943        19.2284         0.20391      1514.03  
+       0.10379         2.1406         1.4504
+
+where:
+     03/15/2010     Date (source unknown), UTC
+                      03   = 2-digit month
+                      15   = 2-digit day of month
+                      2010 = 4-digit year
+     14:08:45.876   Time (source unknown), UTC
+                      14     = 2-digit hour [24-hour clock]
+                      08     = 2-digit minute
+                      45.876 = decimal seconds
+     followed by user defined TSG fields

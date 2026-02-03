@@ -1,0 +1,13 @@
+
+20141017 161235:
+   addtimestamp	true
+     dataformat	nmea0183
+    description	Sperry MK37
+      directory	gyro
+   manufacturer	Sperry
+       measures	heading
+           mode	4800,n,8,1,a
+          model	MK37
+           port	/dev/ttyRP3
+   serialnumber	???
+      timeoutms	2000

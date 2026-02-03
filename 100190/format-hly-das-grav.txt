@@ -1,0 +1,31 @@
+File Format ID: HLY_das_grav
+
+Format Description Creation Date: 2019-07-31
+
+File Type: ASCII, comma-separated values
+
+Record Format: Gravimeter output string with external date/time stamp.
+
+Data Format Description:
+The file contains bgm3 gravimeter data strings prefixed by an external date/time stamp.
+
+gravimeter fields are defined below. Example Record:
+gravimeter_bgm221,2014-05-12T23:59:40Z,04:025157 00
+
+Instrument Detail:
+Bell Aerospace BGM-3 Marine Gravity Meter
+The raw gravity measurements are stored as counts 
+
+These files have the following format:
+gravimeter_bgm221 - gravimeter id
+2014-05-12T23:59:40Z -	date/time time 
+						2014 - year
+						05 - month
+						12 -day of month
+						23 - hour
+						59 - minute
+						40 - second
+						Z - timezone
+04 - output frequency (Hz)
+025157 -	counts, raw gravity reading (unitless)
+00	-	sensor status (unitless)

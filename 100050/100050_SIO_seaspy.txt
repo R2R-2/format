@@ -1,0 +1,25 @@
+data/SerialInstruments/seaspy-magnetometer 
+Magnetometer data, collected initially using the BOB software, then SeaLINK after BOB started generating 
+
+20120209 111140:
+	      dataformat	proprietary
+	     description	SeaSpy Magnetometer
+	    addtimestamp	true
+	       directory	seaspy-magnetometer
+	            mode	9600,n,8,1,a
+	            port	/dev/ttyRP6
+	        measures	magnetic field
+	    manufacturer	Marine Magnetics
+	       timeoutms	1000
+	    serialnumber	SS-257331-01
+	           model	SeaSPY
+
+SeaSPY Smart Transceiver v3.4
+
+Ex:
+1299024000.465 *11.061/00:00:02.5 F:025748.986 S:188 D:+004.4m  L0 0465ms Q:99     
+1299024001.465 *11.061/00:00:03.5 F:025748.962 S:188 D:+004.5m  L0 0465ms Q:99 
+
+Format defined in Magnetometer_Data_Format.pdf
+
+Data records in SeaSPY format may be preceded by Unix timestamp.

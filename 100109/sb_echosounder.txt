@@ -1,0 +1,15 @@
+sb_echosounder.txt
+
+  Bridge navigation echo sounder, port console
+  Model: LAZ 5100
+  Sample rate: variable
+
+
+  Example data lines:
+    sb_echosounder_1  2014-11-19T02:52:42.7943Z  $SDDPT,0005.9,-0.0,0010*6B
+    sb_echosounder_1  2014-11-19T02:52:42.8741Z  $SDDBT,0019.3,f,0005.9,M,0003.2,F*30
+
+  Field Descriptions:
+    Logger ID
+    Time Stamp [UTC]
+    NMEA ASCII message

@@ -1,0 +1,56 @@
+File Format ID: spd
+
+Format Description Creation Date: 2020-05-29
+
+File Type: ASCII, whitespace-delimited and comma-separated values
+
+Record Format: National Marine Electronics Association (NMEA) 0183 string with device id
+and external, colon-separated datetime stamp.
+
+Data Format Description:
+The file contains PFEC, VDVLW and VDVHW  strings, alternating line-by-line.  Each NMEA 
+record is prefixed by a datatype id, an external datetime stamp, and device tag.
+
+Example Record:
+NAV 2018/11/01 18:39:57.083 SPD $VDVLW,47702.775,N,46487.665,N*50
+
+where:
+     NAV                       Datatype ID
+     2018/11/01 18:39:57.083   External datetime stamp (source unknown)
+                                 2018         4-digit year
+                                 11           2-digit month
+                                 01           2-digit day of month
+                                 18           2-digit hour [24-hour clock]
+                                 39           2-digit minute
+                                 57.083       decimal seconds
+     SPD			           Device tag
+     $VDVLW etc                NMEA record (see definitions below)
+
+Definitions follow.
+
+VHW Water Speed and Heading
+1   2 3   4 5   6 7   8 9
+|   | |   | |   | |   | |
+$--VHW,x.x,T,x.x,M,x.x,N,x.x,K*hh
+
+1) Degress True
+2) T = True
+3) Degrees Magnetic
+4) M = Magnetic
+5) Knots (speed of vessel relative to the water)
+6) N = Knots
+7) Kilometers (speed of vessel relative to the water)
+8) K = Kilometres
+9) Checksum
+
+VLW	Distance Traveled through Water
+1   2 3   4 5
+|   | |   | |
+$--VLW,x.x,N,x.x,N*hh
+1) Total cumulative distance
+2) N = Nautical Miles
+3) Distance since Reset
+4) N = Nautical 
+9) Checksum
+
+$PFEC - proprietary Furuno sentences
