@@ -8,7 +8,7 @@ Record Format: National Marine Electronics Association (NMEA) 0183 string with
 external datetime stamp.
 
 Data Format Description:
-The file contains GGA strings prefixed by an external datetime stamp.
+The file contains GGA strings prefixed by an external datetime stamp. The external datetime stamp can be either a datestamp with comma delimiter or an ISO8601 formatted date. Because these date stamps are provided by an external time source variation is to be expected. R2R's navigation processing scripts parses either of these formats.
 
 Example Record: 03/15/2010,14:08:45.876,$GPGGA,140844,2605.395,N,08006.974,W,2,08,0.90,0,M,,,1196,0017*21
 
