@@ -15,8 +15,8 @@
         const params = new URLSearchParams(window.location.search);
         const dir = params.get("dir");
 
-        const repoOwner = "USERNAME";
-        const repoName = "REPO";
+        const repoOwner = "R2R-2";
+        const repoName = "format";
 
         if (dir) {
             const apiURL = `https://api.github.com/repos/${repoOwner}/${repoName}/contents/${dir}`;
