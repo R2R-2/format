@@ -31,18 +31,27 @@
             max-width: 800px;
         }
 
+        /* H1 is the primary Page Title */
         h1 {
             font-size: 1.5rem;
             font-weight: 600;
-            margin-bottom: 24px;
+            margin-bottom: 8px;
             letter-spacing: -0.02em;
         }
 
-        /* File List Styling */
+        /* H2 (usually inside custom-header-area) is now smaller/secondary */
+        h2 {
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: var(--text-muted);
+            margin-top: 0;
+            margin-bottom: 16px;
+        }
+
         #file-list {
             list-style: none;
             padding: 0;
-            margin: 0;
+            margin: 24px 0 0 0;
             border-top: 1px solid var(--border);
         }
 
@@ -51,41 +60,37 @@
         }
 
         #file-list a {
-            display: block;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             padding: 12px 16px;
             text-decoration: none;
-            color: var(--accent);
-            font-weight: 500;
+            color: var(--text-main);
+            font-weight: 400;
             transition: background 0.2s ease;
-            display: flex;
-            align-items: center;
         }
 
         #file-list a:hover {
             background-color: var(--hover-bg);
-            text-decoration: underline;
+            color: var(--accent);
         }
 
-        /* Icon placeholder using CSS */
-        #file-list a::before {
-            content: "📄";
-            margin-right: 12px;
+        /* The Indicator Icon */
+        .icon-indicator {
             font-size: 0.9rem;
-            opacity: 0.7;
+            opacity: 0.5;
+            margin-left: 10px;
         }
 
-        /* Error state */
-        .error-msg {
-            color: #d93025;
-            background: #fff5f5;
-            padding: 12px;
-            border-radius: 6px;
-            border: 1px solid #ffcfcf;
-        }
-
-        /* Custom Header Injection Container */
         .custom-header-wrapper {
             margin-bottom: 32px;
+        }
+
+        .error-msg {
+            color: #d93025;
+            padding: 12px;
+            border: 1px solid #ffcfcf;
+            border-radius: 6px;
         }
     </style>
 </head>
@@ -93,20 +98,16 @@
 
     <div class="container">
         <h1 id="page-title">Loading...</h1>
-        
         <div id="custom-header-area" class="custom-header-wrapper"></div>
-
         <ul id="file-list"></ul>
     </div>
 
     <script>
         const params = new URLSearchParams(window.location.search);
         const dir = params.get("dir");
-
         const repoOwner = "R2R-2";
         const repoName = "format";
 
-        // Logic for page and tab titles
         const displayDir = dir ? dir : "Root";
         const fullTitle = `${displayDir} Format Description Documentation`;
         document.title = fullTitle;
@@ -117,47 +118,57 @@
 
             fetch(apiURL)
                 .then(res => {
-                    if (!res.ok) throw new Error("Directory not found or API limit reached.");
+                    if (!res.ok) throw new Error("Directory not found.");
                     return res.json();
                 })
                 .then(files => {
                     const list = document.getElementById("file-list");
                     const headerArea = document.getElementById("custom-header-area");
 
-                    // 1. Check for custom header.html
+                    // 1. Header Injection
                     const headerFile = files.find(f => f.name === "header.html");
                     if (headerFile) {
                         fetch(headerFile.download_url)
                             .then(res => res.text())
-                            .then(htmlContent => {
-                                headerArea.innerHTML = htmlContent;
-                            });
+                            .then(html => headerArea.innerHTML = html);
                     }
 
-                    // 2. Build the file list
+                    // 2. File List with dynamic indicators
                     files.forEach(file => {
-                        // Filter out folders and the header file itself
                         if (file.type === "file" && file.name !== "header.html") {
                             const li = document.createElement("li");
                             const a = document.createElement("a");
+                            
+                            const isTxt = file.name.toLowerCase().endsWith('.txt');
+                            
+                            // Text Span for Name
+                            const nameSpan = document.createElement("span");
+                            nameSpan.textContent = file.name;
+                            
+                            // Icon Span for Indicator
+                            const iconSpan = document.createElement("span");
+                            iconSpan.className = "icon-indicator";
+                            // ↗ for external/link (txt), ↓ for download (others)
+                            iconSpan.textContent = isTxt ? "↗" : "↓";
 
                             a.href = file.download_url;
-                            a.textContent = file.name;
+                            
+                            // If it's a download (not .txt), help the browser realize it
+                            if (!isTxt) {
+                                a.setAttribute("download", file.name);
+                            }
 
+                            a.appendChild(nameSpan);
+                            a.appendChild(iconSpan);
                             li.appendChild(a);
                             list.appendChild(li);
                         }
                     });
                 })
                 .catch(err => {
-                    const list = document.getElementById("file-list");
-                    list.innerHTML = `<p class="error-msg"><strong>Error:</strong> ${err.message}</p>`;
-                    console.error(err);
+                    document.getElementById("file-list").innerHTML = `<p class="error-msg">${err.message}</p>`;
                 });
-        } else {
-            document.getElementById("page-title").textContent = "Please specify a directory in the URL.";
         }
     </script>
-
 </body>
 </html>
