@@ -1,15 +1,103 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>File Browser</title>
-</head>
+    <style>
+        :root {
+            --bg: #ffffff;
+            --text-main: #1a1a1a;
+            --text-muted: #666666;
+            --accent: #0066cc;
+            --border: #eeeeee;
+            --hover-bg: #f8f9fa;
+            --font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
 
+        body {
+            font-family: var(--font-stack);
+            background-color: var(--bg);
+            color: var(--text-main);
+            line-height: 1.6;
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 800px;
+        }
+
+        h1 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 24px;
+            letter-spacing: -0.02em;
+        }
+
+        /* File List Styling */
+        #file-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            border-top: 1px solid var(--border);
+        }
+
+        #file-list li {
+            border-bottom: 1px solid var(--border);
+        }
+
+        #file-list a {
+            display: block;
+            padding: 12px 16px;
+            text-decoration: none;
+            color: var(--accent);
+            font-weight: 500;
+            transition: background 0.2s ease;
+            display: flex;
+            align-items: center;
+        }
+
+        #file-list a:hover {
+            background-color: var(--hover-bg);
+            text-decoration: underline;
+        }
+
+        /* Icon placeholder using CSS */
+        #file-list a::before {
+            content: "📄";
+            margin-right: 12px;
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+
+        /* Error state */
+        .error-msg {
+            color: #d93025;
+            background: #fff5f5;
+            padding: 12px;
+            border-radius: 6px;
+            border: 1px solid #ffcfcf;
+        }
+
+        /* Custom Header Injection Container */
+        .custom-header-wrapper {
+            margin-bottom: 32px;
+        }
+    </style>
+</head>
 <body>
 
-    <h1>Files</h1>
-    <ul id="file-list"></ul>
+    <div class="container">
+        <h1 id="page-title">Loading...</h1>
+        
+        <div id="custom-header-area" class="custom-header-wrapper"></div>
+
+        <ul id="file-list"></ul>
+    </div>
 
     <script>
         const params = new URLSearchParams(window.location.search);
@@ -18,31 +106,38 @@
         const repoOwner = "R2R-2";
         const repoName = "format";
 
+        // Logic for page and tab titles
+        const displayDir = dir ? dir : "Root";
+        const fullTitle = `${displayDir} Format Description Documentation`;
+        document.title = fullTitle;
+        document.getElementById("page-title").textContent = fullTitle;
+
         if (dir) {
             const apiURL = `https://api.github.com/repos/${repoOwner}/${repoName}/contents/${dir}`;
 
             fetch(apiURL)
-                .then(res => res.json())
+                .then(res => {
+                    if (!res.ok) throw new Error("Directory not found or API limit reached.");
+                    return res.json();
+                })
                 .then(files => {
                     const list = document.getElementById("file-list");
+                    const headerArea = document.getElementById("custom-header-area");
 
-                    // to include custom html define a file called header.html in the target directory containing the markup/text you want.
+                    // 1. Check for custom header.html
                     const headerFile = files.find(f => f.name === "header.html");
                     if (headerFile) {
-                        // Fetch the actual content of the header file
                         fetch(headerFile.download_url)
                             .then(res => res.text())
                             .then(htmlContent => {
-                                const headerDiv = document.createElement("div");
-                                headerDiv.innerHTML = htmlContent;
-                                // Insert it before the list
-                                list.parentNode.insertBefore(headerDiv, list);
+                                headerArea.innerHTML = htmlContent;
                             });
                     }
 
+                    // 2. Build the file list
                     files.forEach(file => {
-                        if (file.type === "file") {
-
+                        // Filter out folders and the header file itself
+                        if (file.type === "file" && file.name !== "header.html") {
                             const li = document.createElement("li");
                             const a = document.createElement("a");
 
@@ -55,12 +150,14 @@
                     });
                 })
                 .catch(err => {
-                    document.body.innerHTML += "<p>Error loading directory.</p>";
+                    const list = document.getElementById("file-list");
+                    list.innerHTML = `<p class="error-msg"><strong>Error:</strong> ${err.message}</p>`;
                     console.error(err);
                 });
+        } else {
+            document.getElementById("page-title").textContent = "Please specify a directory in the URL.";
         }
     </script>
 
 </body>
-
 </html>
