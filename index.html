@@ -26,6 +26,20 @@
                 .then(files => {
                     const list = document.getElementById("file-list");
 
+                    // to include custom html define a file called header.html in the target directory containing the markup/text you want.
+                    const headerFile = files.find(f => f.name === "header.html");
+                    if (headerFile) {
+                        // Fetch the actual content of the header file
+                        fetch(headerFile.download_url)
+                            .then(res => res.text())
+                            .then(htmlContent => {
+                                const headerDiv = document.createElement("div");
+                                headerDiv.innerHTML = htmlContent;
+                                // Insert it before the list
+                                list.parentNode.insertBefore(headerDiv, list);
+                            });
+                    }
+
                     files.forEach(file => {
                         if (file.type === "file") {
 
