@@ -9,7 +9,9 @@ and external, colon-separated datetime stamp.
 
 Data Format Description:
 The file contains GGA, RMC, VTG, and ZDA strings, alternating line-by-line.  Each NMEA 
-record is prefixed by a datatype id, an external datetime stamp, and device tag.
+record is prefixed by a datatype id, an external datetime stamp, and device tag. The parser doesn't
+require there to be a prefix to the NMEA line. In fact, everything before the `$` is parsed out
+and ignored in the data line processing.
 
 Example Record:
 NAV 2013/11/20 05:00:04.561 GPS $GPGGA,050004.00,4131.43841,N,07040.33593,W,2,7,1.0,28.99,M,-30.68,M,10,0907*5E

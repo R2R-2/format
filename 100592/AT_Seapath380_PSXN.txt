@@ -1,0 +1,26 @@
+Instrument Make and Model: Seapath 380 Series 
+S/N: 
+Model: 380 Series
+Calibration Date: Sea Acceptance Testing July 18-21, 2021
+Installation:  2019 March 
+
+
+
+RAW datafile:
+dsLog time stamp:
+IMU 2025/09/05 19:00:22.792 SEAPATH $PSXN,23,0.30,0.69,288.47,0.00*35
+
+IMU                 Inertial   Unit 
+2025/09/05          date in gmt
+19:00:22.792        time in gmt
+SEAPATH		    from the Seapath 380
+data                $PSXN,23,0.30,0.69,288.47,0.00*35 
+
+
+     $PSXN          Kongsberg Proprietary NMEA format message
+     23             proprietary message type 23 
+     0.30           roll
+     0.69           pitch
+     288.47         heading
+     0.00           heave
+     *35            checksun       

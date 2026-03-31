@@ -1,0 +1,41 @@
+Data Format Description: Thompson Rad SCS format.
+
+Standards Followed: N/A
+
+Useful References: N/A
+
+Sample Rate: N/A
+
+Data line column descriptions (one description per unique line format):
+
+    Example Line: 08/02/2025,18:26:24.839,$PWAM,002.65,006.23,176.00,011.45,204.58,170.00,011.45,232.00,234.00,005.91,058.00,096.60,000.28,096.60,000.28,222.17,000.00*30
+    where:
+          08/02/2025      Date
+          18:26:24.839    Time (UTC)
+          $PWAM           Talker ID
+          002.65          Sig Wave Height (m)
+          006.23          Mean Period (s)
+          176.00          Peak Wave Direction (coming from)
+          011.45          Peak Wave Period
+          204.58          Peak Wave length (m)
+          170.00          Swell wave direction (coming from)
+          011.45          Swell Wave Period (seconds)
+          232.00          Swell Wave Length (m)
+          234.00          Wind sea wave direction (coming from)
+          005.91          Wind Sea wave period
+          058.00          Wind Sea wave current direction
+          096.60          Current Direction
+          000.28          Current Speed (m/s)         
+          096.60          Encounter current direction
+          000.28          Encounter current speed (m/s) (Georgr. Oriented, going to)
+          222.17          Gyro compass
+          000.00*30       quality index (the higher this value the worth the quality is)
+
+
+Example File Contents:
+
+    08/02/2025,18:26:24.839,$PWAM,002.65,006.23,176.00,011.45,204.58,170.00,011.45,232.00,234.00,005.91,058.00,096.60,000.28,096.60,000.28,222.17,000.00*30
+    08/02/2025,18:28:00.185,$PWAM,002.67,006.22,176.00,011.44,204.31,170.00,011.44,232.00,234.00,005.90,058.00,097.10,000.28,097.10,000.28,222.35,000.00*3D
+    08/02/2025,18:29:35.754,$PWAM,002.68,006.23,176.00,011.43,204.04,182.00,011.43,204.00,234.00,005.82,058.00,097.20,000.27,097.20,000.27,222.24,000.00*3E
+    08/02/2025,18:31:10.530,$PWAM,002.73,006.26,176.00,011.44,204.25,182.00,011.44,204.00,234.00,005.91,058.00,097.40,000.26,097.40,000.26,222.77,000.00*36
+    08/02/2025,18:32:45.721,$PWAM,002.74,006.27,176.00,011.43,204.02,182.00,011.43,204.00,234.00,005.91,058.00,096.90,000.27,096.90,000.27,221.54,000.00*37

@@ -1,0 +1,31 @@
+ Data Format Description: TGT SCS fluoremeter data format.
+
+Standards Followed: N/A
+
+Useful References: N/A
+
+Sample Rate: N/A
+
+Data line column descriptions (one description per unique line format):
+
+    Example Line: 07/31/2025,00:00:12.921,99/99/99	99:99:99	0.05	695	56	515
+    where:
+          07/31/2025      Date
+          00:00:12.921    Time (UTC)
+          99/99/99        Date (presumably not set because only the external datestamp is used).
+          99:99:99        Time (UTC) (presumably not set because only the external datestamp is used).
+          0.05            fluorescence ug/L
+          695             wavelength
+          56              Fluorometer Counts
+          515             Therminstor Reading
+
+
+Example File Contents:
+
+    07/31/2025,00:00:12.921,99/99/99	99:99:99	0.05	695	56	515
+    07/31/2025,00:00:14.030,99/99/99	99:99:99	0.05	695	57	515
+    07/31/2025,00:00:15.124,99/99/99	99:99:99	0.04	695	55	515
+    07/31/2025,00:00:16.218,99/99/99	99:99:99	0.05	695	57	515
+    07/31/2025,00:00:17.322,99/99/99	99:99:99	0.07	695	59	515
+    07/31/2025,00:00:18.416,99/99/99	99:99:99	0.05	695	57	515
+    07/31/2025,00:00:19.509,99/99/99	99:99:99	0.05	695	57	515

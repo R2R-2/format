@@ -1,0 +1,25 @@
+Data Format Description: Thompson Water Thermometer SCS format.
+
+Standards Followed: N/A
+
+Useful References: N/A
+
+Sample Rate: N/A
+
+Data line column descriptions (one description per unique line format):
+
+    Example Line: 07/25/2025,00:00:24.276,29.3365
+    where:
+          07/25/2025      Date
+          00:00:24.276    Time (UTC)
+          29.3365         Intake Temp (C)
+
+
+Example File Contents:
+
+    07/25/2025,00:00:24.276,29.3365
+    07/25/2025,00:00:25.948,29.3360
+    07/25/2025,00:00:27.605,29.3358
+    07/25/2025,00:00:29.277,29.3359
+    07/25/2025,00:00:30.949,29.3362
+    07/25/2025,00:00:32.605,29.3371

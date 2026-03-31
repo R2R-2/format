@@ -1,0 +1,33 @@
+Data Format Description: NOAA SCS (version 4.9x)
+
+Standards Followed: N/A
+
+Useful References: N/A
+
+Sample Rate: N/A
+
+Data line column descriptions (one description per unique line format):
+
+    Example Line: 06/20/2022,00:50:40.493,$METED,006.4,084.6,013.72,074.3,1024.3,
+    where:
+          06/20/2022     Date
+          00:50:40.493   Time (UTC)
+          $METED         Talker ID
+          006.4          Relative Wind Speed-Ultrasonic (knts)
+          084.6          Relative Wind Direction-Ultrasonic (deg)
+          013.72         Air Temp C
+          074.3          Relative Humidity
+          1024.3         Barometric Pressure (mbar)
+
+
+Example File Contents:
+
+    06/20/2022,00:50:40.493,$METED,006.4,084.6,013.72,074.3,1024.3,
+    06/20/2022,00:50:41.508,$METED,007.2,083.8,013.72,074.3,1024.3,
+    06/20/2022,00:50:42.492,$METED,006.9,081.6,013.69,074.3,1024.3,
+    06/20/2022,00:50:43.508,$METED,009.1,075.0,013.71,074.3,1024.3,
+    06/20/2022,00:50:44.508,$METED,008.8,078.5,013.69,074.3,1024.3,
+    06/20/2022,00:50:45.508,$METED,008.8,070.8,013.71,074.3,1024.3,
+    06/20/2022,00:50:46.508,$METED,008.9,069.5,013.70,074.3,1024.3,
+    06/20/2022,00:50:47.502,$METED,009.4,069.8,013.71,074.4,1024.3,
+    06/20/2022,00:50:48.502,$METED,009.6,070.3,013.70,074.4,1024.3,

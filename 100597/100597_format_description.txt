@@ -1,0 +1,29 @@
+Data Format Description: Thompson Rad SCS format.
+
+Standards Followed: N/A
+
+Useful References: N/A
+
+Sample Rate: N/A
+
+Data line column descriptions (one description per unique line format):
+
+    Example Line: 08/01/2025,00:00:12.893,$RAD,432.9,432.9,100.0,20.1
+    where:
+          08/01/2025      Date
+          00:00:12.893    Time (UTC)
+          $RAD            Talker ID
+          432.9           SGR4 raw (mV)
+          432.9           SGR4 LongWave (W/m^2)
+          100.0           SMP10 raw (mV)
+          20.1            SMP10 ShortWave (W/m^2)
+
+
+Example File Contents:
+
+    08/01/2025,00:00:12.893,$RAD,432.9,432.9,100.0,20.1
+    08/01/2025,00:00:13.909,$RAD,432.9,432.9,100.1,20.1
+    08/01/2025,00:00:14.893,$RAD,432.9,432.9,100.2,20.3
+    08/01/2025,00:00:15.893,$RAD,433.0,433.0,100.2,20.5
+    08/01/2025,00:00:16.909,$RAD,432.8,432.8,100.2,20.5
+    08/01/2025,00:00:17.894,$RAD,432.8,432.8,100.2,20.5

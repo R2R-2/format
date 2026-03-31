@@ -1,0 +1,26 @@
+Data Format Description: Thompson SSV SCS Format.
+
+Standards Followed: N/A
+
+Useful References: N/A
+
+Sample Rate: N/A
+
+Data line column descriptions (one description per unique line format):
+
+    Example Line: 07/25/2025,00:00:02.691, 1542.267 
+    where:
+          07/25/2025      Date
+          00:00:02.691    Time (UTC)
+          1542.267        Sound Speed (m/s)
+
+
+Example File Contents:
+
+    07/25/2025,00:00:02.691, 1542.267
+    07/25/2025,00:00:02.738, 1542.257
+    07/25/2025,00:00:02.769, 1542.256
+    07/25/2025,00:00:02.816, 1542.265
+    07/25/2025,00:00:02.847, 1542.259
+    07/25/2025,00:00:02.894, 1542.264
+    07/25/2025,00:00:02.925, 1542.264

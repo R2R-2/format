@@ -1,0 +1,30 @@
+Data Format Description: Thompson Rad SCS $PPAR format.
+
+Standards Followed: N/A
+
+Useful References: N/A
+
+Sample Rate: N/A
+
+Data line column descriptions (one description per unique line format):
+
+    Example Line: 07/24/2025,00:00:06.911,$PPAR,39.258, 28.51, 11.633 
+    where:
+          07/24/2025      Date
+          00:00:06.911    Time (UTC)
+          $PPAR           Talker ID
+          39.258          PAR Value (uE/m^2)
+          28.51           Air Temp C
+          11.633          Voltage
+
+
+Example File Contents:
+
+07/24/2025,00:00:06.911,$PPAR,39.258, 28.51, 11.633
+07/24/2025,00:00:07.943,$PPAR,39.259, 28.51, 11.633
+07/24/2025,00:00:08.950,$PPAR,39.236, 28.51, 11.633
+07/24/2025,00:00:09.965,$PPAR,39.253, 28.51, 11.633
+07/24/2025,00:00:10.981,$PPAR,39.311, 28.51, 11.633
+07/24/2025,00:00:11.997,$PPAR,39.440, 28.51, 11.633
+07/24/2025,00:00:13.013,$PPAR,39.590, 28.51, 11.633
+07/24/2025,00:00:14.044,$PPAR,39.710, 28.51, 11.633 
