@@ -73,14 +73,12 @@
             color: var(--accent);
         }
 
-        /* The Name Container (for Name + Primary Badge) */
         .file-info {
             display: flex;
             align-items: center;
             gap: 10px;
         }
 
-        /* Primary Badge Styling */
         .primary-badge {
             font-size: 11px;
             font-weight: 600;
@@ -100,6 +98,17 @@
         .custom-header-wrapper {
             margin-bottom: 32px;
         }
+
+        /* Styling for the empty state message */
+        .empty-message {
+            padding: 32px;
+            text-align: center;
+            color: var(--text-muted);
+            background: var(--hover-bg);
+            border-radius: 8px;
+            border: 1px dashed var(--border);
+            margin-top: 24px;
+        }
     </style>
 </head>
 <body>
@@ -113,7 +122,7 @@
     <script>
         const params = new URLSearchParams(window.location.search);
         const dir = params.get("dir");
-        const primaryFile = params.get("primary"); // Get the primary filename
+        const primaryFile = params.get("primary");
 
         const repoOwner = "R2R-2";
         const repoName = "format";
@@ -134,7 +143,9 @@
                 .then(files => {
                     const list = document.getElementById("file-list");
                     const headerArea = document.getElementById("custom-header-area");
+                    let renderedCount = 0;
 
+                    // 1. Process Header
                     const headerFile = files.find(f => f.name === "header.html");
                     if (headerFile) {
                         fetch(headerFile.download_url)
@@ -142,15 +153,16 @@
                             .then(html => headerArea.innerHTML = html);
                     }
 
+                    // 2. Build List
                     files.forEach(file => {
                         if (file.type === "file" && file.name !== "header.html") {
+                            renderedCount++;
                             const li = document.createElement("li");
                             const a = document.createElement("a");
                             
                             const isTxt = file.name.toLowerCase().endsWith('.txt');
                             const isPrimary = (file.name === primaryFile);
 
-                            // Left side: Name + Badge
                             const infoDiv = document.createElement("div");
                             infoDiv.className = "file-info";
                             
@@ -165,7 +177,6 @@
                                 infoDiv.appendChild(badge);
                             }
 
-                            // Right side: Icon
                             const iconSpan = document.createElement("span");
                             iconSpan.className = "icon-indicator";
                             iconSpan.textContent = isTxt ? "↗" : "↓";
@@ -179,9 +190,17 @@
                             list.appendChild(li);
                         }
                     });
+
+                    // 3. Handle Empty State
+                    if (renderedCount === 0) {
+                        const emptyDiv = document.createElement("div");
+                        emptyDiv.className = "empty-message";
+                        emptyDiv.innerHTML = `<strong>No files identified to serve</strong><br>This directory does not currently contain any accessible documents.`;
+                        list.parentNode.replaceChild(emptyDiv, list);
+                    }
                 })
                 .catch(err => {
-                    document.getElementById("file-list").innerHTML = `<p>${err.message}</p>`;
+                    document.getElementById("file-list").innerHTML = `<p style="color: red;">${err.message}</p>`;
                 });
         }
     </script>
