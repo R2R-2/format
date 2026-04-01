@@ -1,0 +1,29 @@
+Kilo Moana Raw Metstation Data File Field Description:
+     1: Year
+     2: Ordinal Day (day of year)
+     3: Hour
+     4: Minute
+     5: Second
+     6: MSeconds
+     7: Code (sensor)
+     8: Panel Temperature (dummy value)
+     9: WXT Temperature (deg C)
+     10: WXT Relative Humidity (%)
+     11: WXT Temperature (deg C, dummy field)
+     12: Optical Rain Gauge (dummy value)
+     13: Kipp & Zonen SMP10 Pyranometer (V)
+     14: Kipp & Zonen SGR4 Pyrgeometer (V)
+     15: dummy value
+     16: dummy value
+     17: dummy value
+     18: dummy value
+     19: dummy value
+     20: Biospherical QSR-2200 PAR Sensor (V)
+     21: WXT Relative Wind Speed (knots)
+     22: WXT Relative Wind Direction (deg)
+     23: WXT True Wind Speed (knots)
+     24: WXT True Wind Direction (deg)
+     25: WXT Rain Accumulation (mm)
+     26: WXT Rain Rate (mm/min)
+
+Note: All fields with a description containing WXT come from the Vaisala WXT536

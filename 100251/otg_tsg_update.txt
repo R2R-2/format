@@ -1,0 +1,9 @@
+Kilo Moana TSG file format:
+Year DOY Hr Min Sec MSec Stamp Temperature_Internal(°C) Conductivity(µS/cm) Salinity(ppt) Temperature_External(°C) Sound_Velocity(m/s)
+
+Example lines:
+2025 354 00 00 08 708 uthsl 25.9809 5.39851 34.9177 25.7203 1536.036
+2025 354 00 00 09 708 uthsl 25.9799 5.39843 34.9179 25.7205 1536.037
+2025 354 00 00 10 707 uthsl 25.9789 5.39843 34.9186 25.7226 1536.043
+
+Note: some files may have additional gps position fields for latitude and longitude right after the stamp field and/or may lack the sound velocity field
