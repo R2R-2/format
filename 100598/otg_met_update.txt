@@ -1,4 +1,5 @@
-Kilo Moana Raw Metstation Data File Field Description:
+Kilo Moana Raw and Processed Metstation Data File Field Description:
+
      1: Year
      2: Ordinal Day (day of year)
      3: Hour
@@ -17,13 +18,19 @@ Kilo Moana Raw Metstation Data File Field Description:
      16: dummy value
      17: dummy value
      18: dummy value
-     19: dummy value
-     20: Biospherical QSR-2200 PAR Sensor (V)
-     21: WXT Relative Wind Speed (knots)
-     22: WXT Relative Wind Direction (deg)
-     23: WXT True Wind Speed (knots)
-     24: WXT True Wind Direction (deg)
-     25: WXT Rain Accumulation (mm)
-     26: WXT Rain Rate (mm/min)
+     19: Biospherical QSR-2200 PAR Sensor (V)
+     20: WXT Relative Wind Speed (knots)
+     21: WXT Relative Wind Direction (deg)
+     22: WXT True Wind Speed (knots)
+     23: WXT True Wind Direction (deg)
+     24: WXT Rain Accumulation (mm)
+     25: WXT Rain Rate (mm/min)
 
-Note: All fields with a description containing WXT come from the Vaisala WXT536
+Note: All fields with a description containing WXT come from Vaisala WXT536 metstation
+
+Example lines:
+2025 295 18 07 36 490 met 00 27.4 62.8 27.4 00 328 -75 00 00 00 00 0.8814 7.7 211.0 7.8 50.3 0.0 0.12
+2025 295 18 07 37 440 met 00 27.4 62.8 27.4 00 327 -75 00 00 00 00 0.8787 7.5 213.0 7.6 52.3 0.0 0.12
+2025 295 18 07 38 447 met 00 27.4 62.8 27.4 00 327 -75 00 00 00 00 0.8836 7.9 219.0 8.0 58.1 0.0 0.12
+2025 295 18 07 39 495 met 00 27.4 62.8 27.4 00 327 -75 00 00 00 00 0.8791 7.2 225.0 7.3 64.0 0.0 0.12
+2025 295 18 07 40 464 met 00 27.4 62.8 27.4 00 327 -75 00 00 00 00 0.8815 6.9 210.0 7.0 49.3 0.0 0.12

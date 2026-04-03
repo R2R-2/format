@@ -1,0 +1,30 @@
+Kilo Moana Vaisala WXT536 Data File Field Description:
+
+        1: Year
+        2: Ordinal Day (day of year)
+        3: Hour
+        4: Minute
+        5: Second
+        6: MSeconds
+        7: wxt536 (sensor)
+        8: True Wind Speed (knots) - Calculated from posmv and wxt
+        9: True Wind Direction (deg) - Calculated from posmv and wxt
+        10: Heading (deg) - From posmv
+        11: Speed Over Ground (knots) - From posmv
+        12: Course Over Ground (deg) - From posmv
+        13: Relative Wind Direction (deg) - From wxt
+        14: Relative Wind Speed (knots) - From wxt
+        15: Air Temperature (deg C) - From wxt
+        16: Relative Humidity (%) - From wxt
+        17: Barometric pressure (mbar) - From wxt
+        18: Rain Accumulation (mm) - From wxt
+        19: Rain Intensity (mm/min) - From wxt
+
+Note: Any fields that require data from GPS will show "00" if no GPS data was available at that time
+Note: Fields from posmv come from Applanix POS/MV-320 V4 INS and fields from wxt come from Vaisala WXT536 metstation
+
+Example lines:
+2025 295 18 07 31 605 wxt536    7.0     52.2    209.30  0.1     222.1   213.0   6.9     27.4    62.9    1014.7  0.12    0.0
+2025 295 18 07 32 606 wxt536    6.6     54.2    209.30  0.1     225.4   215.0   6.5     27.4    62.8    1014.7  0.12    0.0
+2025 295 18 07 33 605 wxt536    7.1     55.1    209.20  0.1     228.4   216.0   7.0     27.4    62.8    1014.7  0.12    0.0
+2025 295 18 07 34 605 wxt536    7.8     58.2    209.20  0.1     234.4   219.0   7.7     27.4    62.8    1014.7  0.12    0.0
