@@ -1,0 +1,5 @@
+Atlantis Seametrics SPX-038 Flowmeter Data Format
+
+String: SSW 2026-04-17T20:11:50.295Z FLOW 0 System Timestamp Type Counts/Second
+
+UPDATE FOR CLARITY WHEN NEW DATA FILES ARE RECEIVED

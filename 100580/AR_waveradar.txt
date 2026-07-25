@@ -1,0 +1,21 @@
+Neil Armstrong Wave Radar Format
+
+Fields: 
+	1.  date
+	2.  time (UTC) 
+	3.  longitude (deg E) 
+	4.  latitude (deg N)
+	5.  peak wave period (s)
+	6.  mean wave period (s) 
+	7.  peak wave direction (deg CWFN coming from)
+	8.  significant wave height (m)
+	9.  near-surface current speed (m/s) 
+	10. near-surface current direction (deg CWFN going to)
+
+Example Lines:
+2025/11/09, 00:00, -70.88533, 39.96131, 8.80, 7.81, 202.6, 1.01, 0.25, 258.7
+2025/11/09, 00:02, -70.88425, 39.96055, 8.04, 7.76, 207.5, 0.88, 0.25, 259.5
+2025/11/09, 00:04, -70.87570, 39.95808, 8.16, 7.77, 207.3, 0.77, 0.25, 261.4
+2025/11/09, 00:06, -70.87663, 39.96382, 8.16, 7.78, 206.6, 0.74, 0.25, 262.8
+2025/11/09, 00:08, -70.87876, 39.96919, 8.51, 7.75, 205.7, 0.73, 0.24, 264.1
+2025/11/09, 00:10, -70.87863, 39.97445, 8.42, 7.77, 208.5, 0.71, 0.24, 265.2
