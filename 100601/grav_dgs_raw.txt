@@ -1,4 +1,6 @@
-Data Format Description: This data comes from the Dynamic Gravity Systems AT1M gravimeter on board the Thomas G. Thompson. The column names and units are sourced from the tgt_scs_sensorinfo_dec2025v2 Excel file.
+Instrument Make and Model: Dynamic Gravity Systems AT1M DGS gravimeter
+
+Note: Headers, data tags, and datetime formats may vary by vessel
 
 Data line column descriptions (one description per unique line format):
 

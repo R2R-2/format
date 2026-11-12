@@ -1,0 +1,574 @@
+GPS01:
+  category: "device_type"
+  description: "General Trimble GPS" 
+  
+  format:
+  -GGA:
+    - "$GPGGA,{GPSTime:og},{Latitude:nlat},{NorS:w},{Longitude:nlat},{EorW:w},{FixQuality:d},{NumSats:d},{HDOP:of},{AntennaHeight:of},{:ow},{GeoidHeight:of},{:ow},{:ow}*{CheckSum:x}"
+    - "$GPGGA,{GPSTime:og},{Latitude:nlat},{NorS:w},{Longitude:nlat},{EorW:w},{FixQuality:d},{NumSats:d},{HDOP:of},{AntennaHeight:of},{:ow},{GeoidHeight:of},{:ow},{:ow},{:ow}*{CheckSum:x}"
+    - "$GPGGA,{GPSTime:og},{Latitude:nlat},{NorS:w},{Longitude:nlat},{EorW:w},{FixQuality:d},{NumSats:d},{HDOP:of},{AntennaHeight:of},{:ow},{GeoidHeight:of},{:ow},{LastDGPSUpdate:of},{DGPSStationID:od}*{CheckSum:x}"
+    - "$GPGGA,{GPSTime:og},{Latitude:nlat},{NorS:w},{Longitude:nlat},{EorW:w},{FixQuality:d},{NumSats:d},{HDOP:of},{AntennaHeight:of},{:ow},{GeoidHeight:of},{:ow},{LastDGPSUpdate:of},{DGPSStationID:od},{Unknown:og}*{CheckSum:x}"
+    GLL:
+    - "$GPGLL,{Latitude:nlat},{NorS:w},{Longitude:nlat},{EorW:w},{FixTime:g},{DataValid:w},{Mode:w}*{CheckSum:x}"
+    - "$GPGLL,{Latitude:nlat},{NorS:w},{Longitude:nlat},{EorW:w},{FixTime:g},{Mode:w}*{CheckSum:x}"
+    GSA:
+    - "$GPGSA,{ManualAutoMode:w},{DimensionMode:d},{Sat1ID:od},{Sat2ID:od},{Sat3ID:od},{Sat4ID:od},{Sat5ID:od},{Sat6ID:od},{Sat7ID:od},{Sat8ID:od},{Sat9ID:od},{Sat10ID:od},{Sat11ID:od},{Sat12ID:od},{PDOP:f},{HDOP:f},{VDOP:f}*{CheckSum:x}"
+    GSV:
+    - "$GPGSV,{TotalNumMesg:d},{MesgNum:d},{NumSats:d},{Sat1PRN:d},{Sat1Elevation:d},{Sat1Azimuth:d},{Sat1SignalToNoise:d},{Sat2PRN:d},{Sat2Elevation:d},{Sat2Azimuth:d},{Sat2SignalToNoise:d},{Sat3PRN:d},{Sat3Elevation:d},{Sat3Azimuth:d},{Sat3SignalToNoise:d},{Sat4PRN:d},{Sat4Elevation:d},{Sat4Azimuth:d},{Sat4SignalToNoise:d}*{CheckSum:x}"
+    - "$GPGSV,{TotalNumMesg:d},{MesgNum:d},{NumSats:d},{Sat1PRN:d},{Sat1Elevation:d},{Sat1Azimuth:d},{Sat1SignalToNoise:d},{Sat2PRN:d},{Sat2Elevation:d},{Sat2Azimuth:d},{Sat2SignalToNoise:d},{Sat3PRN:d},{Sat3Elevation:d},{Sat3Azimuth:d},{Sat3SignalToNoise:d}*{CheckSum:x}"
+    - "$GPGSV,{TotalNumMesg:d},{MesgNum:d},{NumSats:d},{Sat1PRN:d},{Sat1Elevation:d},{Sat1Azimuth:d},{Sat1SignalToNoise:d},{Sat2PRN:d},{Sat2Elevation:d},{Sat2Azimuth:d},{Sat2SignalToNoise:d}*{CheckSum:x}"
+    - "$GPGSV,{TotalNumMesg:d},{MesgNum:d},{NumSats:d},{Sat1PRN:d},{Sat1Elevation:d},{Sat1Azimuth:d},{Sat1SignalToNoise:d}*{CheckSum:x}"
+    HDT: "$GPHDT,{HeadingTrue:f},T*{CheckSum:x}"
+
+    #  $GPRMC,131208,     A,            5310.2626,   S,       07054.3592,   W,       0.1,        171.9,         020819,     14.2,           E                  ,A       *2B
+    RMC:
+    - "$GPRMC,{GPSTime:og},{GPSStatus:w},{Latitude:nlat},{NorS:w},{Longitude:nlat},{EorW:w},{SpeedKt:f},{CourseTrue:f},{GPSDate:w},{MagneticVar:f},{MagneticVarEorW:w},{Mode:w}*{Checksum:x}"
+    - "$GPRMC,{GPSTime:og},{GPSStatus:w},{Latitude:nlat},{NorS:w},{Longitude:nlat},{EorW:w},{SpeedKt:f},{CourseTrue:f},{GPSDate:w},{MagneticVar:f},{MagneticVarEorW:w}*{Checksum:x}"
+    VTG:
+    - "$GPVTG,{CourseTrue:of},T,{CourseMag:of},M,{SpeedKt:of},N,{SpeedKm:of},K*{CheckSum:x}"
+    - "$GPVTG,{CourseTrue:of},T,{CourseMag:of},M,{SpeedKt:of},N,{SpeedKm:of},K,{Mode:w}*{CheckSum:x}"
+    ZDA:
+    - "$GPZDA,{GPSTime:d},{GPSDay:d},{GPSMonth:d},{GPSYear:d},{LocalHours:od},{LocalZone:od}*{CheckSum:x}"
+    - "$GPZDA,{GPSTime:og},{GPSDay:d},{GPSMonth:d},{GPSYear:d},{LocalHours:od},{LocalZone:od},{Unknown:ow}*{CheckSum:x}"
+    DTM:
+    # "$GPDTM,W84,,0000.0000,N,00000.0000,E,0.0,W84*5F"
+    - "$GPDTM,{LocalDatum:w},{LocalDatumSubCode:ow},{LatitudeOffsetMinutes:f},{LatitudeOffsetNorS:w},{LongitudeOffsetMinutes:f},{LongitudeOffsetEorW:w},{AltitudeOffset:og},{Datum:w}*{Checksum:x}"
+
+  ########
+  # Optional metadata to help make sense of the parsed values.
+  fields:
+    FixQuality:
+      units: ""
+      description: ""
+    FixTime:
+      units: ""
+      description: ""
+    NumSats:
+      units: "count"
+      description: ""
+    HDOP:
+      units: ""
+      description: ""
+    AntennaHeight:
+      units: "meters"
+      description: ""
+    GeoidHeight:
+      units: "meters"
+      description: ""
+    LastDGPSUpdate:
+      units: ""
+      description: ""
+    DGPSStationID:
+      units: ""
+      description: ""
+    CourseTrue:
+      units: "degrees"
+      description: "True course"
+    CourseMag:
+      units: "degrees"
+      description: "Magnetic course"
+    SpeedKt:
+      units: "knots"
+      description: "Speed over ground in knots"
+    SpeedKm:
+      units: "km/hour"
+      description: "Speed over ground in kilometers per hour"
+    GPSTime:
+      units: ""
+      description: ""
+    GPSDay:
+      units: ""
+      description: ""
+    GPSMonth:
+      units: ""
+      description: ""
+    GPSYear:
+      units: ""
+      description: ""
+    GPSDate:
+      units: ""
+      description: ""
+    LocalHours:
+      units: ""
+      description: ""
+    LocalZone:
+      units: ""
+      description: ""
+    HorizQual:
+      units: ""
+      description: ""
+    HeightQual:
+      units: ""
+      description: ""
+    HeadingQual:
+      units: ""
+      description: ""
+    RollPitchQual:
+      units: ""
+      description: ""
+    GyroCal:
+      units: ""
+      description: ""
+    GyroOffset:
+      units: ""
+      description: ""
+    Roll:
+      units: "degrees"
+      description: "Roll, port side up is positive"
+    Pitch:
+      units: "degrees"
+      description: "Roll, bow up is positive"
+    HeadingTrue:
+      units: "degrees"
+      description: "True heading"
+    Heave:
+      units: "meters"
+      description: "Positive is down"
+    Latitude:
+      units: "degrees"
+      description: "Latitude in degrees; north or south depends on NorS"
+    NorS:
+      description: "N if Latitude value is north, S otherwise"
+    Longitude:
+      units: "degrees"
+      description: "Longitude in degrees; east or west depends on value of EorW"
+    EorW:
+      description: "E if Longitude value is east, W otherwise"
+    MagneticVar:
+      units: "degrees"
+      description: "Magnetic variation in degrees; east or west depends on value of MagneticVarEorW"
+    MagneticVarEorW:
+      description: "E if Magnetic variation value is east, W otherwise"
+    DataValid:
+      description: "A = Data valid, V = Data not valid"
+    Mode:
+      description: "A = GPS used, D = DGPS used, E = Dead reckoning, M = Manual mode, S = Simulator mode, N = Invalid"
+    LocalDatum:
+      description: unknown
+    LocalDatumSubCode:
+      description: unknown
+    LatitudeOffsetMinutes:
+      description: unknown
+    LatitudeOffsetNorS:
+      description: unknown
+    LongitudeOffsetMinutes:
+      description: unknown
+    LongitudeOffsetEorW:
+      description: unknown
+    AltitudeOffset:
+      description: unknown
+    Datum:
+      description: unknown
+    ManualAutoMode:
+      description: "M = Manual, A = Automatic 2D/3D"
+    DimensionMode:
+      description: "1 = Fix, 2 = 2D fix, 3 = 3D fix"
+    PDOP:
+      description: "Dilution of precision"
+    VDOP:
+      description: "Vertical dilution of precision"
+    TDOP:
+      description: "Time dilution of precision"
+    TotalNumMesg:
+      description: "Total number of GSV messages"
+    MesgNum:
+      description: "Message number"
+    Sat1PRN:
+      description: "Satellite PRN number"
+    Sat1Elevation:
+      units: "degrees"
+      description: "Satellite elevation"
+    Sat1Azimuth:
+      units: "degrees"
+      description: "Satellite azimuth"
+    Sat1SignalToNoise:
+      units: "dB"
+      description: "Signal to noise ratio"
+    Sat2PRN:
+      description: "Satellite PRN number"
+    Sat2Elevation:
+      units: "degrees"
+      description: "Satellite elevation"
+    Sat2Azimuth:
+      units: "degrees"
+      description: "Satellite azimuth"
+    Sat2SignalToNoise:
+      units: "dB"
+      description: "Signal to noise ratio"
+    Sat3PRN:
+      description: "Satellite PRN number"
+    Sat3Elevation:
+      units: "degrees"
+      description: "Satellite elevation"
+    Sat3Azimuth:
+      units: "degrees"
+      description: "Satellite azimuth"
+    Sat3SignalToNoise:
+      units: "dB"
+      description: "Signal to noise ratio"
+    Sat4PRN:
+      description: "Satellite PRN number"
+    Sat4Elevation:
+      units: "degrees"
+      description: "Satellite elevation"
+    Sat4Azimuth:
+      units: "degrees"
+      description: "Satellite azimuth"
+    Sat4SignalToNoise:
+      units: "dB"
+      description: "Signal to noise ratio"
+    Sat1ID:
+      description: "Satellite ID 1"
+    Sat2ID:
+      description: "Satellite ID 2"
+    Sat3ID:
+      description: "Satellite ID 3"
+    Sat4ID:
+      description: "Satellite ID 4"
+    Sat5ID:
+      description: "Satellite ID 5"
+    Sat6ID:
+      description: "Satellite ID 6"
+    Sat7ID:
+      description: "Satellite ID 7"
+    Sat8ID:
+      description: "Satellite ID 8"
+    Sat9ID:
+      description: "Satellite ID 9"
+    Sat10ID:
+      description: "Satellite ID 10"
+    Sat11ID:
+      description: "Satellite ID 11"
+    Sat12ID:
+      description: "Satellite ID 12"
+    WeekNum:
+      description: "GPS Week Number"
+    SecondsInWeek:
+      description: "Seconds in GPS Week"
+
+######################################
+
+TSG_SBE45:
+  category: "device_type"
+  description: "Thermosalinograph Sea-Bird SBE-45"
+
+  format:
+  - "{Temp:og},{Conductivity:og},{Salinity:og},{SoundVelocity:og}"
+  - "{Temp:og},{Conductivity:og},{Salinity:og}"
+
+  fields:
+    Temp:
+      units: "C"
+      description: "Temperature"
+    Conductivity:
+      units: "s/m"
+      description: "Conductivity"
+    Salinity:
+      units: "PSU"
+      description: "Salinity"
+    SoundVelocity:
+      units: "m/s"
+      description: "SoundVelocity"
+
+######################################
+RMYoung:
+  category: "device_type"
+  description: "Serial translator for anemometers/barometers/humitters "
+
+  format:
+  - "${:2l}MW1,{PortRelWindDir:of},{Reference:ow},{PortRelWindSpeed:of},{WindSpeedUnits:ow},{Status:ow}*{CheckSum:x}"
+  - "${:2l}MW2,{StbdRelWindDir:of},{Reference:ow},{StbdRelWindSpeed:of},{WindSpeedUnits:ow},{Status:ow}*{CheckSum:x}"
+  - "${:2l}XDR,{Type1:nc},{Value1:of},{Units1:nc},{Name1:nc}*{CheckSum:x}"
+  - "${:2l}XDR,{Type1:nc},{Value1:of},{Units1:nc},{Name1:nc},{Type2:nc},{Value2:of},{Units2:nc},{Name2:nc}*{CheckSum:x}"
+  - "${:2l}XDR,{Type1:nc},{Value1:of},{Units1:nc},{Name1:nc},{Type2:nc},{Value2:of},{Units2:nc},{Name2:nc},{Type3:nc},{Value3:of},{Units3:nc},{Name3:nc}*{CheckSum:x}"
+  - "${:2l}XDR,{Type1:nc},{Value1:of},{Units1:nc},{Name1:nc},{Type2:nc},{Value2:of},{Units2:nc},{Name2:nc},{Type3:nc},{Value3:of},{Units3:nc},{Name3:nc},{Type4:nc},{Value4:of},{Units4:nc},{Name4:nc}*{CheckSum:x}"
+ 
+ # - "${:2l}MW1,{WindAngle:of},{Reference:ow},{WindSpeed:of},{WindSpeedUnits:ow},{Status:ow}*{CheckSum:x}"
+ # - "${:2l}MW2,{WindAngle:of},{Reference:ow},{WindSpeed:of},{WindSpeedUnits:ow},{Status:ow}*{CheckSum:x}"
+ # - "${:2l}XDR,{Type1:nc},{Value1:of},{Units1:nc},{Name1:nc}*{CheckSum:x}"
+ # - "${:2l}XDR,{Type1:nc},{Value1:of},{Units1:nc},{Name1:nc},{Type2:nc},{Value2:of},{Units2:nc},{Name2:nc}*{CheckSum:x}"
+ # - "${:2l}XDR,{Type1:nc},{Value1:of},{Units1:nc},{Name1:nc},{Type2:nc},{Value2:of},{Units2:nc},{Name2:nc},{Type3:nc},{Value3:of},{Units3:nc},{Name3:nc}*{CheckSum:x}"
+ # - "${:2l}XDR,{Type1:nc},{Value1:of},{Units1:nc},{Name1:nc},{Type2:nc},{Value2:of},{Units2:nc},{Name2:nc},{Type3:nc},{Value3:of},{Units3:nc},{Name3:nc},{Type4:nc},{Value4:of},{Units4:nc},{Name4:nc}*{CheckSum:x}"
+ 
+  fields:
+    PortRelWindDir:
+      units: "degrees"
+      description: "Port relative wind direction"
+    PortRelWindSpeed:
+      units: "m/s"
+      description: "Port relative wind speed"
+    StbdRelWindDir:
+      units: "degrees"
+      description: "Stbd relative wind direction"
+    StbdRelWindSpeed:
+      units: "m/s"
+      description: "Stbd relative wind speed"  
+ # WindAngle:
+    #  units: "degrees"
+     # description: "Wind angle (0-360 for MWV/MWD, 0-180 for VWR/VWT)"
+    Reference:
+      description: "R=Relative, T=True"
+  #  WindSpeed:
+   #   description: "Wind speed (units per WindSpeedUnits)"
+    WindSpeedUnits:
+      description: "K=km/h, M=m/s, N=knots, S=statute mph"
+    Status:
+      description: "A=Valid, V=Invalid"
+    WindDirTrue:
+      units: "degrees"
+      description: "Wind direction, true (from)"
+    WindDirMag:
+      units: "degrees"
+      description: "Wind direction, magnetic (from)"
+    WindSpeedKt:
+      units: "knots"
+      description: "Wind speed in knots"
+    WindSpeedMs:
+      units: "m/s"
+      description: "Wind speed in meters per second"
+    WindSpeedKm:
+      units: "km/hour"
+      description: "Wind speed in kilometers per hour"
+    WindSide:
+      description: "L=Left/Port, R=Right/Starboard"
+    BaroInches:
+      units: "inches Hg"
+      description: "Barometric pressure in inches of mercury"
+    BaroBars:
+      units: "bars"
+      description: "Barometric pressure in bars"
+    AirTemp:
+      units: "degrees C"
+      description: "Air temperature"
+    WaterTemp:
+      units: "degrees C"
+      description: "Water temperature"
+    Temp:
+      units: "degrees C"
+      description: "Temperature"
+    Units:
+      description: "C=Celsius, F=Fahrenheit"
+    RelHumidity:
+      units: "percent"
+      description: "Relative humidity"
+    AbsHumidity:
+      units: "percent"
+      description: "Absolute humidity"
+    DewPoint:
+      units: "degrees C"
+      description: "Dew point temperature"
+    Type1:
+      description: "Transducer 1 type (A=Angular, C=Temperature, etc.)"
+    Value1:
+      description: "Transducer 1 measurement value"
+    Units1:
+      description: "Transducer 1 units"
+    Name1:
+      description: "Transducer 1 name"
+    Type2:
+      description: "Transducer 2 type"
+    Value2:
+      description: "Transducer 2 measurement value"
+    Units2:
+      description: "Transducer 2 units"
+    Name2:
+      description: "Transducer 2 name"
+    Type3:
+      description: "Transducer 3 type"
+    Value3:
+      description: "Transducer 3 measurement value"
+    Units3:
+      description: "Transducer 3 units"
+    Name3:
+      description: "Transducer 3 name"
+    Type4:
+      description: "Transducer 4 type"
+    Value4:
+      description: "Transducer 4 measurement value"
+    Units4:
+      description: "Transducer 4 units"
+    Name4:
+      description: "Transducer 4 name"
+
+#####################################     
+FLNTURT:
+  category: "device_type"
+  description: "Seabird Scientific dual channel fluorometer (fluorescence/turbidity)"
+
+  format: "{Date:S}{:s}{Time:S}{:s}{ChlChannel:d}{:s}{ChlCount:d}{:s}{TurbChannel:d}{:s}{TurbCount:d}{:s}{Auxiliary:d}"
+
+  fields:
+    Date:
+      description: "DD/MM/YY"
+    Time:
+      description: "HH:MM:SS"
+    ChlChannel:
+      description: "Chlorophyll channel"
+    ChlCount:
+      description: "Chlorophyll count"
+    TurbChannel:
+      description: "Turbidity channel"
+    TurbCount:
+      description: "Turbidity count"
+    Auxiliary:
+      description: "Auxiliary"
+
+##################################### 
+POS:
+  category: "device_type"
+  description: "Applanix POS MV is a compact, fully integrated position and orientation system (GNSS + INS)"
+
+  format:
+  - "$PASHR,{GPSTime:of},{Heading:of},{HeadingType:ow},{Roll:of},{Pitch:of},{Heave:of},{RollAcc:of},{PitchAcc:of},{HeadingAcc:of},{AidingStatus:od},{IMUStatus:od}*{CheckSum:x}" 
+  - "$INGGA,{GPSTime:of},{Latitude:nlat},{NorS:os},{Longitude:nlat},{EorW:ow},{FixQuality:od},{NumSats:od},{HDOP:of},{AntennaHeight:of},M,,,{LastDGPSUpdate:of},{DGPSStationID:od}*{CheckSum:x}" 
+  - "${:2l}HDT,{HeadingTrue:of},T*{CheckSum:x}"
+  - "${:2l}VTG,{CourseTrue:of},T,{CourseMag:of},M,{SpeedKt:of},N,{SpeedKm:of},K,{Mode:ow}*{CheckSum:x}"
+  - "${:2l}ZDA,{GPSTime:of},{Day:od},{Month:od},{Year:od},{LocalHours:od},{LocalMinutes:od}*{CheckSum:x}"
+
+  fields:
+    GPSTime:
+      units: "hhmmss.ss"
+      description: "UTC time"
+    GPSDate:
+      units: "ddmmyy"
+      description: "UTC date"
+    Latitude:
+      units: "degrees"
+      description: "Latitude in decimal degrees"
+    NorS:
+      description: "N for North, S for South"
+    Longitude:
+      units: "degrees"
+      description: "Longitude in decimal degrees"
+    EorW:
+      description: "E for East, W for West"
+    FixQuality:
+      description: "0=invalid, 1=GPS, 2=DGPS, 3=PPS, 4=RTK, 5=Float RTK"
+    NumSats:
+      units: "count"
+      description: "Number of satellites in use"
+    HDOP:
+      description: "Horizontal dilution of precision"
+    AntennaHeight:
+      units: "meters"
+      description: "Antenna height above mean sea level"
+    GeoidHeight:
+      units: "meters"
+      description: "Geoidal separation"
+    LastDGPSUpdate:
+      units: "seconds"
+      description: "Time since last DGPS update"
+    DGPSStationID:
+      description: "DGPS reference station ID"
+    Status:
+      description: "A=Active/Valid, V=Void/Invalid"
+    Mode:
+      description: "A=Autonomous, D=Differential, E=Estimated, N=Not valid"
+    SpeedKt:
+      units: "knots"
+      description: "Speed over ground in knots"
+    SpeedKm:
+      units: "km/hour"
+      description: "Speed over ground in km/hour"
+    CourseTrue:
+      units: "degrees"
+      description: "Course over ground, true"
+    CourseMag:
+      units: "degrees"
+      description: "Course over ground, magnetic"
+    MagVar:
+      units: "degrees"
+      description: "Magnetic variation"
+    MagVarDir:
+      description: "E=East, W=West"
+    Day:
+      description: "Day of month (01-31)"
+    Month:
+      description: "Month (01-12)"
+    Year:
+      description: "Year (4 digits)"
+    LocalHours:
+      units: "hours"
+      description: "Local zone offset from UTC"
+    LocalMinutes:
+      units: "minutes"
+      description: "Local zone offset from UTC"
+    # Heading fields
+    HeadingTrue:
+      units: "degrees"
+      description: "True heading"
+    HeadingMag:
+      units: "degrees"
+      description: "Magnetic heading"
+    Heading:
+      units: "degrees"
+      description: "Heading"
+    HeadingType:
+      description: "T=True, M=Magnetic"
+    Deviation:
+      units: "degrees"
+      description: "Magnetic deviation"
+    DeviationDir:
+      description: "E=East, W=West"
+    Variation:
+      units: "degrees"
+      description: "Magnetic variation"
+    VariationDir:
+      description: "E=East, W=West"
+    RateOfTurn:
+      units: "degrees/minute"
+      description: "Rate of turn"
+    # Motion fields
+    Roll:
+      units: "degrees"
+      description: "Roll angle (positive = port up)"
+    Pitch:
+      units: "degrees"
+      description: "Pitch angle (positive = bow up)"
+    Heave:
+      units: "meters"
+      description: "Heave displacement"
+    RollRate:
+      units: "degrees/second"
+      description: "Roll rate"
+    PitchRate:
+      units: "degrees/second"
+      description: "Pitch rate"
+    YawRate:
+      units: "degrees/second"
+      description: "Yaw rate"
+    VerticalVel:
+      units: "m/s"
+      description: "Vertical velocity"
+    # Quality fields
+    HorizQual:
+      description: "Horizontal position quality (0=none to 4=excellent)"
+    HeightQual:
+      description: "Height quality indicator"
+    HeadingQual:
+      description: "Heading quality indicator"
+    RollPitchQual:
+      description: "Roll/Pitch quality indicator"
+    EventType:
+      description: "Event trigger type"
+    GyroCal:
+      units: "degrees/hour"
+      description: "Gyro calibration status"
+    GyroOffset:
+      units: "degrees"
+      description: "Gyro offset"
+    # PASHR fields
+    RollAcc:
+      units: "degrees"
+      description: "Roll accuracy estimate"
+    PitchAcc:
+      units: "degrees"
+      description: "Pitch accuracy estimate"
+    HeadingAcc:
+      units: "degrees"
+      description: "Heading accuracy estimate"
+    AidingStatus:
+      description: "Aiding status (0=none, 1=aided)"
+    IMUStatus:
+      description: "IMU status code"
+

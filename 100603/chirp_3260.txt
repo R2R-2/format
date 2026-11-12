@@ -1,0 +1,26 @@
+Data Format Description: Each line includes an ISO8601 date string prefix and records depth measurements from a Knudsen Chirp echosounder using the NMEA 0183 DBT (Depth Below Transducer) sentence format. Depth is reported in feet, meters, and fathoms. Data can be in 100KHz, 12KHz, or 3.5KHz. A file contains depth records from the sounder output stream.
+
+Standards Followed: NMEA 0183, ISO8601
+
+Data line column descriptions (one description per unique line format):
+
+	Example Line: 07/17/2026,10:55:34.664,$SDDBT,0000.00,f,0000.00,M,0000.00,F*06
+	where:
+	07/17/2026 	Date of record assigned by the logging software
+	10:55:34.664 	Time of record assigned by the logging software
+	$SDDBT 		NMEA 0183 Depth Below Transducer sentence identifier
+	0000.00 	Depth below transducer in feet
+	f	 	Unit identifier for feet
+	0000.00 	Depth below transducer in meters
+	M	 	Unit identifier for meters
+	0000.00 	Depth below transducer in fathoms
+	F	 	Unit identifier for fathoms
+	*06	 	NMEA checksum used for data integrity verification
+
+Example File Contents: 
+07/17/2026,12:25:41.787,$SDDBT,7828.54,f,2386.14,M,1304.76,F*0F
+07/17/2026,12:25:46.616,$SDDBT,7899.65,f,2407.81,M,1316.61,F*00
+07/17/2026,12:25:51.444,$SDDBT,7829.01,f,2386.28,M,1304.83,F*0B
+07/17/2026,12:25:56.272,$SDDBT,7829.38,f,2386.39,M,1304.90,F*03
+07/17/2026,12:26:01.101,$SDDBT,7830.36,f,2386.69,M,1305.06,F*0E
+07/17/2026,12:26:05.928,$SDDBT,7829.97,f,2386.57,M,1304.99,F*0i7

@@ -1,0 +1,3 @@
+All file format and parameter information for Sharp PAR data files can be found in the header of each file. Formats and parameters may change between files, but should be clearly documented in the header.
+
+In most files, data are grouped together by instrument and data type. This leads to several empty fields in the header, as well as repeated column headings, making the CSV potentially confusing. Open files in Excel for the most intuituve, human-readable experience. The attached PDF file also attempts to clear up which parameters apply to which data fields.

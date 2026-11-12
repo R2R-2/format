@@ -1,0 +1,29 @@
+E/V Nautilus 200WX WeatherStation File Format
+
+Data Format:
+BRWIND  <datetime>     DYNPOS  $WIMWV,<wind angle>,<wind reference (R = relative)>,<wind speed>,<wind speed units (N = knots)>,<status (A = valid)><checksum>
+
+Worked Example:
+BRWIND  2026-06-11T15:00:00.782320Z     DYNPOS  $WIMWV,84.6,R,7.3,N,A*1D
+
+BRWIND				Data Prefix
+2026-06-11T15:00:00.782320Z	Datetime
+DYNPOS				Data Prefix
+$WIMWV,84.6,R,7.3,N,A*1D	Standard $WIMWV NMEA String
+
+$WIMWV NMEA String Example:
+$WIMWV,84.6,R,7.3,N,A*1D
+
+$WIMWV	NMEA Message Type
+84.6	Wind Angle
+R	Wind Reference (R = Relative, T = True)
+7.3	Wind Speed
+N	Wind Speed Units (N = Knots, K = km/h, M = m/s, S = mph)
+A	Data Validity Status (A = Valid, V = Invalid)
+*1D	String Checksum
+
+Example Raw Data Lines:
+BRWIND	2026-06-11T15:00:00.782320Z	DYNPOS	$WIMWV,84.6,R,7.3,N,A*1D
+BRWIND	2026-06-11T15:00:01.684274Z	DYNPOS	$WIMWV,83.5,R,6.8,N,A*13
+BRWIND	2026-06-11T15:00:02.585777Z	DYNPOS	$WIMWV,87.0,R,7.2,N,A*19
+BRWIND	2026-06-11T15:00:03.485587Z	DYNPOS	$WIMWV,82.7,R,7.3,N,A*1A

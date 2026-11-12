@@ -1,5 +1,20 @@
 Atlantis Seametrics SPX-038 Flowmeter Data Format
 
-String: SSW 2026-04-17T20:11:50.295Z FLOW 0 System Timestamp Type Counts/Second
+Raw Data Format:
+System Timestamp Type Counts/Second
 
-UPDATE FOR CLARITY WHEN NEW DATA FILES ARE RECEIVED
+Worked Example:
+SSW 2026-04-25T04:05:53.777Z FLOW 11
+
+SSW				Surface Sea Water
+2026-04-25T04:05:53.777Z	Timestamp (GMT)
+FLOW 				Flowmeter Data
+11 				Pulse Counts Per Second
+
+Example Data Lines:
+SSW 2026-04-25T04:05:53.777Z FLOW 11
+SSW 2026-04-25T04:05:54.833Z FLOW 11
+SSW 2026-04-25T04:05:55.889Z FLOW 10
+SSW 2026-04-25T04:05:56.945Z FLOW 11
+SSW 2026-04-25T04:05:58.001Z FLOW 11
+
